@@ -1,0 +1,121 @@
+# Requests for tag: reactions
+
+
+
+### List reactions for a team discussion comment [GET]
+GET {{$dotenv BASE_URL}}/orgs/{{$dotenv ORG_NAME}}/teams/{{$dotenv TEAM_SLUG}}/discussions/{{$dotenv DISCUSSION_NUMBER}}/comments/{{$dotenv COMMENT_NUMBER}}/reactions?content={{$dotenv CONTENT}}
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+
+### Create reaction for a team discussion comment [POST]
+POST {{$dotenv BASE_URL}}/orgs/{{$dotenv ORG_NAME}}/teams/{{$dotenv TEAM_SLUG}}/discussions/{{$dotenv DISCUSSION_NUMBER}}/comments/{{$dotenv COMMENT_NUMBER}}/reactions
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+Content-Type: application/json
+{}
+
+### Delete team discussion comment reaction [DELETE]
+DELETE {{$dotenv BASE_URL}}/orgs/{{$dotenv ORG_NAME}}/teams/{{$dotenv TEAM_SLUG}}/discussions/{{$dotenv DISCUSSION_NUMBER}}/comments/{{$dotenv COMMENT_NUMBER}}/reactions/{{$dotenv REACTION_ID}}
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+
+### List reactions for a team discussion [GET]
+GET {{$dotenv BASE_URL}}/orgs/{{$dotenv ORG_NAME}}/teams/{{$dotenv TEAM_SLUG}}/discussions/{{$dotenv DISCUSSION_NUMBER}}/reactions?content={{$dotenv CONTENT}}
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+
+### Create reaction for a team discussion [POST]
+POST {{$dotenv BASE_URL}}/orgs/{{$dotenv ORG_NAME}}/teams/{{$dotenv TEAM_SLUG}}/discussions/{{$dotenv DISCUSSION_NUMBER}}/reactions
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+Content-Type: application/json
+{}
+
+### Delete team discussion reaction [DELETE]
+DELETE {{$dotenv BASE_URL}}/orgs/{{$dotenv ORG_NAME}}/teams/{{$dotenv TEAM_SLUG}}/discussions/{{$dotenv DISCUSSION_NUMBER}}/reactions/{{$dotenv REACTION_ID}}
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+
+### List reactions for a commit comment [GET]
+GET {{$dotenv BASE_URL}}/repos/{{$dotenv OWNER}}/{{$dotenv REPO}}/comments/{{$dotenv COMMENT_ID}}/reactions?content={{$dotenv CONTENT}}
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+
+### Create reaction for a commit comment [POST]
+POST {{$dotenv BASE_URL}}/repos/{{$dotenv OWNER}}/{{$dotenv REPO}}/comments/{{$dotenv COMMENT_ID}}/reactions
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+Content-Type: application/json
+{}
+
+### Delete a commit comment reaction [DELETE]
+DELETE {{$dotenv BASE_URL}}/repos/{{$dotenv OWNER}}/{{$dotenv REPO}}/comments/{{$dotenv COMMENT_ID}}/reactions/{{$dotenv REACTION_ID}}
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+
+### List reactions for an issue comment [GET]
+GET {{$dotenv BASE_URL}}/repos/{{$dotenv OWNER}}/{{$dotenv REPO}}/issues/comments/{{$dotenv COMMENT_ID}}/reactions?content={{$dotenv CONTENT}}
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+
+### Create reaction for an issue comment [POST]
+POST {{$dotenv BASE_URL}}/repos/{{$dotenv OWNER}}/{{$dotenv REPO}}/issues/comments/{{$dotenv COMMENT_ID}}/reactions
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+Content-Type: application/json
+{}
+
+### Delete an issue comment reaction [DELETE]
+DELETE {{$dotenv BASE_URL}}/repos/{{$dotenv OWNER}}/{{$dotenv REPO}}/issues/comments/{{$dotenv COMMENT_ID}}/reactions/{{$dotenv REACTION_ID}}
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+
+### List reactions for an issue [GET]
+GET {{$dotenv BASE_URL}}/repos/{{$dotenv OWNER}}/{{$dotenv REPO}}/issues/{{$dotenv ISSUE_NUMBER}}/reactions?content={{$dotenv CONTENT}}
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+
+### Create reaction for an issue [POST]
+POST {{$dotenv BASE_URL}}/repos/{{$dotenv OWNER}}/{{$dotenv REPO}}/issues/{{$dotenv ISSUE_NUMBER}}/reactions
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+Content-Type: application/json
+{}
+
+### Delete an issue reaction [DELETE]
+DELETE {{$dotenv BASE_URL}}/repos/{{$dotenv OWNER}}/{{$dotenv REPO}}/issues/{{$dotenv ISSUE_NUMBER}}/reactions/{{$dotenv REACTION_ID}}
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+
+### List reactions for a pull request review comment [GET]
+GET {{$dotenv BASE_URL}}/repos/{{$dotenv OWNER}}/{{$dotenv REPO}}/pulls/comments/{{$dotenv COMMENT_ID}}/reactions?content={{$dotenv CONTENT}}
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+
+### Create reaction for a pull request review comment [POST]
+POST {{$dotenv BASE_URL}}/repos/{{$dotenv OWNER}}/{{$dotenv REPO}}/pulls/comments/{{$dotenv COMMENT_ID}}/reactions
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+Content-Type: application/json
+{}
+
+### Delete a pull request comment reaction [DELETE]
+DELETE {{$dotenv BASE_URL}}/repos/{{$dotenv OWNER}}/{{$dotenv REPO}}/pulls/comments/{{$dotenv COMMENT_ID}}/reactions/{{$dotenv REACTION_ID}}
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+
+### List reactions for a release [GET]
+GET {{$dotenv BASE_URL}}/repos/{{$dotenv OWNER}}/{{$dotenv REPO}}/releases/{{$dotenv RELEASE_ID}}/reactions?content={{$dotenv CONTENT}}
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+
+### Create reaction for a release [POST]
+POST {{$dotenv BASE_URL}}/repos/{{$dotenv OWNER}}/{{$dotenv REPO}}/releases/{{$dotenv RELEASE_ID}}/reactions
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+Content-Type: application/json
+{}
+
+### Delete a release reaction [DELETE]
+DELETE {{$dotenv BASE_URL}}/repos/{{$dotenv OWNER}}/{{$dotenv REPO}}/releases/{{$dotenv RELEASE_ID}}/reactions/{{$dotenv REACTION_ID}}
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+
+### List reactions for a team discussion comment (Legacy) [GET]
+GET {{$dotenv BASE_URL}}/teams/{{$dotenv TEAM_ID}}/discussions/{{$dotenv DISCUSSION_NUMBER}}/comments/{{$dotenv COMMENT_NUMBER}}/reactions?content={{$dotenv CONTENT}}
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+
+### Create reaction for a team discussion comment (Legacy) [POST]
+POST {{$dotenv BASE_URL}}/teams/{{$dotenv TEAM_ID}}/discussions/{{$dotenv DISCUSSION_NUMBER}}/comments/{{$dotenv COMMENT_NUMBER}}/reactions
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+Content-Type: application/json
+{}
+
+### List reactions for a team discussion (Legacy) [GET]
+GET {{$dotenv BASE_URL}}/teams/{{$dotenv TEAM_ID}}/discussions/{{$dotenv DISCUSSION_NUMBER}}/reactions?content={{$dotenv CONTENT}}
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+
+### Create reaction for a team discussion (Legacy) [POST]
+POST {{$dotenv BASE_URL}}/teams/{{$dotenv TEAM_ID}}/discussions/{{$dotenv DISCUSSION_NUMBER}}/reactions
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+Content-Type: application/json
+{}

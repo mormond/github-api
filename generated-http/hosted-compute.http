@@ -1,0 +1,59 @@
+# Requests for tag: hosted-compute
+
+
+
+### List hosted compute network configurations for an enterprise [GET]
+GET {{$dotenv BASE_URL}}/enterprises/{{$dotenv ENTERPRISE_NAME}}/network-configurations
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+
+### Create a hosted compute network configuration for an enterprise [POST]
+POST {{$dotenv BASE_URL}}/enterprises/{{$dotenv ENTERPRISE_NAME}}/network-configurations
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+Content-Type: application/json
+{}
+
+### Get a hosted compute network configuration for an enterprise [GET]
+GET {{$dotenv BASE_URL}}/enterprises/{{$dotenv ENTERPRISE_NAME}}/network-configurations/{{$dotenv NETWORK_CONFIGURATION_ID}}
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+
+### Update a hosted compute network configuration for an enterprise [PATCH]
+PATCH {{$dotenv BASE_URL}}/enterprises/{{$dotenv ENTERPRISE_NAME}}/network-configurations/{{$dotenv NETWORK_CONFIGURATION_ID}}
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+Content-Type: application/json
+{}
+
+### Delete a hosted compute network configuration from an enterprise [DELETE]
+DELETE {{$dotenv BASE_URL}}/enterprises/{{$dotenv ENTERPRISE_NAME}}/network-configurations/{{$dotenv NETWORK_CONFIGURATION_ID}}
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+
+### Get a hosted compute network settings resource for an enterprise [GET]
+GET {{$dotenv BASE_URL}}/enterprises/{{$dotenv ENTERPRISE_NAME}}/network-settings/{{$dotenv NETWORK_SETTINGS_ID}}
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+
+### List hosted compute network configurations for an organization [GET]
+GET {{$dotenv BASE_URL}}/orgs/{{$dotenv ORG_NAME}}/settings/network-configurations
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+
+### Create a hosted compute network configuration for an organization [POST]
+POST {{$dotenv BASE_URL}}/orgs/{{$dotenv ORG_NAME}}/settings/network-configurations
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+Content-Type: application/json
+{}
+
+### Get a hosted compute network configuration for an organization [GET]
+GET {{$dotenv BASE_URL}}/orgs/{{$dotenv ORG_NAME}}/settings/network-configurations/{{$dotenv NETWORK_CONFIGURATION_ID}}
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+
+### Update a hosted compute network configuration for an organization [PATCH]
+PATCH {{$dotenv BASE_URL}}/orgs/{{$dotenv ORG_NAME}}/settings/network-configurations/{{$dotenv NETWORK_CONFIGURATION_ID}}
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+Content-Type: application/json
+{}
+
+### Delete a hosted compute network configuration from an organization [DELETE]
+DELETE {{$dotenv BASE_URL}}/orgs/{{$dotenv ORG_NAME}}/settings/network-configurations/{{$dotenv NETWORK_CONFIGURATION_ID}}
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+
+### Get a hosted compute network settings resource for an organization [GET]
+GET {{$dotenv BASE_URL}}/orgs/{{$dotenv ORG_NAME}}/settings/network-settings/{{$dotenv NETWORK_SETTINGS_ID}}
+Authorization: Bearer {{$dotenv GH_TOKEN}}

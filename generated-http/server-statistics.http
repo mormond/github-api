@@ -1,0 +1,7 @@
+# Requests for tag: server-statistics
+
+
+
+### Get GitHub Enterprise Server statistics [GET]
+GET {{$dotenv BASE_URL}}/enterprise-installation/{{$dotenv ENTERPRISE_OR_ORG}}/server-statistics?date_start={{$dotenv DATE_START}}&date_end={{$dotenv DATE_END}}
+Authorization: Bearer {{$dotenv GH_TOKEN}}

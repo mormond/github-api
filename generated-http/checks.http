@@ -1,0 +1,59 @@
+# Requests for tag: checks
+
+
+
+### Create a check run [POST]
+POST {{$dotenv BASE_URL}}/repos/{{$dotenv OWNER}}/{{$dotenv REPO}}/check-runs
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+Content-Type: application/json
+{}
+
+### Get a check run [GET]
+GET {{$dotenv BASE_URL}}/repos/{{$dotenv OWNER}}/{{$dotenv REPO}}/check-runs/{{$dotenv CHECK_RUN_ID}}
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+
+### Update a check run [PATCH]
+PATCH {{$dotenv BASE_URL}}/repos/{{$dotenv OWNER}}/{{$dotenv REPO}}/check-runs/{{$dotenv CHECK_RUN_ID}}
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+Content-Type: application/json
+{}
+
+### List check run annotations [GET]
+GET {{$dotenv BASE_URL}}/repos/{{$dotenv OWNER}}/{{$dotenv REPO}}/check-runs/{{$dotenv CHECK_RUN_ID}}/annotations
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+
+### Rerequest a check run [POST]
+POST {{$dotenv BASE_URL}}/repos/{{$dotenv OWNER}}/{{$dotenv REPO}}/check-runs/{{$dotenv CHECK_RUN_ID}}/rerequest
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+
+### Create a check suite [POST]
+POST {{$dotenv BASE_URL}}/repos/{{$dotenv OWNER}}/{{$dotenv REPO}}/check-suites
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+Content-Type: application/json
+{}
+
+### Update repository preferences for check suites [PATCH]
+PATCH {{$dotenv BASE_URL}}/repos/{{$dotenv OWNER}}/{{$dotenv REPO}}/check-suites/preferences
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+Content-Type: application/json
+{}
+
+### Get a check suite [GET]
+GET {{$dotenv BASE_URL}}/repos/{{$dotenv OWNER}}/{{$dotenv REPO}}/check-suites/{{$dotenv CHECK_SUITE_ID}}
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+
+### List check runs in a check suite [GET]
+GET {{$dotenv BASE_URL}}/repos/{{$dotenv OWNER}}/{{$dotenv REPO}}/check-suites/{{$dotenv CHECK_SUITE_ID}}/check-runs?filter={{$dotenv FILTER}}
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+
+### Rerequest a check suite [POST]
+POST {{$dotenv BASE_URL}}/repos/{{$dotenv OWNER}}/{{$dotenv REPO}}/check-suites/{{$dotenv CHECK_SUITE_ID}}/rerequest
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+
+### List check runs for a Git reference [GET]
+GET {{$dotenv BASE_URL}}/repos/{{$dotenv OWNER}}/{{$dotenv REPO}}/commits/{{$dotenv REF}}/check-runs?filter={{$dotenv FILTER}}&app_id={{$dotenv APP_ID}}
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+
+### List check suites for a Git reference [GET]
+GET {{$dotenv BASE_URL}}/repos/{{$dotenv OWNER}}/{{$dotenv REPO}}/commits/{{$dotenv REF}}/check-suites?app_id={{$dotenv APP_ID}}
+Authorization: Bearer {{$dotenv GH_TOKEN}}

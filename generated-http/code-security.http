@@ -1,0 +1,101 @@
+# Requests for tag: code-security
+
+
+
+### Get code security configurations for an enterprise [GET]
+GET {{$dotenv BASE_URL}}/enterprises/{{$dotenv ENTERPRISE_NAME}}/code-security/configurations?per_page={{$dotenv PER_PAGE}}
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+
+### Create a code security configuration for an enterprise [POST]
+POST {{$dotenv BASE_URL}}/enterprises/{{$dotenv ENTERPRISE_NAME}}/code-security/configurations
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+Content-Type: application/json
+{}
+
+### Get default code security configurations for an enterprise [GET]
+GET {{$dotenv BASE_URL}}/enterprises/{{$dotenv ENTERPRISE_NAME}}/code-security/configurations/defaults
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+
+### Retrieve a code security configuration of an enterprise [GET]
+GET {{$dotenv BASE_URL}}/enterprises/{{$dotenv ENTERPRISE_NAME}}/code-security/configurations/{{$dotenv CONFIGURATION_ID}}
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+
+### Update a custom code security configuration for an enterprise [PATCH]
+PATCH {{$dotenv BASE_URL}}/enterprises/{{$dotenv ENTERPRISE_NAME}}/code-security/configurations/{{$dotenv CONFIGURATION_ID}}
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+Content-Type: application/json
+{}
+
+### Delete a code security configuration for an enterprise [DELETE]
+DELETE {{$dotenv BASE_URL}}/enterprises/{{$dotenv ENTERPRISE_NAME}}/code-security/configurations/{{$dotenv CONFIGURATION_ID}}
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+
+### Attach an enterprise configuration to repositories [POST]
+POST {{$dotenv BASE_URL}}/enterprises/{{$dotenv ENTERPRISE_NAME}}/code-security/configurations/{{$dotenv CONFIGURATION_ID}}/attach
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+Content-Type: application/json
+{}
+
+### Set a code security configuration as a default for an enterprise [PUT]
+PUT {{$dotenv BASE_URL}}/enterprises/{{$dotenv ENTERPRISE_NAME}}/code-security/configurations/{{$dotenv CONFIGURATION_ID}}/defaults
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+Content-Type: application/json
+{}
+
+### Get repositories associated with an enterprise code security configuration [GET]
+GET {{$dotenv BASE_URL}}/enterprises/{{$dotenv ENTERPRISE_NAME}}/code-security/configurations/{{$dotenv CONFIGURATION_ID}}/repositories?per_page={{$dotenv PER_PAGE}}&status={{$dotenv STATUS}}
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+
+### Get code security configurations for an organization [GET]
+GET {{$dotenv BASE_URL}}/orgs/{{$dotenv ORG_NAME}}/code-security/configurations?target_type={{$dotenv TARGET_TYPE}}&per_page={{$dotenv PER_PAGE}}
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+
+### Create a code security configuration [POST]
+POST {{$dotenv BASE_URL}}/orgs/{{$dotenv ORG_NAME}}/code-security/configurations
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+Content-Type: application/json
+{}
+
+### Get default code security configurations [GET]
+GET {{$dotenv BASE_URL}}/orgs/{{$dotenv ORG_NAME}}/code-security/configurations/defaults
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+
+### Detach configurations from repositories [DELETE]
+DELETE {{$dotenv BASE_URL}}/orgs/{{$dotenv ORG_NAME}}/code-security/configurations/detach
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+Content-Type: application/json
+{}
+
+### Get a code security configuration [GET]
+GET {{$dotenv BASE_URL}}/orgs/{{$dotenv ORG_NAME}}/code-security/configurations/{{$dotenv CONFIGURATION_ID}}
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+
+### Update a code security configuration [PATCH]
+PATCH {{$dotenv BASE_URL}}/orgs/{{$dotenv ORG_NAME}}/code-security/configurations/{{$dotenv CONFIGURATION_ID}}
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+Content-Type: application/json
+{}
+
+### Delete a code security configuration [DELETE]
+DELETE {{$dotenv BASE_URL}}/orgs/{{$dotenv ORG_NAME}}/code-security/configurations/{{$dotenv CONFIGURATION_ID}}
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+
+### Attach a configuration to repositories [POST]
+POST {{$dotenv BASE_URL}}/orgs/{{$dotenv ORG_NAME}}/code-security/configurations/{{$dotenv CONFIGURATION_ID}}/attach
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+Content-Type: application/json
+{}
+
+### Set a code security configuration as a default for an organization [PUT]
+PUT {{$dotenv BASE_URL}}/orgs/{{$dotenv ORG_NAME}}/code-security/configurations/{{$dotenv CONFIGURATION_ID}}/defaults
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+Content-Type: application/json
+{}
+
+### Get repositories associated with a code security configuration [GET]
+GET {{$dotenv BASE_URL}}/orgs/{{$dotenv ORG_NAME}}/code-security/configurations/{{$dotenv CONFIGURATION_ID}}/repositories?per_page={{$dotenv PER_PAGE}}&status={{$dotenv STATUS}}
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+
+### Get the code security configuration associated with a repository [GET]
+GET {{$dotenv BASE_URL}}/repos/{{$dotenv OWNER}}/{{$dotenv REPO}}/code-security-configuration
+Authorization: Bearer {{$dotenv GH_TOKEN}}

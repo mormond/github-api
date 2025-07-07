@@ -1,0 +1,27 @@
+# Requests for tag: classroom
+
+
+
+### Get an assignment [GET]
+GET {{$dotenv BASE_URL}}/assignments/{{$dotenv ASSIGNMENT_ID}}
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+
+### List accepted assignments for an assignment [GET]
+GET {{$dotenv BASE_URL}}/assignments/{{$dotenv ASSIGNMENT_ID}}/accepted_assignments
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+
+### Get assignment grades [GET]
+GET {{$dotenv BASE_URL}}/assignments/{{$dotenv ASSIGNMENT_ID}}/grades
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+
+### List classrooms [GET]
+GET {{$dotenv BASE_URL}}/classrooms
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+
+### Get a classroom [GET]
+GET {{$dotenv BASE_URL}}/classrooms/{{$dotenv CLASSROOM_ID}}
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+
+### List assignments for a classroom [GET]
+GET {{$dotenv BASE_URL}}/classrooms/{{$dotenv CLASSROOM_ID}}/assignments
+Authorization: Bearer {{$dotenv GH_TOKEN}}

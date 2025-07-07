@@ -1,0 +1,213 @@
+# Requests for tag: users
+
+
+
+### Get the authenticated user [GET]
+GET {{$dotenv BASE_URL}}/user
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+
+### Update the authenticated user [PATCH]
+PATCH {{$dotenv BASE_URL}}/user
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+Content-Type: application/json
+{}
+
+### List users blocked by the authenticated user [GET]
+GET {{$dotenv BASE_URL}}/user/blocks
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+
+### Check if a user is blocked by the authenticated user [GET]
+GET {{$dotenv BASE_URL}}/user/blocks/{{$dotenv USERNAME}}
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+
+### Block a user [PUT]
+PUT {{$dotenv BASE_URL}}/user/blocks/{{$dotenv USERNAME}}
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+
+### Unblock a user [DELETE]
+DELETE {{$dotenv BASE_URL}}/user/blocks/{{$dotenv USERNAME}}
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+
+### Set primary email visibility for the authenticated user [PATCH]
+PATCH {{$dotenv BASE_URL}}/user/email/visibility
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+Content-Type: application/json
+{}
+
+### List email addresses for the authenticated user [GET]
+GET {{$dotenv BASE_URL}}/user/emails
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+
+### Add an email address for the authenticated user [POST]
+POST {{$dotenv BASE_URL}}/user/emails
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+Content-Type: application/json
+{}
+
+### Delete an email address for the authenticated user [DELETE]
+DELETE {{$dotenv BASE_URL}}/user/emails
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+Content-Type: application/json
+{}
+
+### List followers of the authenticated user [GET]
+GET {{$dotenv BASE_URL}}/user/followers
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+
+### List the people the authenticated user follows [GET]
+GET {{$dotenv BASE_URL}}/user/following
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+
+### Check if a person is followed by the authenticated user [GET]
+GET {{$dotenv BASE_URL}}/user/following/{{$dotenv USERNAME}}
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+
+### Follow a user [PUT]
+PUT {{$dotenv BASE_URL}}/user/following/{{$dotenv USERNAME}}
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+
+### Unfollow a user [DELETE]
+DELETE {{$dotenv BASE_URL}}/user/following/{{$dotenv USERNAME}}
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+
+### List GPG keys for the authenticated user [GET]
+GET {{$dotenv BASE_URL}}/user/gpg_keys
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+
+### Create a GPG key for the authenticated user [POST]
+POST {{$dotenv BASE_URL}}/user/gpg_keys
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+Content-Type: application/json
+{}
+
+### Get a GPG key for the authenticated user [GET]
+GET {{$dotenv BASE_URL}}/user/gpg_keys/{{$dotenv GPG_KEY_ID}}
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+
+### Delete a GPG key for the authenticated user [DELETE]
+DELETE {{$dotenv BASE_URL}}/user/gpg_keys/{{$dotenv GPG_KEY_ID}}
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+
+### List public SSH keys for the authenticated user [GET]
+GET {{$dotenv BASE_URL}}/user/keys
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+
+### Create a public SSH key for the authenticated user [POST]
+POST {{$dotenv BASE_URL}}/user/keys
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+Content-Type: application/json
+{}
+
+### Get a public SSH key for the authenticated user [GET]
+GET {{$dotenv BASE_URL}}/user/keys/{{$dotenv KEY_ID}}
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+
+### Delete a public SSH key for the authenticated user [DELETE]
+DELETE {{$dotenv BASE_URL}}/user/keys/{{$dotenv KEY_ID}}
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+
+### List public email addresses for the authenticated user [GET]
+GET {{$dotenv BASE_URL}}/user/public_emails
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+
+### List social accounts for the authenticated user [GET]
+GET {{$dotenv BASE_URL}}/user/social_accounts
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+
+### Add social accounts for the authenticated user [POST]
+POST {{$dotenv BASE_URL}}/user/social_accounts
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+Content-Type: application/json
+{}
+
+### Delete social accounts for the authenticated user [DELETE]
+DELETE {{$dotenv BASE_URL}}/user/social_accounts
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+Content-Type: application/json
+{}
+
+### List SSH signing keys for the authenticated user [GET]
+GET {{$dotenv BASE_URL}}/user/ssh_signing_keys
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+
+### Create a SSH signing key for the authenticated user [POST]
+POST {{$dotenv BASE_URL}}/user/ssh_signing_keys
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+Content-Type: application/json
+{}
+
+### Get an SSH signing key for the authenticated user [GET]
+GET {{$dotenv BASE_URL}}/user/ssh_signing_keys/{{$dotenv SSH_SIGNING_KEY_ID}}
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+
+### Delete an SSH signing key for the authenticated user [DELETE]
+DELETE {{$dotenv BASE_URL}}/user/ssh_signing_keys/{{$dotenv SSH_SIGNING_KEY_ID}}
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+
+### Get a user using their ID [GET]
+GET {{$dotenv BASE_URL}}/user/{{$dotenv ACCOUNT_ID}}
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+
+### List users [GET]
+GET {{$dotenv BASE_URL}}/users
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+
+### Get a user [GET]
+GET {{$dotenv BASE_URL}}/users/{{$dotenv USERNAME}}
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+
+### List attestations by bulk subject digests [POST]
+POST {{$dotenv BASE_URL}}/users/{{$dotenv USERNAME}}/attestations/bulk-list
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+Content-Type: application/json
+{}
+
+### Delete attestations in bulk [POST]
+POST {{$dotenv BASE_URL}}/users/{{$dotenv USERNAME}}/attestations/delete-request
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+Content-Type: application/json
+{}
+
+### Delete attestations by subject digest [DELETE]
+DELETE {{$dotenv BASE_URL}}/users/{{$dotenv USERNAME}}/attestations/digest/{{$dotenv SUBJECT_DIGEST}}
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+
+### Delete attestations by ID [DELETE]
+DELETE {{$dotenv BASE_URL}}/users/{{$dotenv USERNAME}}/attestations/{{$dotenv ATTESTATION_ID}}
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+
+### List attestations [GET]
+GET {{$dotenv BASE_URL}}/users/{{$dotenv USERNAME}}/attestations/{{$dotenv SUBJECT_DIGEST}}?predicate_type={{$dotenv PREDICATE_TYPE}}
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+
+### List followers of a user [GET]
+GET {{$dotenv BASE_URL}}/users/{{$dotenv USERNAME}}/followers
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+
+### List the people a user follows [GET]
+GET {{$dotenv BASE_URL}}/users/{{$dotenv USERNAME}}/following
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+
+### Check if a user follows another user [GET]
+GET {{$dotenv BASE_URL}}/users/{{$dotenv USERNAME}}/following/{{$dotenv TARGET_USER}}
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+
+### List GPG keys for a user [GET]
+GET {{$dotenv BASE_URL}}/users/{{$dotenv USERNAME}}/gpg_keys
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+
+### Get contextual information for a user [GET]
+GET {{$dotenv BASE_URL}}/users/{{$dotenv USERNAME}}/hovercard?subject_type={{$dotenv SUBJECT_TYPE}}&subject_id={{$dotenv SUBJECT_ID}}
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+
+### List public keys for a user [GET]
+GET {{$dotenv BASE_URL}}/users/{{$dotenv USERNAME}}/keys
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+
+### List social accounts for a user [GET]
+GET {{$dotenv BASE_URL}}/users/{{$dotenv USERNAME}}/social_accounts
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+
+### List SSH signing keys for a user [GET]
+GET {{$dotenv BASE_URL}}/users/{{$dotenv USERNAME}}/ssh_signing_keys
+Authorization: Bearer {{$dotenv GH_TOKEN}}

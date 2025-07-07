@@ -1,0 +1,137 @@
+# Requests for tag: pulls
+
+
+
+### List pull requests [GET]
+GET {{$dotenv BASE_URL}}/repos/{{$dotenv OWNER}}/{{$dotenv REPO}}/pulls?state={{$dotenv STATE}}&head={{$dotenv HEAD}}&base={{$dotenv BASE}}&sort={{$dotenv SORT}}&direction={{$dotenv DIRECTION}}
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+
+### Create a pull request [POST]
+POST {{$dotenv BASE_URL}}/repos/{{$dotenv OWNER}}/{{$dotenv REPO}}/pulls
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+Content-Type: application/json
+{}
+
+### List review comments in a repository [GET]
+GET {{$dotenv BASE_URL}}/repos/{{$dotenv OWNER}}/{{$dotenv REPO}}/pulls/comments?sort={{$dotenv SORT}}&direction={{$dotenv DIRECTION}}
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+
+### Get a review comment for a pull request [GET]
+GET {{$dotenv BASE_URL}}/repos/{{$dotenv OWNER}}/{{$dotenv REPO}}/pulls/comments/{{$dotenv COMMENT_ID}}
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+
+### Update a review comment for a pull request [PATCH]
+PATCH {{$dotenv BASE_URL}}/repos/{{$dotenv OWNER}}/{{$dotenv REPO}}/pulls/comments/{{$dotenv COMMENT_ID}}
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+Content-Type: application/json
+{}
+
+### Delete a review comment for a pull request [DELETE]
+DELETE {{$dotenv BASE_URL}}/repos/{{$dotenv OWNER}}/{{$dotenv REPO}}/pulls/comments/{{$dotenv COMMENT_ID}}
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+
+### Get a pull request [GET]
+GET {{$dotenv BASE_URL}}/repos/{{$dotenv OWNER}}/{{$dotenv REPO}}/pulls/{{$dotenv PULL_NUMBER}}
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+
+### Update a pull request [PATCH]
+PATCH {{$dotenv BASE_URL}}/repos/{{$dotenv OWNER}}/{{$dotenv REPO}}/pulls/{{$dotenv PULL_NUMBER}}
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+Content-Type: application/json
+{}
+
+### List review comments on a pull request [GET]
+GET {{$dotenv BASE_URL}}/repos/{{$dotenv OWNER}}/{{$dotenv REPO}}/pulls/{{$dotenv PULL_NUMBER}}/comments?direction={{$dotenv DIRECTION}}
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+
+### Create a review comment for a pull request [POST]
+POST {{$dotenv BASE_URL}}/repos/{{$dotenv OWNER}}/{{$dotenv REPO}}/pulls/{{$dotenv PULL_NUMBER}}/comments
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+Content-Type: application/json
+{}
+
+### Create a reply for a review comment [POST]
+POST {{$dotenv BASE_URL}}/repos/{{$dotenv OWNER}}/{{$dotenv REPO}}/pulls/{{$dotenv PULL_NUMBER}}/comments/{{$dotenv COMMENT_ID}}/replies
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+Content-Type: application/json
+{}
+
+### List commits on a pull request [GET]
+GET {{$dotenv BASE_URL}}/repos/{{$dotenv OWNER}}/{{$dotenv REPO}}/pulls/{{$dotenv PULL_NUMBER}}/commits
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+
+### List pull requests files [GET]
+GET {{$dotenv BASE_URL}}/repos/{{$dotenv OWNER}}/{{$dotenv REPO}}/pulls/{{$dotenv PULL_NUMBER}}/files
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+
+### Check if a pull request has been merged [GET]
+GET {{$dotenv BASE_URL}}/repos/{{$dotenv OWNER}}/{{$dotenv REPO}}/pulls/{{$dotenv PULL_NUMBER}}/merge
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+
+### Merge a pull request [PUT]
+PUT {{$dotenv BASE_URL}}/repos/{{$dotenv OWNER}}/{{$dotenv REPO}}/pulls/{{$dotenv PULL_NUMBER}}/merge
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+Content-Type: application/json
+{}
+
+### Get all requested reviewers for a pull request [GET]
+GET {{$dotenv BASE_URL}}/repos/{{$dotenv OWNER}}/{{$dotenv REPO}}/pulls/{{$dotenv PULL_NUMBER}}/requested_reviewers
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+
+### Request reviewers for a pull request [POST]
+POST {{$dotenv BASE_URL}}/repos/{{$dotenv OWNER}}/{{$dotenv REPO}}/pulls/{{$dotenv PULL_NUMBER}}/requested_reviewers
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+Content-Type: application/json
+{}
+
+### Remove requested reviewers from a pull request [DELETE]
+DELETE {{$dotenv BASE_URL}}/repos/{{$dotenv OWNER}}/{{$dotenv REPO}}/pulls/{{$dotenv PULL_NUMBER}}/requested_reviewers
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+Content-Type: application/json
+{}
+
+### List reviews for a pull request [GET]
+GET {{$dotenv BASE_URL}}/repos/{{$dotenv OWNER}}/{{$dotenv REPO}}/pulls/{{$dotenv PULL_NUMBER}}/reviews
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+
+### Create a review for a pull request [POST]
+POST {{$dotenv BASE_URL}}/repos/{{$dotenv OWNER}}/{{$dotenv REPO}}/pulls/{{$dotenv PULL_NUMBER}}/reviews
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+Content-Type: application/json
+{}
+
+### Get a review for a pull request [GET]
+GET {{$dotenv BASE_URL}}/repos/{{$dotenv OWNER}}/{{$dotenv REPO}}/pulls/{{$dotenv PULL_NUMBER}}/reviews/{{$dotenv REVIEW_ID}}
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+
+### Update a review for a pull request [PUT]
+PUT {{$dotenv BASE_URL}}/repos/{{$dotenv OWNER}}/{{$dotenv REPO}}/pulls/{{$dotenv PULL_NUMBER}}/reviews/{{$dotenv REVIEW_ID}}
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+Content-Type: application/json
+{}
+
+### Delete a pending review for a pull request [DELETE]
+DELETE {{$dotenv BASE_URL}}/repos/{{$dotenv OWNER}}/{{$dotenv REPO}}/pulls/{{$dotenv PULL_NUMBER}}/reviews/{{$dotenv REVIEW_ID}}
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+
+### List comments for a pull request review [GET]
+GET {{$dotenv BASE_URL}}/repos/{{$dotenv OWNER}}/{{$dotenv REPO}}/pulls/{{$dotenv PULL_NUMBER}}/reviews/{{$dotenv REVIEW_ID}}/comments
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+
+### Dismiss a review for a pull request [PUT]
+PUT {{$dotenv BASE_URL}}/repos/{{$dotenv OWNER}}/{{$dotenv REPO}}/pulls/{{$dotenv PULL_NUMBER}}/reviews/{{$dotenv REVIEW_ID}}/dismissals
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+Content-Type: application/json
+{}
+
+### Submit a review for a pull request [POST]
+POST {{$dotenv BASE_URL}}/repos/{{$dotenv OWNER}}/{{$dotenv REPO}}/pulls/{{$dotenv PULL_NUMBER}}/reviews/{{$dotenv REVIEW_ID}}/events
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+Content-Type: application/json
+{}
+
+### Update a pull request branch [PUT]
+PUT {{$dotenv BASE_URL}}/repos/{{$dotenv OWNER}}/{{$dotenv REPO}}/pulls/{{$dotenv PULL_NUMBER}}/update-branch
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+Content-Type: application/json
+{}

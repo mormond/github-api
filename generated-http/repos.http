@@ -1,0 +1,961 @@
+# Requests for tag: repos
+
+
+
+### Create an enterprise repository ruleset [POST]
+POST {{$dotenv BASE_URL}}/enterprises/{{$dotenv ENTERPRISE_NAME}}/rulesets
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+Content-Type: application/json
+{}
+
+### Get an enterprise repository ruleset [GET]
+GET {{$dotenv BASE_URL}}/enterprises/{{$dotenv ENTERPRISE_NAME}}/rulesets/{{$dotenv RULESET_ID}}
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+
+### Update an enterprise repository ruleset [PUT]
+PUT {{$dotenv BASE_URL}}/enterprises/{{$dotenv ENTERPRISE_NAME}}/rulesets/{{$dotenv RULESET_ID}}
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+Content-Type: application/json
+{}
+
+### Delete an enterprise repository ruleset [DELETE]
+DELETE {{$dotenv BASE_URL}}/enterprises/{{$dotenv ENTERPRISE_NAME}}/rulesets/{{$dotenv RULESET_ID}}
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+
+### List organization repositories [GET]
+GET {{$dotenv BASE_URL}}/orgs/{{$dotenv ORG_NAME}}/repos?type={{$dotenv TYPE}}&sort={{$dotenv SORT}}&direction={{$dotenv DIRECTION}}
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+
+### Create an organization repository [POST]
+POST {{$dotenv BASE_URL}}/orgs/{{$dotenv ORG_NAME}}/repos
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+Content-Type: application/json
+{}
+
+### Get all organization repository rulesets [GET]
+GET {{$dotenv BASE_URL}}/orgs/{{$dotenv ORG_NAME}}/rulesets
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+
+### Create an organization repository ruleset [POST]
+POST {{$dotenv BASE_URL}}/orgs/{{$dotenv ORG_NAME}}/rulesets
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+Content-Type: application/json
+{}
+
+### List organization rule suites [GET]
+GET {{$dotenv BASE_URL}}/orgs/{{$dotenv ORG_NAME}}/rulesets/rule-suites
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+
+### Get an organization rule suite [GET]
+GET {{$dotenv BASE_URL}}/orgs/{{$dotenv ORG_NAME}}/rulesets/rule-suites/{{$dotenv RULE_SUITE_ID}}
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+
+### Get an organization repository ruleset [GET]
+GET {{$dotenv BASE_URL}}/orgs/{{$dotenv ORG_NAME}}/rulesets/{{$dotenv RULESET_ID}}
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+
+### Update an organization repository ruleset [PUT]
+PUT {{$dotenv BASE_URL}}/orgs/{{$dotenv ORG_NAME}}/rulesets/{{$dotenv RULESET_ID}}
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+Content-Type: application/json
+{}
+
+### Delete an organization repository ruleset [DELETE]
+DELETE {{$dotenv BASE_URL}}/orgs/{{$dotenv ORG_NAME}}/rulesets/{{$dotenv RULESET_ID}}
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+
+### Get a repository [GET]
+GET {{$dotenv BASE_URL}}/repos/{{$dotenv OWNER}}/{{$dotenv REPO}}
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+
+### Update a repository [PATCH]
+PATCH {{$dotenv BASE_URL}}/repos/{{$dotenv OWNER}}/{{$dotenv REPO}}
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+Content-Type: application/json
+{}
+
+### Delete a repository [DELETE]
+DELETE {{$dotenv BASE_URL}}/repos/{{$dotenv OWNER}}/{{$dotenv REPO}}
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+
+### List repository activities [GET]
+GET {{$dotenv BASE_URL}}/repos/{{$dotenv OWNER}}/{{$dotenv REPO}}/activity?ref={{$dotenv REF}}&actor={{$dotenv ACTOR}}&time_period={{$dotenv TIME_PERIOD}}&activity_type={{$dotenv ACTIVITY_TYPE}}
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+
+### Create an attestation [POST]
+POST {{$dotenv BASE_URL}}/repos/{{$dotenv OWNER}}/{{$dotenv REPO}}/attestations
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+Content-Type: application/json
+{}
+
+### List attestations [GET]
+GET {{$dotenv BASE_URL}}/repos/{{$dotenv OWNER}}/{{$dotenv REPO}}/attestations/{{$dotenv SUBJECT_DIGEST}}?predicate_type={{$dotenv PREDICATE_TYPE}}
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+
+### Get all autolinks of a repository [GET]
+GET {{$dotenv BASE_URL}}/repos/{{$dotenv OWNER}}/{{$dotenv REPO}}/autolinks
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+
+### Create an autolink reference for a repository [POST]
+POST {{$dotenv BASE_URL}}/repos/{{$dotenv OWNER}}/{{$dotenv REPO}}/autolinks
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+Content-Type: application/json
+{}
+
+### Get an autolink reference of a repository [GET]
+GET {{$dotenv BASE_URL}}/repos/{{$dotenv OWNER}}/{{$dotenv REPO}}/autolinks/{{$dotenv AUTOLINK_ID}}
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+
+### Delete an autolink reference from a repository [DELETE]
+DELETE {{$dotenv BASE_URL}}/repos/{{$dotenv OWNER}}/{{$dotenv REPO}}/autolinks/{{$dotenv AUTOLINK_ID}}
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+
+### Check if Dependabot security updates are enabled for a repository [GET]
+GET {{$dotenv BASE_URL}}/repos/{{$dotenv OWNER}}/{{$dotenv REPO}}/automated-security-fixes
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+
+### Enable Dependabot security updates [PUT]
+PUT {{$dotenv BASE_URL}}/repos/{{$dotenv OWNER}}/{{$dotenv REPO}}/automated-security-fixes
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+
+### Disable Dependabot security updates [DELETE]
+DELETE {{$dotenv BASE_URL}}/repos/{{$dotenv OWNER}}/{{$dotenv REPO}}/automated-security-fixes
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+
+### List branches [GET]
+GET {{$dotenv BASE_URL}}/repos/{{$dotenv OWNER}}/{{$dotenv REPO}}/branches?protected={{$dotenv PROTECTED}}
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+
+### Get a branch [GET]
+GET {{$dotenv BASE_URL}}/repos/{{$dotenv OWNER}}/{{$dotenv REPO}}/branches/{{$dotenv BRANCH}}
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+
+### Get branch protection [GET]
+GET {{$dotenv BASE_URL}}/repos/{{$dotenv OWNER}}/{{$dotenv REPO}}/branches/{{$dotenv BRANCH}}/protection
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+
+### Update branch protection [PUT]
+PUT {{$dotenv BASE_URL}}/repos/{{$dotenv OWNER}}/{{$dotenv REPO}}/branches/{{$dotenv BRANCH}}/protection
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+Content-Type: application/json
+{}
+
+### Delete branch protection [DELETE]
+DELETE {{$dotenv BASE_URL}}/repos/{{$dotenv OWNER}}/{{$dotenv REPO}}/branches/{{$dotenv BRANCH}}/protection
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+
+### Get admin branch protection [GET]
+GET {{$dotenv BASE_URL}}/repos/{{$dotenv OWNER}}/{{$dotenv REPO}}/branches/{{$dotenv BRANCH}}/protection/enforce_admins
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+
+### Set admin branch protection [POST]
+POST {{$dotenv BASE_URL}}/repos/{{$dotenv OWNER}}/{{$dotenv REPO}}/branches/{{$dotenv BRANCH}}/protection/enforce_admins
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+
+### Delete admin branch protection [DELETE]
+DELETE {{$dotenv BASE_URL}}/repos/{{$dotenv OWNER}}/{{$dotenv REPO}}/branches/{{$dotenv BRANCH}}/protection/enforce_admins
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+
+### Get pull request review protection [GET]
+GET {{$dotenv BASE_URL}}/repos/{{$dotenv OWNER}}/{{$dotenv REPO}}/branches/{{$dotenv BRANCH}}/protection/required_pull_request_reviews
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+
+### Update pull request review protection [PATCH]
+PATCH {{$dotenv BASE_URL}}/repos/{{$dotenv OWNER}}/{{$dotenv REPO}}/branches/{{$dotenv BRANCH}}/protection/required_pull_request_reviews
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+Content-Type: application/json
+{}
+
+### Delete pull request review protection [DELETE]
+DELETE {{$dotenv BASE_URL}}/repos/{{$dotenv OWNER}}/{{$dotenv REPO}}/branches/{{$dotenv BRANCH}}/protection/required_pull_request_reviews
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+
+### Get commit signature protection [GET]
+GET {{$dotenv BASE_URL}}/repos/{{$dotenv OWNER}}/{{$dotenv REPO}}/branches/{{$dotenv BRANCH}}/protection/required_signatures
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+
+### Create commit signature protection [POST]
+POST {{$dotenv BASE_URL}}/repos/{{$dotenv OWNER}}/{{$dotenv REPO}}/branches/{{$dotenv BRANCH}}/protection/required_signatures
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+
+### Delete commit signature protection [DELETE]
+DELETE {{$dotenv BASE_URL}}/repos/{{$dotenv OWNER}}/{{$dotenv REPO}}/branches/{{$dotenv BRANCH}}/protection/required_signatures
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+
+### Get status checks protection [GET]
+GET {{$dotenv BASE_URL}}/repos/{{$dotenv OWNER}}/{{$dotenv REPO}}/branches/{{$dotenv BRANCH}}/protection/required_status_checks
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+
+### Update status check protection [PATCH]
+PATCH {{$dotenv BASE_URL}}/repos/{{$dotenv OWNER}}/{{$dotenv REPO}}/branches/{{$dotenv BRANCH}}/protection/required_status_checks
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+Content-Type: application/json
+{}
+
+### Remove status check protection [DELETE]
+DELETE {{$dotenv BASE_URL}}/repos/{{$dotenv OWNER}}/{{$dotenv REPO}}/branches/{{$dotenv BRANCH}}/protection/required_status_checks
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+
+### Get all status check contexts [GET]
+GET {{$dotenv BASE_URL}}/repos/{{$dotenv OWNER}}/{{$dotenv REPO}}/branches/{{$dotenv BRANCH}}/protection/required_status_checks/contexts
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+
+### Add status check contexts [POST]
+POST {{$dotenv BASE_URL}}/repos/{{$dotenv OWNER}}/{{$dotenv REPO}}/branches/{{$dotenv BRANCH}}/protection/required_status_checks/contexts
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+Content-Type: application/json
+{}
+
+### Set status check contexts [PUT]
+PUT {{$dotenv BASE_URL}}/repos/{{$dotenv OWNER}}/{{$dotenv REPO}}/branches/{{$dotenv BRANCH}}/protection/required_status_checks/contexts
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+Content-Type: application/json
+{}
+
+### Remove status check contexts [DELETE]
+DELETE {{$dotenv BASE_URL}}/repos/{{$dotenv OWNER}}/{{$dotenv REPO}}/branches/{{$dotenv BRANCH}}/protection/required_status_checks/contexts
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+Content-Type: application/json
+{}
+
+### Get access restrictions [GET]
+GET {{$dotenv BASE_URL}}/repos/{{$dotenv OWNER}}/{{$dotenv REPO}}/branches/{{$dotenv BRANCH}}/protection/restrictions
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+
+### Delete access restrictions [DELETE]
+DELETE {{$dotenv BASE_URL}}/repos/{{$dotenv OWNER}}/{{$dotenv REPO}}/branches/{{$dotenv BRANCH}}/protection/restrictions
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+
+### Get apps with access to the protected branch [GET]
+GET {{$dotenv BASE_URL}}/repos/{{$dotenv OWNER}}/{{$dotenv REPO}}/branches/{{$dotenv BRANCH}}/protection/restrictions/apps
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+
+### Add app access restrictions [POST]
+POST {{$dotenv BASE_URL}}/repos/{{$dotenv OWNER}}/{{$dotenv REPO}}/branches/{{$dotenv BRANCH}}/protection/restrictions/apps
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+Content-Type: application/json
+{}
+
+### Set app access restrictions [PUT]
+PUT {{$dotenv BASE_URL}}/repos/{{$dotenv OWNER}}/{{$dotenv REPO}}/branches/{{$dotenv BRANCH}}/protection/restrictions/apps
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+Content-Type: application/json
+{}
+
+### Remove app access restrictions [DELETE]
+DELETE {{$dotenv BASE_URL}}/repos/{{$dotenv OWNER}}/{{$dotenv REPO}}/branches/{{$dotenv BRANCH}}/protection/restrictions/apps
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+Content-Type: application/json
+{}
+
+### Get teams with access to the protected branch [GET]
+GET {{$dotenv BASE_URL}}/repos/{{$dotenv OWNER}}/{{$dotenv REPO}}/branches/{{$dotenv BRANCH}}/protection/restrictions/teams
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+
+### Add team access restrictions [POST]
+POST {{$dotenv BASE_URL}}/repos/{{$dotenv OWNER}}/{{$dotenv REPO}}/branches/{{$dotenv BRANCH}}/protection/restrictions/teams
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+Content-Type: application/json
+{}
+
+### Set team access restrictions [PUT]
+PUT {{$dotenv BASE_URL}}/repos/{{$dotenv OWNER}}/{{$dotenv REPO}}/branches/{{$dotenv BRANCH}}/protection/restrictions/teams
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+Content-Type: application/json
+{}
+
+### Remove team access restrictions [DELETE]
+DELETE {{$dotenv BASE_URL}}/repos/{{$dotenv OWNER}}/{{$dotenv REPO}}/branches/{{$dotenv BRANCH}}/protection/restrictions/teams
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+Content-Type: application/json
+{}
+
+### Get users with access to the protected branch [GET]
+GET {{$dotenv BASE_URL}}/repos/{{$dotenv OWNER}}/{{$dotenv REPO}}/branches/{{$dotenv BRANCH}}/protection/restrictions/users
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+
+### Add user access restrictions [POST]
+POST {{$dotenv BASE_URL}}/repos/{{$dotenv OWNER}}/{{$dotenv REPO}}/branches/{{$dotenv BRANCH}}/protection/restrictions/users
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+Content-Type: application/json
+{}
+
+### Set user access restrictions [PUT]
+PUT {{$dotenv BASE_URL}}/repos/{{$dotenv OWNER}}/{{$dotenv REPO}}/branches/{{$dotenv BRANCH}}/protection/restrictions/users
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+Content-Type: application/json
+{}
+
+### Remove user access restrictions [DELETE]
+DELETE {{$dotenv BASE_URL}}/repos/{{$dotenv OWNER}}/{{$dotenv REPO}}/branches/{{$dotenv BRANCH}}/protection/restrictions/users
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+Content-Type: application/json
+{}
+
+### Rename a branch [POST]
+POST {{$dotenv BASE_URL}}/repos/{{$dotenv OWNER}}/{{$dotenv REPO}}/branches/{{$dotenv BRANCH}}/rename
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+Content-Type: application/json
+{}
+
+### List repository push rule bypass requests [GET]
+GET {{$dotenv BASE_URL}}/repos/{{$dotenv OWNER}}/{{$dotenv REPO}}/bypass-requests/push-rules
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+
+### Get a repository push bypass request [GET]
+GET {{$dotenv BASE_URL}}/repos/{{$dotenv OWNER}}/{{$dotenv REPO}}/bypass-requests/push-rules/{{$dotenv BYPASS_REQUEST_NUMBER}}
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+
+### List CODEOWNERS errors [GET]
+GET {{$dotenv BASE_URL}}/repos/{{$dotenv OWNER}}/{{$dotenv REPO}}/codeowners/errors?ref={{$dotenv REF}}
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+
+### List repository collaborators [GET]
+GET {{$dotenv BASE_URL}}/repos/{{$dotenv OWNER}}/{{$dotenv REPO}}/collaborators?affiliation={{$dotenv AFFILIATION}}&permission={{$dotenv PERMISSION}}
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+
+### Check if a user is a repository collaborator [GET]
+GET {{$dotenv BASE_URL}}/repos/{{$dotenv OWNER}}/{{$dotenv REPO}}/collaborators/{{$dotenv USERNAME}}
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+
+### Add a repository collaborator [PUT]
+PUT {{$dotenv BASE_URL}}/repos/{{$dotenv OWNER}}/{{$dotenv REPO}}/collaborators/{{$dotenv USERNAME}}
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+Content-Type: application/json
+{}
+
+### Remove a repository collaborator [DELETE]
+DELETE {{$dotenv BASE_URL}}/repos/{{$dotenv OWNER}}/{{$dotenv REPO}}/collaborators/{{$dotenv USERNAME}}
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+
+### Get repository permissions for a user [GET]
+GET {{$dotenv BASE_URL}}/repos/{{$dotenv OWNER}}/{{$dotenv REPO}}/collaborators/{{$dotenv USERNAME}}/permission
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+
+### List commit comments for a repository [GET]
+GET {{$dotenv BASE_URL}}/repos/{{$dotenv OWNER}}/{{$dotenv REPO}}/comments
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+
+### Get a commit comment [GET]
+GET {{$dotenv BASE_URL}}/repos/{{$dotenv OWNER}}/{{$dotenv REPO}}/comments/{{$dotenv COMMENT_ID}}
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+
+### Update a commit comment [PATCH]
+PATCH {{$dotenv BASE_URL}}/repos/{{$dotenv OWNER}}/{{$dotenv REPO}}/comments/{{$dotenv COMMENT_ID}}
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+Content-Type: application/json
+{}
+
+### Delete a commit comment [DELETE]
+DELETE {{$dotenv BASE_URL}}/repos/{{$dotenv OWNER}}/{{$dotenv REPO}}/comments/{{$dotenv COMMENT_ID}}
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+
+### List commits [GET]
+GET {{$dotenv BASE_URL}}/repos/{{$dotenv OWNER}}/{{$dotenv REPO}}/commits?sha={{$dotenv SHA}}&path={{$dotenv PATH}}&author={{$dotenv AUTHOR}}&committer={{$dotenv COMMITTER}}&since={{$dotenv SINCE}}&until={{$dotenv UNTIL}}
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+
+### List branches for HEAD commit [GET]
+GET {{$dotenv BASE_URL}}/repos/{{$dotenv OWNER}}/{{$dotenv REPO}}/commits/{{$dotenv COMMIT_SHA}}/branches-where-head
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+
+### List commit comments [GET]
+GET {{$dotenv BASE_URL}}/repos/{{$dotenv OWNER}}/{{$dotenv REPO}}/commits/{{$dotenv COMMIT_SHA}}/comments
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+
+### Create a commit comment [POST]
+POST {{$dotenv BASE_URL}}/repos/{{$dotenv OWNER}}/{{$dotenv REPO}}/commits/{{$dotenv COMMIT_SHA}}/comments
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+Content-Type: application/json
+{}
+
+### List pull requests associated with a commit [GET]
+GET {{$dotenv BASE_URL}}/repos/{{$dotenv OWNER}}/{{$dotenv REPO}}/commits/{{$dotenv COMMIT_SHA}}/pulls
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+
+### Get a commit [GET]
+GET {{$dotenv BASE_URL}}/repos/{{$dotenv OWNER}}/{{$dotenv REPO}}/commits/{{$dotenv REF}}
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+
+### Get the combined status for a specific reference [GET]
+GET {{$dotenv BASE_URL}}/repos/{{$dotenv OWNER}}/{{$dotenv REPO}}/commits/{{$dotenv REF}}/status
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+
+### List commit statuses for a reference [GET]
+GET {{$dotenv BASE_URL}}/repos/{{$dotenv OWNER}}/{{$dotenv REPO}}/commits/{{$dotenv REF}}/statuses
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+
+### Get community profile metrics [GET]
+GET {{$dotenv BASE_URL}}/repos/{{$dotenv OWNER}}/{{$dotenv REPO}}/community/profile
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+
+### Compare two commits [GET]
+GET {{$dotenv BASE_URL}}/repos/{{$dotenv OWNER}}/{{$dotenv REPO}}/compare/{{$dotenv BASEHEAD}}
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+
+### Get repository content [GET]
+GET {{$dotenv BASE_URL}}/repos/{{$dotenv OWNER}}/{{$dotenv REPO}}/contents/{{$dotenv PATH}}?ref={{$dotenv REF}}
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+
+### Create or update file contents [PUT]
+PUT {{$dotenv BASE_URL}}/repos/{{$dotenv OWNER}}/{{$dotenv REPO}}/contents/{{$dotenv PATH}}
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+Content-Type: application/json
+{}
+
+### Delete a file [DELETE]
+DELETE {{$dotenv BASE_URL}}/repos/{{$dotenv OWNER}}/{{$dotenv REPO}}/contents/{{$dotenv PATH}}
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+Content-Type: application/json
+{}
+
+### List repository contributors [GET]
+GET {{$dotenv BASE_URL}}/repos/{{$dotenv OWNER}}/{{$dotenv REPO}}/contributors?anon={{$dotenv ANON}}
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+
+### List deployments [GET]
+GET {{$dotenv BASE_URL}}/repos/{{$dotenv OWNER}}/{{$dotenv REPO}}/deployments?sha={{$dotenv SHA}}&ref={{$dotenv REF}}&task={{$dotenv TASK}}&environment={{$dotenv ENVIRONMENT}}
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+
+### Create a deployment [POST]
+POST {{$dotenv BASE_URL}}/repos/{{$dotenv OWNER}}/{{$dotenv REPO}}/deployments
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+Content-Type: application/json
+{}
+
+### Get a deployment [GET]
+GET {{$dotenv BASE_URL}}/repos/{{$dotenv OWNER}}/{{$dotenv REPO}}/deployments/{{$dotenv DEPLOYMENT_ID}}
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+
+### Delete a deployment [DELETE]
+DELETE {{$dotenv BASE_URL}}/repos/{{$dotenv OWNER}}/{{$dotenv REPO}}/deployments/{{$dotenv DEPLOYMENT_ID}}
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+
+### List deployment statuses [GET]
+GET {{$dotenv BASE_URL}}/repos/{{$dotenv OWNER}}/{{$dotenv REPO}}/deployments/{{$dotenv DEPLOYMENT_ID}}/statuses
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+
+### Create a deployment status [POST]
+POST {{$dotenv BASE_URL}}/repos/{{$dotenv OWNER}}/{{$dotenv REPO}}/deployments/{{$dotenv DEPLOYMENT_ID}}/statuses
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+Content-Type: application/json
+{}
+
+### Get a deployment status [GET]
+GET {{$dotenv BASE_URL}}/repos/{{$dotenv OWNER}}/{{$dotenv REPO}}/deployments/{{$dotenv DEPLOYMENT_ID}}/statuses/{{$dotenv STATUS_ID}}
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+
+### Create a repository dispatch event [POST]
+POST {{$dotenv BASE_URL}}/repos/{{$dotenv OWNER}}/{{$dotenv REPO}}/dispatches
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+Content-Type: application/json
+{}
+
+### List environments [GET]
+GET {{$dotenv BASE_URL}}/repos/{{$dotenv OWNER}}/{{$dotenv REPO}}/environments
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+
+### Get an environment [GET]
+GET {{$dotenv BASE_URL}}/repos/{{$dotenv OWNER}}/{{$dotenv REPO}}/environments/{{$dotenv ENVIRONMENT_NAME}}
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+
+### Create or update an environment [PUT]
+PUT {{$dotenv BASE_URL}}/repos/{{$dotenv OWNER}}/{{$dotenv REPO}}/environments/{{$dotenv ENVIRONMENT_NAME}}
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+Content-Type: application/json
+{}
+
+### Delete an environment [DELETE]
+DELETE {{$dotenv BASE_URL}}/repos/{{$dotenv OWNER}}/{{$dotenv REPO}}/environments/{{$dotenv ENVIRONMENT_NAME}}
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+
+### List deployment branch policies [GET]
+GET {{$dotenv BASE_URL}}/repos/{{$dotenv OWNER}}/{{$dotenv REPO}}/environments/{{$dotenv ENVIRONMENT_NAME}}/deployment-branch-policies
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+
+### Create a deployment branch policy [POST]
+POST {{$dotenv BASE_URL}}/repos/{{$dotenv OWNER}}/{{$dotenv REPO}}/environments/{{$dotenv ENVIRONMENT_NAME}}/deployment-branch-policies
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+Content-Type: application/json
+{}
+
+### Get a deployment branch policy [GET]
+GET {{$dotenv BASE_URL}}/repos/{{$dotenv OWNER}}/{{$dotenv REPO}}/environments/{{$dotenv ENVIRONMENT_NAME}}/deployment-branch-policies/{{$dotenv BRANCH_POLICY_ID}}
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+
+### Update a deployment branch policy [PUT]
+PUT {{$dotenv BASE_URL}}/repos/{{$dotenv OWNER}}/{{$dotenv REPO}}/environments/{{$dotenv ENVIRONMENT_NAME}}/deployment-branch-policies/{{$dotenv BRANCH_POLICY_ID}}
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+Content-Type: application/json
+{}
+
+### Delete a deployment branch policy [DELETE]
+DELETE {{$dotenv BASE_URL}}/repos/{{$dotenv OWNER}}/{{$dotenv REPO}}/environments/{{$dotenv ENVIRONMENT_NAME}}/deployment-branch-policies/{{$dotenv BRANCH_POLICY_ID}}
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+
+### Get all deployment protection rules for an environment [GET]
+GET {{$dotenv BASE_URL}}/repos/{{$dotenv OWNER}}/{{$dotenv REPO}}/environments/{{$dotenv ENVIRONMENT_NAME}}/deployment_protection_rules
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+
+### Create a custom deployment protection rule on an environment [POST]
+POST {{$dotenv BASE_URL}}/repos/{{$dotenv OWNER}}/{{$dotenv REPO}}/environments/{{$dotenv ENVIRONMENT_NAME}}/deployment_protection_rules
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+Content-Type: application/json
+{}
+
+### List custom deployment rule integrations available for an environment [GET]
+GET {{$dotenv BASE_URL}}/repos/{{$dotenv OWNER}}/{{$dotenv REPO}}/environments/{{$dotenv ENVIRONMENT_NAME}}/deployment_protection_rules/apps
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+
+### Get a custom deployment protection rule [GET]
+GET {{$dotenv BASE_URL}}/repos/{{$dotenv OWNER}}/{{$dotenv REPO}}/environments/{{$dotenv ENVIRONMENT_NAME}}/deployment_protection_rules/{{$dotenv PROTECTION_RULE_ID}}
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+
+### Disable a custom protection rule for an environment [DELETE]
+DELETE {{$dotenv BASE_URL}}/repos/{{$dotenv OWNER}}/{{$dotenv REPO}}/environments/{{$dotenv ENVIRONMENT_NAME}}/deployment_protection_rules/{{$dotenv PROTECTION_RULE_ID}}
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+
+### List forks [GET]
+GET {{$dotenv BASE_URL}}/repos/{{$dotenv OWNER}}/{{$dotenv REPO}}/forks?sort={{$dotenv SORT}}
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+
+### Create a fork [POST]
+POST {{$dotenv BASE_URL}}/repos/{{$dotenv OWNER}}/{{$dotenv REPO}}/forks
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+Content-Type: application/json
+{}
+
+### List repository webhooks [GET]
+GET {{$dotenv BASE_URL}}/repos/{{$dotenv OWNER}}/{{$dotenv REPO}}/hooks
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+
+### Create a repository webhook [POST]
+POST {{$dotenv BASE_URL}}/repos/{{$dotenv OWNER}}/{{$dotenv REPO}}/hooks
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+Content-Type: application/json
+{}
+
+### Get a repository webhook [GET]
+GET {{$dotenv BASE_URL}}/repos/{{$dotenv OWNER}}/{{$dotenv REPO}}/hooks/{{$dotenv HOOK_ID}}
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+
+### Update a repository webhook [PATCH]
+PATCH {{$dotenv BASE_URL}}/repos/{{$dotenv OWNER}}/{{$dotenv REPO}}/hooks/{{$dotenv HOOK_ID}}
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+Content-Type: application/json
+{}
+
+### Delete a repository webhook [DELETE]
+DELETE {{$dotenv BASE_URL}}/repos/{{$dotenv OWNER}}/{{$dotenv REPO}}/hooks/{{$dotenv HOOK_ID}}
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+
+### Get a webhook configuration for a repository [GET]
+GET {{$dotenv BASE_URL}}/repos/{{$dotenv OWNER}}/{{$dotenv REPO}}/hooks/{{$dotenv HOOK_ID}}/config
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+
+### Update a webhook configuration for a repository [PATCH]
+PATCH {{$dotenv BASE_URL}}/repos/{{$dotenv OWNER}}/{{$dotenv REPO}}/hooks/{{$dotenv HOOK_ID}}/config
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+Content-Type: application/json
+{}
+
+### List deliveries for a repository webhook [GET]
+GET {{$dotenv BASE_URL}}/repos/{{$dotenv OWNER}}/{{$dotenv REPO}}/hooks/{{$dotenv HOOK_ID}}/deliveries
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+
+### Get a delivery for a repository webhook [GET]
+GET {{$dotenv BASE_URL}}/repos/{{$dotenv OWNER}}/{{$dotenv REPO}}/hooks/{{$dotenv HOOK_ID}}/deliveries/{{$dotenv DELIVERY_ID}}
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+
+### Redeliver a delivery for a repository webhook [POST]
+POST {{$dotenv BASE_URL}}/repos/{{$dotenv OWNER}}/{{$dotenv REPO}}/hooks/{{$dotenv HOOK_ID}}/deliveries/{{$dotenv DELIVERY_ID}}/attempts
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+
+### Ping a repository webhook [POST]
+POST {{$dotenv BASE_URL}}/repos/{{$dotenv OWNER}}/{{$dotenv REPO}}/hooks/{{$dotenv HOOK_ID}}/pings
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+
+### Test the push repository webhook [POST]
+POST {{$dotenv BASE_URL}}/repos/{{$dotenv OWNER}}/{{$dotenv REPO}}/hooks/{{$dotenv HOOK_ID}}/tests
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+
+### List repository invitations [GET]
+GET {{$dotenv BASE_URL}}/repos/{{$dotenv OWNER}}/{{$dotenv REPO}}/invitations
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+
+### Update a repository invitation [PATCH]
+PATCH {{$dotenv BASE_URL}}/repos/{{$dotenv OWNER}}/{{$dotenv REPO}}/invitations/{{$dotenv INVITATION_ID}}
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+Content-Type: application/json
+{}
+
+### Delete a repository invitation [DELETE]
+DELETE {{$dotenv BASE_URL}}/repos/{{$dotenv OWNER}}/{{$dotenv REPO}}/invitations/{{$dotenv INVITATION_ID}}
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+
+### List deploy keys [GET]
+GET {{$dotenv BASE_URL}}/repos/{{$dotenv OWNER}}/{{$dotenv REPO}}/keys
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+
+### Create a deploy key [POST]
+POST {{$dotenv BASE_URL}}/repos/{{$dotenv OWNER}}/{{$dotenv REPO}}/keys
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+Content-Type: application/json
+{}
+
+### Get a deploy key [GET]
+GET {{$dotenv BASE_URL}}/repos/{{$dotenv OWNER}}/{{$dotenv REPO}}/keys/{{$dotenv KEY_ID}}
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+
+### Delete a deploy key [DELETE]
+DELETE {{$dotenv BASE_URL}}/repos/{{$dotenv OWNER}}/{{$dotenv REPO}}/keys/{{$dotenv KEY_ID}}
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+
+### List repository languages [GET]
+GET {{$dotenv BASE_URL}}/repos/{{$dotenv OWNER}}/{{$dotenv REPO}}/languages
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+
+### Enable Git LFS for a repository [PUT]
+PUT {{$dotenv BASE_URL}}/repos/{{$dotenv OWNER}}/{{$dotenv REPO}}/lfs
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+
+### Disable Git LFS for a repository [DELETE]
+DELETE {{$dotenv BASE_URL}}/repos/{{$dotenv OWNER}}/{{$dotenv REPO}}/lfs
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+
+### Sync a fork branch with the upstream repository [POST]
+POST {{$dotenv BASE_URL}}/repos/{{$dotenv OWNER}}/{{$dotenv REPO}}/merge-upstream
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+Content-Type: application/json
+{}
+
+### Merge a branch [POST]
+POST {{$dotenv BASE_URL}}/repos/{{$dotenv OWNER}}/{{$dotenv REPO}}/merges
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+Content-Type: application/json
+{}
+
+### Get a GitHub Enterprise Cloud Pages site [GET]
+GET {{$dotenv BASE_URL}}/repos/{{$dotenv OWNER}}/{{$dotenv REPO}}/pages
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+
+### Create a GitHub Enterprise Cloud Pages site [POST]
+POST {{$dotenv BASE_URL}}/repos/{{$dotenv OWNER}}/{{$dotenv REPO}}/pages
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+Content-Type: application/json
+{}
+
+### Update information about a GitHub Enterprise Cloud Pages site [PUT]
+PUT {{$dotenv BASE_URL}}/repos/{{$dotenv OWNER}}/{{$dotenv REPO}}/pages
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+Content-Type: application/json
+{}
+
+### Delete a GitHub Enterprise Cloud Pages site [DELETE]
+DELETE {{$dotenv BASE_URL}}/repos/{{$dotenv OWNER}}/{{$dotenv REPO}}/pages
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+
+### List GitHub Enterprise Cloud Pages builds [GET]
+GET {{$dotenv BASE_URL}}/repos/{{$dotenv OWNER}}/{{$dotenv REPO}}/pages/builds
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+
+### Request a GitHub Enterprise Cloud Pages build [POST]
+POST {{$dotenv BASE_URL}}/repos/{{$dotenv OWNER}}/{{$dotenv REPO}}/pages/builds
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+
+### Get latest Pages build [GET]
+GET {{$dotenv BASE_URL}}/repos/{{$dotenv OWNER}}/{{$dotenv REPO}}/pages/builds/latest
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+
+### Get GitHub Enterprise Cloud Pages build [GET]
+GET {{$dotenv BASE_URL}}/repos/{{$dotenv OWNER}}/{{$dotenv REPO}}/pages/builds/{{$dotenv BUILD_ID}}
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+
+### Create a GitHub Pages deployment [POST]
+POST {{$dotenv BASE_URL}}/repos/{{$dotenv OWNER}}/{{$dotenv REPO}}/pages/deployments
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+Content-Type: application/json
+{}
+
+### Get the status of a GitHub Pages deployment [GET]
+GET {{$dotenv BASE_URL}}/repos/{{$dotenv OWNER}}/{{$dotenv REPO}}/pages/deployments/{{$dotenv PAGES_DEPLOYMENT_ID}}
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+
+### Cancel a GitHub Pages deployment [POST]
+POST {{$dotenv BASE_URL}}/repos/{{$dotenv OWNER}}/{{$dotenv REPO}}/pages/deployments/{{$dotenv PAGES_DEPLOYMENT_ID}}/cancel
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+
+### Get a DNS health check for GitHub Pages [GET]
+GET {{$dotenv BASE_URL}}/repos/{{$dotenv OWNER}}/{{$dotenv REPO}}/pages/health
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+
+### Check if private vulnerability reporting is enabled for a repository [GET]
+GET {{$dotenv BASE_URL}}/repos/{{$dotenv OWNER}}/{{$dotenv REPO}}/private-vulnerability-reporting
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+
+### Enable private vulnerability reporting for a repository [PUT]
+PUT {{$dotenv BASE_URL}}/repos/{{$dotenv OWNER}}/{{$dotenv REPO}}/private-vulnerability-reporting
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+
+### Disable private vulnerability reporting for a repository [DELETE]
+DELETE {{$dotenv BASE_URL}}/repos/{{$dotenv OWNER}}/{{$dotenv REPO}}/private-vulnerability-reporting
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+
+### Get all custom property values for a repository [GET]
+GET {{$dotenv BASE_URL}}/repos/{{$dotenv OWNER}}/{{$dotenv REPO}}/properties/values
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+
+### Create or update custom property values for a repository [PATCH]
+PATCH {{$dotenv BASE_URL}}/repos/{{$dotenv OWNER}}/{{$dotenv REPO}}/properties/values
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+Content-Type: application/json
+{}
+
+### Get a repository README [GET]
+GET {{$dotenv BASE_URL}}/repos/{{$dotenv OWNER}}/{{$dotenv REPO}}/readme?ref={{$dotenv REF}}
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+
+### Get a repository README for a directory [GET]
+GET {{$dotenv BASE_URL}}/repos/{{$dotenv OWNER}}/{{$dotenv REPO}}/readme/{{$dotenv DIR}}?ref={{$dotenv REF}}
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+
+### List releases [GET]
+GET {{$dotenv BASE_URL}}/repos/{{$dotenv OWNER}}/{{$dotenv REPO}}/releases
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+
+### Create a release [POST]
+POST {{$dotenv BASE_URL}}/repos/{{$dotenv OWNER}}/{{$dotenv REPO}}/releases
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+Content-Type: application/json
+{}
+
+### Get a release asset [GET]
+GET {{$dotenv BASE_URL}}/repos/{{$dotenv OWNER}}/{{$dotenv REPO}}/releases/assets/{{$dotenv ASSET_ID}}
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+
+### Update a release asset [PATCH]
+PATCH {{$dotenv BASE_URL}}/repos/{{$dotenv OWNER}}/{{$dotenv REPO}}/releases/assets/{{$dotenv ASSET_ID}}
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+Content-Type: application/json
+{}
+
+### Delete a release asset [DELETE]
+DELETE {{$dotenv BASE_URL}}/repos/{{$dotenv OWNER}}/{{$dotenv REPO}}/releases/assets/{{$dotenv ASSET_ID}}
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+
+### Generate release notes content for a release [POST]
+POST {{$dotenv BASE_URL}}/repos/{{$dotenv OWNER}}/{{$dotenv REPO}}/releases/generate-notes
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+Content-Type: application/json
+{}
+
+### Get the latest release [GET]
+GET {{$dotenv BASE_URL}}/repos/{{$dotenv OWNER}}/{{$dotenv REPO}}/releases/latest
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+
+### Get a release by tag name [GET]
+GET {{$dotenv BASE_URL}}/repos/{{$dotenv OWNER}}/{{$dotenv REPO}}/releases/tags/{{$dotenv TAG}}
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+
+### Get a release [GET]
+GET {{$dotenv BASE_URL}}/repos/{{$dotenv OWNER}}/{{$dotenv REPO}}/releases/{{$dotenv RELEASE_ID}}
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+
+### Update a release [PATCH]
+PATCH {{$dotenv BASE_URL}}/repos/{{$dotenv OWNER}}/{{$dotenv REPO}}/releases/{{$dotenv RELEASE_ID}}
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+Content-Type: application/json
+{}
+
+### Delete a release [DELETE]
+DELETE {{$dotenv BASE_URL}}/repos/{{$dotenv OWNER}}/{{$dotenv REPO}}/releases/{{$dotenv RELEASE_ID}}
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+
+### List release assets [GET]
+GET {{$dotenv BASE_URL}}/repos/{{$dotenv OWNER}}/{{$dotenv REPO}}/releases/{{$dotenv RELEASE_ID}}/assets
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+
+### Upload a release asset [POST]
+POST {{$dotenv BASE_URL}}/repos/{{$dotenv OWNER}}/{{$dotenv REPO}}/releases/{{$dotenv RELEASE_ID}}/assets?name={{$dotenv NAME}}&label={{$dotenv LABEL}}
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+Content-Type: application/json
+{}
+
+### Get rules for a branch [GET]
+GET {{$dotenv BASE_URL}}/repos/{{$dotenv OWNER}}/{{$dotenv REPO}}/rules/branches/{{$dotenv BRANCH}}
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+
+### Get all repository rulesets [GET]
+GET {{$dotenv BASE_URL}}/repos/{{$dotenv OWNER}}/{{$dotenv REPO}}/rulesets?includes_parents={{$dotenv INCLUDES_PARENTS}}
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+
+### Create a repository ruleset [POST]
+POST {{$dotenv BASE_URL}}/repos/{{$dotenv OWNER}}/{{$dotenv REPO}}/rulesets
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+Content-Type: application/json
+{}
+
+### List repository rule suites [GET]
+GET {{$dotenv BASE_URL}}/repos/{{$dotenv OWNER}}/{{$dotenv REPO}}/rulesets/rule-suites
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+
+### Get a repository rule suite [GET]
+GET {{$dotenv BASE_URL}}/repos/{{$dotenv OWNER}}/{{$dotenv REPO}}/rulesets/rule-suites/{{$dotenv RULE_SUITE_ID}}
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+
+### Get a repository ruleset [GET]
+GET {{$dotenv BASE_URL}}/repos/{{$dotenv OWNER}}/{{$dotenv REPO}}/rulesets/{{$dotenv RULESET_ID}}?includes_parents={{$dotenv INCLUDES_PARENTS}}
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+
+### Update a repository ruleset [PUT]
+PUT {{$dotenv BASE_URL}}/repos/{{$dotenv OWNER}}/{{$dotenv REPO}}/rulesets/{{$dotenv RULESET_ID}}
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+Content-Type: application/json
+{}
+
+### Delete a repository ruleset [DELETE]
+DELETE {{$dotenv BASE_URL}}/repos/{{$dotenv OWNER}}/{{$dotenv REPO}}/rulesets/{{$dotenv RULESET_ID}}
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+
+### Get repository ruleset history [GET]
+GET {{$dotenv BASE_URL}}/repos/{{$dotenv OWNER}}/{{$dotenv REPO}}/rulesets/{{$dotenv RULESET_ID}}/history
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+
+### Get repository ruleset version [GET]
+GET {{$dotenv BASE_URL}}/repos/{{$dotenv OWNER}}/{{$dotenv REPO}}/rulesets/{{$dotenv RULESET_ID}}/history/{{$dotenv VERSION_ID}}
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+
+### Get the weekly commit activity [GET]
+GET {{$dotenv BASE_URL}}/repos/{{$dotenv OWNER}}/{{$dotenv REPO}}/stats/code_frequency
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+
+### Get the last year of commit activity [GET]
+GET {{$dotenv BASE_URL}}/repos/{{$dotenv OWNER}}/{{$dotenv REPO}}/stats/commit_activity
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+
+### Get all contributor commit activity [GET]
+GET {{$dotenv BASE_URL}}/repos/{{$dotenv OWNER}}/{{$dotenv REPO}}/stats/contributors
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+
+### Get the weekly commit count [GET]
+GET {{$dotenv BASE_URL}}/repos/{{$dotenv OWNER}}/{{$dotenv REPO}}/stats/participation
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+
+### Get the hourly commit count for each day [GET]
+GET {{$dotenv BASE_URL}}/repos/{{$dotenv OWNER}}/{{$dotenv REPO}}/stats/punch_card
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+
+### Create a commit status [POST]
+POST {{$dotenv BASE_URL}}/repos/{{$dotenv OWNER}}/{{$dotenv REPO}}/statuses/{{$dotenv SHA}}
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+Content-Type: application/json
+{}
+
+### List repository tags [GET]
+GET {{$dotenv BASE_URL}}/repos/{{$dotenv OWNER}}/{{$dotenv REPO}}/tags
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+
+### Closing down - List tag protection states for a repository [GET]
+GET {{$dotenv BASE_URL}}/repos/{{$dotenv OWNER}}/{{$dotenv REPO}}/tags/protection
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+
+### Closing down - Create a tag protection state for a repository [POST]
+POST {{$dotenv BASE_URL}}/repos/{{$dotenv OWNER}}/{{$dotenv REPO}}/tags/protection
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+Content-Type: application/json
+{}
+
+### Closing down - Delete a tag protection state for a repository [DELETE]
+DELETE {{$dotenv BASE_URL}}/repos/{{$dotenv OWNER}}/{{$dotenv REPO}}/tags/protection/{{$dotenv TAG_PROTECTION_ID}}
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+
+### Download a repository archive (tar) [GET]
+GET {{$dotenv BASE_URL}}/repos/{{$dotenv OWNER}}/{{$dotenv REPO}}/tarball/{{$dotenv REF}}
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+
+### List repository teams [GET]
+GET {{$dotenv BASE_URL}}/repos/{{$dotenv OWNER}}/{{$dotenv REPO}}/teams
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+
+### Get all repository topics [GET]
+GET {{$dotenv BASE_URL}}/repos/{{$dotenv OWNER}}/{{$dotenv REPO}}/topics
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+
+### Replace all repository topics [PUT]
+PUT {{$dotenv BASE_URL}}/repos/{{$dotenv OWNER}}/{{$dotenv REPO}}/topics
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+Content-Type: application/json
+{}
+
+### Get repository clones [GET]
+GET {{$dotenv BASE_URL}}/repos/{{$dotenv OWNER}}/{{$dotenv REPO}}/traffic/clones
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+
+### Get top referral paths [GET]
+GET {{$dotenv BASE_URL}}/repos/{{$dotenv OWNER}}/{{$dotenv REPO}}/traffic/popular/paths
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+
+### Get top referral sources [GET]
+GET {{$dotenv BASE_URL}}/repos/{{$dotenv OWNER}}/{{$dotenv REPO}}/traffic/popular/referrers
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+
+### Get page views [GET]
+GET {{$dotenv BASE_URL}}/repos/{{$dotenv OWNER}}/{{$dotenv REPO}}/traffic/views
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+
+### Transfer a repository [POST]
+POST {{$dotenv BASE_URL}}/repos/{{$dotenv OWNER}}/{{$dotenv REPO}}/transfer
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+Content-Type: application/json
+{}
+
+### Check if vulnerability alerts are enabled for a repository [GET]
+GET {{$dotenv BASE_URL}}/repos/{{$dotenv OWNER}}/{{$dotenv REPO}}/vulnerability-alerts
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+
+### Enable vulnerability alerts [PUT]
+PUT {{$dotenv BASE_URL}}/repos/{{$dotenv OWNER}}/{{$dotenv REPO}}/vulnerability-alerts
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+
+### Disable vulnerability alerts [DELETE]
+DELETE {{$dotenv BASE_URL}}/repos/{{$dotenv OWNER}}/{{$dotenv REPO}}/vulnerability-alerts
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+
+### Download a repository archive (zip) [GET]
+GET {{$dotenv BASE_URL}}/repos/{{$dotenv OWNER}}/{{$dotenv REPO}}/zipball/{{$dotenv REF}}
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+
+### Create a repository using a template [POST]
+POST {{$dotenv BASE_URL}}/repos/{{$dotenv TEMPLATE_OWNER}}/{{$dotenv TEMPLATE_REPO}}/generate
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+Content-Type: application/json
+{}
+
+### List public repositories [GET]
+GET {{$dotenv BASE_URL}}/repositories
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+
+### List repositories for the authenticated user [GET]
+GET {{$dotenv BASE_URL}}/user/repos?visibility={{$dotenv VISIBILITY}}&affiliation={{$dotenv AFFILIATION}}&type={{$dotenv TYPE}}&sort={{$dotenv SORT}}&direction={{$dotenv DIRECTION}}
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+
+### Create a repository for the authenticated user [POST]
+POST {{$dotenv BASE_URL}}/user/repos
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+Content-Type: application/json
+{}
+
+### List repository invitations for the authenticated user [GET]
+GET {{$dotenv BASE_URL}}/user/repository_invitations
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+
+### Accept a repository invitation [PATCH]
+PATCH {{$dotenv BASE_URL}}/user/repository_invitations/{{$dotenv INVITATION_ID}}
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+
+### Decline a repository invitation [DELETE]
+DELETE {{$dotenv BASE_URL}}/user/repository_invitations/{{$dotenv INVITATION_ID}}
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+
+### List repositories for a user [GET]
+GET {{$dotenv BASE_URL}}/users/{{$dotenv USERNAME}}/repos?type={{$dotenv TYPE}}&sort={{$dotenv SORT}}&direction={{$dotenv DIRECTION}}
+Authorization: Bearer {{$dotenv GH_TOKEN}}

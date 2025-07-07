@@ -1,0 +1,517 @@
+# Requests for tag: orgs
+
+
+
+### List organizations [GET]
+GET {{$dotenv BASE_URL}}/organizations
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+
+### Closing down - List custom repository roles in an organization [GET]
+GET {{$dotenv BASE_URL}}/organizations/{{$dotenv ORGANIZATION_ID}}/custom_roles
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+
+### Get an organization [GET]
+GET {{$dotenv BASE_URL}}/orgs/{{$dotenv ORG_NAME}}
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+
+### Update an organization [PATCH]
+PATCH {{$dotenv BASE_URL}}/orgs/{{$dotenv ORG_NAME}}
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+Content-Type: application/json
+{}
+
+### Delete an organization [DELETE]
+DELETE {{$dotenv BASE_URL}}/orgs/{{$dotenv ORG_NAME}}
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+
+### Get announcement banner for organization [GET]
+GET {{$dotenv BASE_URL}}/orgs/{{$dotenv ORG_NAME}}/announcement
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+
+### Set announcement banner for organization [PATCH]
+PATCH {{$dotenv BASE_URL}}/orgs/{{$dotenv ORG_NAME}}/announcement
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+Content-Type: application/json
+{}
+
+### Remove announcement banner from organization [DELETE]
+DELETE {{$dotenv BASE_URL}}/orgs/{{$dotenv ORG_NAME}}/announcement
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+
+### List attestations by bulk subject digests [POST]
+POST {{$dotenv BASE_URL}}/orgs/{{$dotenv ORG_NAME}}/attestations/bulk-list
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+Content-Type: application/json
+{}
+
+### Delete attestations in bulk [POST]
+POST {{$dotenv BASE_URL}}/orgs/{{$dotenv ORG_NAME}}/attestations/delete-request
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+Content-Type: application/json
+{}
+
+### Delete attestations by subject digest [DELETE]
+DELETE {{$dotenv BASE_URL}}/orgs/{{$dotenv ORG_NAME}}/attestations/digest/{{$dotenv SUBJECT_DIGEST}}
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+
+### Delete attestations by ID [DELETE]
+DELETE {{$dotenv BASE_URL}}/orgs/{{$dotenv ORG_NAME}}/attestations/{{$dotenv ATTESTATION_ID}}
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+
+### List attestations [GET]
+GET {{$dotenv BASE_URL}}/orgs/{{$dotenv ORG_NAME}}/attestations/{{$dotenv SUBJECT_DIGEST}}?predicate_type={{$dotenv PREDICATE_TYPE}}
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+
+### Get the audit log for an organization [GET]
+GET {{$dotenv BASE_URL}}/orgs/{{$dotenv ORG_NAME}}/audit-log
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+
+### List users blocked by an organization [GET]
+GET {{$dotenv BASE_URL}}/orgs/{{$dotenv ORG_NAME}}/blocks
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+
+### Check if a user is blocked by an organization [GET]
+GET {{$dotenv BASE_URL}}/orgs/{{$dotenv ORG_NAME}}/blocks/{{$dotenv USERNAME}}
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+
+### Block a user from an organization [PUT]
+PUT {{$dotenv BASE_URL}}/orgs/{{$dotenv ORG_NAME}}/blocks/{{$dotenv USERNAME}}
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+
+### Unblock a user from an organization [DELETE]
+DELETE {{$dotenv BASE_URL}}/orgs/{{$dotenv ORG_NAME}}/blocks/{{$dotenv USERNAME}}
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+
+### List push rule bypass requests within an organization [GET]
+GET {{$dotenv BASE_URL}}/orgs/{{$dotenv ORG_NAME}}/bypass-requests/push-rules
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+
+### List SAML SSO authorizations for an organization [GET]
+GET {{$dotenv BASE_URL}}/orgs/{{$dotenv ORG_NAME}}/credential-authorizations?page={{$dotenv PAGE}}&login={{$dotenv LOGIN}}
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+
+### Remove a SAML SSO authorization for an organization [DELETE]
+DELETE {{$dotenv BASE_URL}}/orgs/{{$dotenv ORG_NAME}}/credential-authorizations/{{$dotenv CREDENTIAL_ID}}
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+
+### List custom repository roles in an organization [GET]
+GET {{$dotenv BASE_URL}}/orgs/{{$dotenv ORG_NAME}}/custom-repository-roles
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+
+### Create a custom repository role [POST]
+POST {{$dotenv BASE_URL}}/orgs/{{$dotenv ORG_NAME}}/custom-repository-roles
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+Content-Type: application/json
+{}
+
+### Get a custom repository role [GET]
+GET {{$dotenv BASE_URL}}/orgs/{{$dotenv ORG_NAME}}/custom-repository-roles/{{$dotenv ROLE_ID}}
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+
+### Update a custom repository role [PATCH]
+PATCH {{$dotenv BASE_URL}}/orgs/{{$dotenv ORG_NAME}}/custom-repository-roles/{{$dotenv ROLE_ID}}
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+Content-Type: application/json
+{}
+
+### Delete a custom repository role [DELETE]
+DELETE {{$dotenv BASE_URL}}/orgs/{{$dotenv ORG_NAME}}/custom-repository-roles/{{$dotenv ROLE_ID}}
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+
+### Closing down - Create a custom role [POST]
+POST {{$dotenv BASE_URL}}/orgs/{{$dotenv ORG_NAME}}/custom_roles
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+Content-Type: application/json
+{}
+
+### Closing down - Get a custom role [GET]
+GET {{$dotenv BASE_URL}}/orgs/{{$dotenv ORG_NAME}}/custom_roles/{{$dotenv ROLE_ID}}
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+
+### Closing down - Update a custom role [PATCH]
+PATCH {{$dotenv BASE_URL}}/orgs/{{$dotenv ORG_NAME}}/custom_roles/{{$dotenv ROLE_ID}}
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+Content-Type: application/json
+{}
+
+### Closing down - Delete a custom role [DELETE]
+DELETE {{$dotenv BASE_URL}}/orgs/{{$dotenv ORG_NAME}}/custom_roles/{{$dotenv ROLE_ID}}
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+
+### List failed organization invitations [GET]
+GET {{$dotenv BASE_URL}}/orgs/{{$dotenv ORG_NAME}}/failed_invitations
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+
+### Closing down - List fine-grained permissions for an organization [GET]
+GET {{$dotenv BASE_URL}}/orgs/{{$dotenv ORG_NAME}}/fine_grained_permissions
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+
+### List organization webhooks [GET]
+GET {{$dotenv BASE_URL}}/orgs/{{$dotenv ORG_NAME}}/hooks
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+
+### Create an organization webhook [POST]
+POST {{$dotenv BASE_URL}}/orgs/{{$dotenv ORG_NAME}}/hooks
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+Content-Type: application/json
+{}
+
+### Get an organization webhook [GET]
+GET {{$dotenv BASE_URL}}/orgs/{{$dotenv ORG_NAME}}/hooks/{{$dotenv HOOK_ID}}
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+
+### Update an organization webhook [PATCH]
+PATCH {{$dotenv BASE_URL}}/orgs/{{$dotenv ORG_NAME}}/hooks/{{$dotenv HOOK_ID}}
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+Content-Type: application/json
+{}
+
+### Delete an organization webhook [DELETE]
+DELETE {{$dotenv BASE_URL}}/orgs/{{$dotenv ORG_NAME}}/hooks/{{$dotenv HOOK_ID}}
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+
+### Get a webhook configuration for an organization [GET]
+GET {{$dotenv BASE_URL}}/orgs/{{$dotenv ORG_NAME}}/hooks/{{$dotenv HOOK_ID}}/config
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+
+### Update a webhook configuration for an organization [PATCH]
+PATCH {{$dotenv BASE_URL}}/orgs/{{$dotenv ORG_NAME}}/hooks/{{$dotenv HOOK_ID}}/config
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+Content-Type: application/json
+{}
+
+### List deliveries for an organization webhook [GET]
+GET {{$dotenv BASE_URL}}/orgs/{{$dotenv ORG_NAME}}/hooks/{{$dotenv HOOK_ID}}/deliveries
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+
+### Get a webhook delivery for an organization webhook [GET]
+GET {{$dotenv BASE_URL}}/orgs/{{$dotenv ORG_NAME}}/hooks/{{$dotenv HOOK_ID}}/deliveries/{{$dotenv DELIVERY_ID}}
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+
+### Redeliver a delivery for an organization webhook [POST]
+POST {{$dotenv BASE_URL}}/orgs/{{$dotenv ORG_NAME}}/hooks/{{$dotenv HOOK_ID}}/deliveries/{{$dotenv DELIVERY_ID}}/attempts
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+
+### Ping an organization webhook [POST]
+POST {{$dotenv BASE_URL}}/orgs/{{$dotenv ORG_NAME}}/hooks/{{$dotenv HOOK_ID}}/pings
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+
+### Get route stats by actor [GET]
+GET {{$dotenv BASE_URL}}/orgs/{{$dotenv ORG_NAME}}/insights/api/route-stats/{{$dotenv ACTOR_TYPE}}/{{$dotenv ACTOR_ID}}
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+
+### Get subject stats [GET]
+GET {{$dotenv BASE_URL}}/orgs/{{$dotenv ORG_NAME}}/insights/api/subject-stats
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+
+### Get summary stats [GET]
+GET {{$dotenv BASE_URL}}/orgs/{{$dotenv ORG_NAME}}/insights/api/summary-stats
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+
+### Get summary stats by user [GET]
+GET {{$dotenv BASE_URL}}/orgs/{{$dotenv ORG_NAME}}/insights/api/summary-stats/users/{{$dotenv USER_ID}}
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+
+### Get summary stats by actor [GET]
+GET {{$dotenv BASE_URL}}/orgs/{{$dotenv ORG_NAME}}/insights/api/summary-stats/{{$dotenv ACTOR_TYPE}}/{{$dotenv ACTOR_ID}}
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+
+### Get time stats [GET]
+GET {{$dotenv BASE_URL}}/orgs/{{$dotenv ORG_NAME}}/insights/api/time-stats
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+
+### Get time stats by user [GET]
+GET {{$dotenv BASE_URL}}/orgs/{{$dotenv ORG_NAME}}/insights/api/time-stats/users/{{$dotenv USER_ID}}
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+
+### Get time stats by actor [GET]
+GET {{$dotenv BASE_URL}}/orgs/{{$dotenv ORG_NAME}}/insights/api/time-stats/{{$dotenv ACTOR_TYPE}}/{{$dotenv ACTOR_ID}}
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+
+### Get user stats [GET]
+GET {{$dotenv BASE_URL}}/orgs/{{$dotenv ORG_NAME}}/insights/api/user-stats/{{$dotenv USER_ID}}
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+
+### List app installations for an organization [GET]
+GET {{$dotenv BASE_URL}}/orgs/{{$dotenv ORG_NAME}}/installations
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+
+### List pending organization invitations [GET]
+GET {{$dotenv BASE_URL}}/orgs/{{$dotenv ORG_NAME}}/invitations?role={{$dotenv ROLE}}&invitation_source={{$dotenv INVITATION_SOURCE}}
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+
+### Create an organization invitation [POST]
+POST {{$dotenv BASE_URL}}/orgs/{{$dotenv ORG_NAME}}/invitations
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+Content-Type: application/json
+{}
+
+### Cancel an organization invitation [DELETE]
+DELETE {{$dotenv BASE_URL}}/orgs/{{$dotenv ORG_NAME}}/invitations/{{$dotenv INVITATION_ID}}
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+
+### List organization invitation teams [GET]
+GET {{$dotenv BASE_URL}}/orgs/{{$dotenv ORG_NAME}}/invitations/{{$dotenv INVITATION_ID}}/teams
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+
+### List issue types for an organization [GET]
+GET {{$dotenv BASE_URL}}/orgs/{{$dotenv ORG_NAME}}/issue-types
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+
+### Create issue type for an organization [POST]
+POST {{$dotenv BASE_URL}}/orgs/{{$dotenv ORG_NAME}}/issue-types
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+Content-Type: application/json
+{}
+
+### Update issue type for an organization [PUT]
+PUT {{$dotenv BASE_URL}}/orgs/{{$dotenv ORG_NAME}}/issue-types/{{$dotenv ISSUE_TYPE_ID}}
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+Content-Type: application/json
+{}
+
+### Delete issue type for an organization [DELETE]
+DELETE {{$dotenv BASE_URL}}/orgs/{{$dotenv ORG_NAME}}/issue-types/{{$dotenv ISSUE_TYPE_ID}}
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+
+### List organization members [GET]
+GET {{$dotenv BASE_URL}}/orgs/{{$dotenv ORG_NAME}}/members?filter={{$dotenv FILTER}}&role={{$dotenv ROLE}}
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+
+### Check organization membership for a user [GET]
+GET {{$dotenv BASE_URL}}/orgs/{{$dotenv ORG_NAME}}/members/{{$dotenv USERNAME}}
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+
+### Remove an organization member [DELETE]
+DELETE {{$dotenv BASE_URL}}/orgs/{{$dotenv ORG_NAME}}/members/{{$dotenv USERNAME}}
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+
+### Get organization membership for a user [GET]
+GET {{$dotenv BASE_URL}}/orgs/{{$dotenv ORG_NAME}}/memberships/{{$dotenv USERNAME}}
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+
+### Set organization membership for a user [PUT]
+PUT {{$dotenv BASE_URL}}/orgs/{{$dotenv ORG_NAME}}/memberships/{{$dotenv USERNAME}}
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+Content-Type: application/json
+{}
+
+### Remove organization membership for a user [DELETE]
+DELETE {{$dotenv BASE_URL}}/orgs/{{$dotenv ORG_NAME}}/memberships/{{$dotenv USERNAME}}
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+
+### List organization fine-grained permissions for an organization [GET]
+GET {{$dotenv BASE_URL}}/orgs/{{$dotenv ORG_NAME}}/organization-fine-grained-permissions
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+
+### Get all organization roles for an organization [GET]
+GET {{$dotenv BASE_URL}}/orgs/{{$dotenv ORG_NAME}}/organization-roles
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+
+### Create a custom organization role [POST]
+POST {{$dotenv BASE_URL}}/orgs/{{$dotenv ORG_NAME}}/organization-roles
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+Content-Type: application/json
+{}
+
+### Remove all organization roles for a team [DELETE]
+DELETE {{$dotenv BASE_URL}}/orgs/{{$dotenv ORG_NAME}}/organization-roles/teams/{{$dotenv TEAM_SLUG}}
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+
+### Assign an organization role to a team [PUT]
+PUT {{$dotenv BASE_URL}}/orgs/{{$dotenv ORG_NAME}}/organization-roles/teams/{{$dotenv TEAM_SLUG}}/{{$dotenv ROLE_ID}}
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+
+### Remove an organization role from a team [DELETE]
+DELETE {{$dotenv BASE_URL}}/orgs/{{$dotenv ORG_NAME}}/organization-roles/teams/{{$dotenv TEAM_SLUG}}/{{$dotenv ROLE_ID}}
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+
+### Remove all organization roles for a user [DELETE]
+DELETE {{$dotenv BASE_URL}}/orgs/{{$dotenv ORG_NAME}}/organization-roles/users/{{$dotenv USERNAME}}
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+
+### Assign an organization role to a user [PUT]
+PUT {{$dotenv BASE_URL}}/orgs/{{$dotenv ORG_NAME}}/organization-roles/users/{{$dotenv USERNAME}}/{{$dotenv ROLE_ID}}
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+
+### Remove an organization role from a user [DELETE]
+DELETE {{$dotenv BASE_URL}}/orgs/{{$dotenv ORG_NAME}}/organization-roles/users/{{$dotenv USERNAME}}/{{$dotenv ROLE_ID}}
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+
+### Get an organization role [GET]
+GET {{$dotenv BASE_URL}}/orgs/{{$dotenv ORG_NAME}}/organization-roles/{{$dotenv ROLE_ID}}
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+
+### Update a custom organization role [PATCH]
+PATCH {{$dotenv BASE_URL}}/orgs/{{$dotenv ORG_NAME}}/organization-roles/{{$dotenv ROLE_ID}}
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+Content-Type: application/json
+{}
+
+### Delete a custom organization role. [DELETE]
+DELETE {{$dotenv BASE_URL}}/orgs/{{$dotenv ORG_NAME}}/organization-roles/{{$dotenv ROLE_ID}}
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+
+### List teams that are assigned to an organization role [GET]
+GET {{$dotenv BASE_URL}}/orgs/{{$dotenv ORG_NAME}}/organization-roles/{{$dotenv ROLE_ID}}/teams
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+
+### List users that are assigned to an organization role [GET]
+GET {{$dotenv BASE_URL}}/orgs/{{$dotenv ORG_NAME}}/organization-roles/{{$dotenv ROLE_ID}}/users
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+
+### List outside collaborators for an organization [GET]
+GET {{$dotenv BASE_URL}}/orgs/{{$dotenv ORG_NAME}}/outside_collaborators?filter={{$dotenv FILTER}}
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+
+### Convert an organization member to outside collaborator [PUT]
+PUT {{$dotenv BASE_URL}}/orgs/{{$dotenv ORG_NAME}}/outside_collaborators/{{$dotenv USERNAME}}
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+Content-Type: application/json
+{}
+
+### Remove outside collaborator from an organization [DELETE]
+DELETE {{$dotenv BASE_URL}}/orgs/{{$dotenv ORG_NAME}}/outside_collaborators/{{$dotenv USERNAME}}
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+
+### List requests to access organization resources with fine-grained personal access tokens [GET]
+GET {{$dotenv BASE_URL}}/orgs/{{$dotenv ORG_NAME}}/personal-access-token-requests
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+
+### Review requests to access organization resources with fine-grained personal access tokens [POST]
+POST {{$dotenv BASE_URL}}/orgs/{{$dotenv ORG_NAME}}/personal-access-token-requests
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+Content-Type: application/json
+{}
+
+### Review a request to access organization resources with a fine-grained personal access token [POST]
+POST {{$dotenv BASE_URL}}/orgs/{{$dotenv ORG_NAME}}/personal-access-token-requests/{{$dotenv PAT_REQUEST_ID}}
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+Content-Type: application/json
+{}
+
+### List repositories requested to be accessed by a fine-grained personal access token [GET]
+GET {{$dotenv BASE_URL}}/orgs/{{$dotenv ORG_NAME}}/personal-access-token-requests/{{$dotenv PAT_REQUEST_ID}}/repositories
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+
+### List fine-grained personal access tokens with access to organization resources [GET]
+GET {{$dotenv BASE_URL}}/orgs/{{$dotenv ORG_NAME}}/personal-access-tokens
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+
+### Update the access to organization resources via fine-grained personal access tokens [POST]
+POST {{$dotenv BASE_URL}}/orgs/{{$dotenv ORG_NAME}}/personal-access-tokens
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+Content-Type: application/json
+{}
+
+### Update the access a fine-grained personal access token has to organization resources [POST]
+POST {{$dotenv BASE_URL}}/orgs/{{$dotenv ORG_NAME}}/personal-access-tokens/{{$dotenv PAT_ID}}
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+Content-Type: application/json
+{}
+
+### List repositories a fine-grained personal access token has access to [GET]
+GET {{$dotenv BASE_URL}}/orgs/{{$dotenv ORG_NAME}}/personal-access-tokens/{{$dotenv PAT_ID}}/repositories
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+
+### Get all custom properties for an organization [GET]
+GET {{$dotenv BASE_URL}}/orgs/{{$dotenv ORG_NAME}}/properties/schema
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+
+### Create or update custom properties for an organization [PATCH]
+PATCH {{$dotenv BASE_URL}}/orgs/{{$dotenv ORG_NAME}}/properties/schema
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+Content-Type: application/json
+{}
+
+### Get a custom property for an organization [GET]
+GET {{$dotenv BASE_URL}}/orgs/{{$dotenv ORG_NAME}}/properties/schema/{{$dotenv CUSTOM_PROPERTY_NAME}}
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+
+### Create or update a custom property for an organization [PUT]
+PUT {{$dotenv BASE_URL}}/orgs/{{$dotenv ORG_NAME}}/properties/schema/{{$dotenv CUSTOM_PROPERTY_NAME}}
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+Content-Type: application/json
+{}
+
+### Remove a custom property for an organization [DELETE]
+DELETE {{$dotenv BASE_URL}}/orgs/{{$dotenv ORG_NAME}}/properties/schema/{{$dotenv CUSTOM_PROPERTY_NAME}}
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+
+### List custom property values for organization repositories [GET]
+GET {{$dotenv BASE_URL}}/orgs/{{$dotenv ORG_NAME}}/properties/values?repository_query={{$dotenv REPOSITORY_QUERY}}
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+
+### Create or update custom property values for organization repositories [PATCH]
+PATCH {{$dotenv BASE_URL}}/orgs/{{$dotenv ORG_NAME}}/properties/values
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+Content-Type: application/json
+{}
+
+### List public organization members [GET]
+GET {{$dotenv BASE_URL}}/orgs/{{$dotenv ORG_NAME}}/public_members
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+
+### Check public organization membership for a user [GET]
+GET {{$dotenv BASE_URL}}/orgs/{{$dotenv ORG_NAME}}/public_members/{{$dotenv USERNAME}}
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+
+### Set public organization membership for the authenticated user [PUT]
+PUT {{$dotenv BASE_URL}}/orgs/{{$dotenv ORG_NAME}}/public_members/{{$dotenv USERNAME}}
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+
+### Remove public organization membership for the authenticated user [DELETE]
+DELETE {{$dotenv BASE_URL}}/orgs/{{$dotenv ORG_NAME}}/public_members/{{$dotenv USERNAME}}
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+
+### List repository fine-grained permissions for an organization [GET]
+GET {{$dotenv BASE_URL}}/orgs/{{$dotenv ORG_NAME}}/repository-fine-grained-permissions
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+
+### Get organization ruleset history [GET]
+GET {{$dotenv BASE_URL}}/orgs/{{$dotenv ORG_NAME}}/rulesets/{{$dotenv RULESET_ID}}/history
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+
+### Get organization ruleset version [GET]
+GET {{$dotenv BASE_URL}}/orgs/{{$dotenv ORG_NAME}}/rulesets/{{$dotenv RULESET_ID}}/history/{{$dotenv VERSION_ID}}
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+
+### List security manager teams [GET]
+GET {{$dotenv BASE_URL}}/orgs/{{$dotenv ORG_NAME}}/security-managers
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+
+### Add a security manager team [PUT]
+PUT {{$dotenv BASE_URL}}/orgs/{{$dotenv ORG_NAME}}/security-managers/teams/{{$dotenv TEAM_SLUG}}
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+
+### Remove a security manager team [DELETE]
+DELETE {{$dotenv BASE_URL}}/orgs/{{$dotenv ORG_NAME}}/security-managers/teams/{{$dotenv TEAM_SLUG}}
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+
+### Enable or disable a security feature for an organization [POST]
+POST {{$dotenv BASE_URL}}/orgs/{{$dotenv ORG_NAME}}/{{$dotenv SECURITY_PRODUCT}}/{{$dotenv ENABLEMENT}}
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+Content-Type: application/json
+{}
+
+### List organization memberships for the authenticated user [GET]
+GET {{$dotenv BASE_URL}}/user/memberships/orgs?state={{$dotenv STATE}}
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+
+### Get an organization membership for the authenticated user [GET]
+GET {{$dotenv BASE_URL}}/user/memberships/orgs/{{$dotenv ORG_NAME}}
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+
+### Update an organization membership for the authenticated user [PATCH]
+PATCH {{$dotenv BASE_URL}}/user/memberships/orgs/{{$dotenv ORG_NAME}}
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+Content-Type: application/json
+{}
+
+### List organizations for the authenticated user [GET]
+GET {{$dotenv BASE_URL}}/user/orgs
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+
+### List organizations for a user [GET]
+GET {{$dotenv BASE_URL}}/users/{{$dotenv USERNAME}}/orgs
+Authorization: Bearer {{$dotenv GH_TOKEN}}

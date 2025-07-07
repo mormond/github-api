@@ -1,0 +1,125 @@
+# Requests for tag: projects
+
+
+
+### List organization projects [GET]
+GET {{$dotenv BASE_URL}}/orgs/{{$dotenv ORG_NAME}}/projects?state={{$dotenv STATE}}
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+
+### Create an organization project [POST]
+POST {{$dotenv BASE_URL}}/orgs/{{$dotenv ORG_NAME}}/projects
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+Content-Type: application/json
+{}
+
+### Get a project card [GET]
+GET {{$dotenv BASE_URL}}/projects/columns/cards/{{$dotenv CARD_ID}}
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+
+### Update an existing project card [PATCH]
+PATCH {{$dotenv BASE_URL}}/projects/columns/cards/{{$dotenv CARD_ID}}
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+Content-Type: application/json
+{}
+
+### Delete a project card [DELETE]
+DELETE {{$dotenv BASE_URL}}/projects/columns/cards/{{$dotenv CARD_ID}}
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+
+### Move a project card [POST]
+POST {{$dotenv BASE_URL}}/projects/columns/cards/{{$dotenv CARD_ID}}/moves
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+Content-Type: application/json
+{}
+
+### Get a project column [GET]
+GET {{$dotenv BASE_URL}}/projects/columns/{{$dotenv COLUMN_ID}}
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+
+### Update an existing project column [PATCH]
+PATCH {{$dotenv BASE_URL}}/projects/columns/{{$dotenv COLUMN_ID}}
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+Content-Type: application/json
+{}
+
+### Delete a project column [DELETE]
+DELETE {{$dotenv BASE_URL}}/projects/columns/{{$dotenv COLUMN_ID}}
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+
+### List project cards [GET]
+GET {{$dotenv BASE_URL}}/projects/columns/{{$dotenv COLUMN_ID}}/cards?archived_state={{$dotenv ARCHIVED_STATE}}
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+
+### Create a project card [POST]
+POST {{$dotenv BASE_URL}}/projects/columns/{{$dotenv COLUMN_ID}}/cards
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+Content-Type: application/json
+{}
+
+### Move a project column [POST]
+POST {{$dotenv BASE_URL}}/projects/columns/{{$dotenv COLUMN_ID}}/moves
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+Content-Type: application/json
+{}
+
+### Get a project [GET]
+GET {{$dotenv BASE_URL}}/projects/{{$dotenv PROJECT_ID}}
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+
+### Update a project [PATCH]
+PATCH {{$dotenv BASE_URL}}/projects/{{$dotenv PROJECT_ID}}
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+Content-Type: application/json
+{}
+
+### Delete a project [DELETE]
+DELETE {{$dotenv BASE_URL}}/projects/{{$dotenv PROJECT_ID}}
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+
+### List project collaborators [GET]
+GET {{$dotenv BASE_URL}}/projects/{{$dotenv PROJECT_ID}}/collaborators?affiliation={{$dotenv AFFILIATION}}
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+
+### Add project collaborator [PUT]
+PUT {{$dotenv BASE_URL}}/projects/{{$dotenv PROJECT_ID}}/collaborators/{{$dotenv USERNAME}}
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+Content-Type: application/json
+{}
+
+### Remove user as a collaborator [DELETE]
+DELETE {{$dotenv BASE_URL}}/projects/{{$dotenv PROJECT_ID}}/collaborators/{{$dotenv USERNAME}}
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+
+### Get project permission for a user [GET]
+GET {{$dotenv BASE_URL}}/projects/{{$dotenv PROJECT_ID}}/collaborators/{{$dotenv USERNAME}}/permission
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+
+### List project columns [GET]
+GET {{$dotenv BASE_URL}}/projects/{{$dotenv PROJECT_ID}}/columns
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+
+### Create a project column [POST]
+POST {{$dotenv BASE_URL}}/projects/{{$dotenv PROJECT_ID}}/columns
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+Content-Type: application/json
+{}
+
+### List repository projects [GET]
+GET {{$dotenv BASE_URL}}/repos/{{$dotenv OWNER}}/{{$dotenv REPO}}/projects?state={{$dotenv STATE}}
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+
+### Create a repository project [POST]
+POST {{$dotenv BASE_URL}}/repos/{{$dotenv OWNER}}/{{$dotenv REPO}}/projects
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+Content-Type: application/json
+{}
+
+### Create a user project [POST]
+POST {{$dotenv BASE_URL}}/user/projects
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+Content-Type: application/json
+{}
+
+### List user projects [GET]
+GET {{$dotenv BASE_URL}}/users/{{$dotenv USERNAME}}/projects?state={{$dotenv STATE}}
+Authorization: Bearer {{$dotenv GH_TOKEN}}

@@ -1,0 +1,211 @@
+# Requests for tag: issues
+
+
+
+### List issues assigned to the authenticated user [GET]
+GET {{$dotenv BASE_URL}}/issues?filter={{$dotenv FILTER}}&state={{$dotenv STATE}}&sort={{$dotenv SORT}}&collab={{$dotenv COLLAB}}&orgs={{$dotenv ORGS}}&owned={{$dotenv OWNED}}&pulls={{$dotenv PULLS}}
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+
+### List organization issues assigned to the authenticated user [GET]
+GET {{$dotenv BASE_URL}}/orgs/{{$dotenv ORG_NAME}}/issues?filter={{$dotenv FILTER}}&state={{$dotenv STATE}}&type={{$dotenv TYPE}}&sort={{$dotenv SORT}}
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+
+### List assignees [GET]
+GET {{$dotenv BASE_URL}}/repos/{{$dotenv OWNER}}/{{$dotenv REPO}}/assignees
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+
+### Check if a user can be assigned [GET]
+GET {{$dotenv BASE_URL}}/repos/{{$dotenv OWNER}}/{{$dotenv REPO}}/assignees/{{$dotenv ASSIGNEE}}
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+
+### List repository issues [GET]
+GET {{$dotenv BASE_URL}}/repos/{{$dotenv OWNER}}/{{$dotenv REPO}}/issues?milestone={{$dotenv MILESTONE}}&state={{$dotenv STATE}}&assignee={{$dotenv ASSIGNEE}}&type={{$dotenv TYPE}}&creator={{$dotenv CREATOR}}&mentioned={{$dotenv MENTIONED}}&sort={{$dotenv SORT}}
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+
+### Create an issue [POST]
+POST {{$dotenv BASE_URL}}/repos/{{$dotenv OWNER}}/{{$dotenv REPO}}/issues
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+Content-Type: application/json
+{}
+
+### List issue comments for a repository [GET]
+GET {{$dotenv BASE_URL}}/repos/{{$dotenv OWNER}}/{{$dotenv REPO}}/issues/comments?direction={{$dotenv DIRECTION}}
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+
+### Get an issue comment [GET]
+GET {{$dotenv BASE_URL}}/repos/{{$dotenv OWNER}}/{{$dotenv REPO}}/issues/comments/{{$dotenv COMMENT_ID}}
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+
+### Update an issue comment [PATCH]
+PATCH {{$dotenv BASE_URL}}/repos/{{$dotenv OWNER}}/{{$dotenv REPO}}/issues/comments/{{$dotenv COMMENT_ID}}
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+Content-Type: application/json
+{}
+
+### Delete an issue comment [DELETE]
+DELETE {{$dotenv BASE_URL}}/repos/{{$dotenv OWNER}}/{{$dotenv REPO}}/issues/comments/{{$dotenv COMMENT_ID}}
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+
+### List issue events for a repository [GET]
+GET {{$dotenv BASE_URL}}/repos/{{$dotenv OWNER}}/{{$dotenv REPO}}/issues/events
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+
+### Get an issue event [GET]
+GET {{$dotenv BASE_URL}}/repos/{{$dotenv OWNER}}/{{$dotenv REPO}}/issues/events/{{$dotenv EVENT_ID}}
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+
+### Get an issue [GET]
+GET {{$dotenv BASE_URL}}/repos/{{$dotenv OWNER}}/{{$dotenv REPO}}/issues/{{$dotenv ISSUE_NUMBER}}
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+
+### Update an issue [PATCH]
+PATCH {{$dotenv BASE_URL}}/repos/{{$dotenv OWNER}}/{{$dotenv REPO}}/issues/{{$dotenv ISSUE_NUMBER}}
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+Content-Type: application/json
+{}
+
+### Add assignees to an issue [POST]
+POST {{$dotenv BASE_URL}}/repos/{{$dotenv OWNER}}/{{$dotenv REPO}}/issues/{{$dotenv ISSUE_NUMBER}}/assignees
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+Content-Type: application/json
+{}
+
+### Remove assignees from an issue [DELETE]
+DELETE {{$dotenv BASE_URL}}/repos/{{$dotenv OWNER}}/{{$dotenv REPO}}/issues/{{$dotenv ISSUE_NUMBER}}/assignees
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+Content-Type: application/json
+{}
+
+### Check if a user can be assigned to a issue [GET]
+GET {{$dotenv BASE_URL}}/repos/{{$dotenv OWNER}}/{{$dotenv REPO}}/issues/{{$dotenv ISSUE_NUMBER}}/assignees/{{$dotenv ASSIGNEE}}
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+
+### List issue comments [GET]
+GET {{$dotenv BASE_URL}}/repos/{{$dotenv OWNER}}/{{$dotenv REPO}}/issues/{{$dotenv ISSUE_NUMBER}}/comments
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+
+### Create an issue comment [POST]
+POST {{$dotenv BASE_URL}}/repos/{{$dotenv OWNER}}/{{$dotenv REPO}}/issues/{{$dotenv ISSUE_NUMBER}}/comments
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+Content-Type: application/json
+{}
+
+### List issue events [GET]
+GET {{$dotenv BASE_URL}}/repos/{{$dotenv OWNER}}/{{$dotenv REPO}}/issues/{{$dotenv ISSUE_NUMBER}}/events
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+
+### List labels for an issue [GET]
+GET {{$dotenv BASE_URL}}/repos/{{$dotenv OWNER}}/{{$dotenv REPO}}/issues/{{$dotenv ISSUE_NUMBER}}/labels
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+
+### Add labels to an issue [POST]
+POST {{$dotenv BASE_URL}}/repos/{{$dotenv OWNER}}/{{$dotenv REPO}}/issues/{{$dotenv ISSUE_NUMBER}}/labels
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+Content-Type: application/json
+{}
+
+### Set labels for an issue [PUT]
+PUT {{$dotenv BASE_URL}}/repos/{{$dotenv OWNER}}/{{$dotenv REPO}}/issues/{{$dotenv ISSUE_NUMBER}}/labels
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+Content-Type: application/json
+{}
+
+### Remove all labels from an issue [DELETE]
+DELETE {{$dotenv BASE_URL}}/repos/{{$dotenv OWNER}}/{{$dotenv REPO}}/issues/{{$dotenv ISSUE_NUMBER}}/labels
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+
+### Remove a label from an issue [DELETE]
+DELETE {{$dotenv BASE_URL}}/repos/{{$dotenv OWNER}}/{{$dotenv REPO}}/issues/{{$dotenv ISSUE_NUMBER}}/labels/{{$dotenv NAME}}
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+
+### Lock an issue [PUT]
+PUT {{$dotenv BASE_URL}}/repos/{{$dotenv OWNER}}/{{$dotenv REPO}}/issues/{{$dotenv ISSUE_NUMBER}}/lock
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+Content-Type: application/json
+{}
+
+### Unlock an issue [DELETE]
+DELETE {{$dotenv BASE_URL}}/repos/{{$dotenv OWNER}}/{{$dotenv REPO}}/issues/{{$dotenv ISSUE_NUMBER}}/lock
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+
+### Remove sub-issue [DELETE]
+DELETE {{$dotenv BASE_URL}}/repos/{{$dotenv OWNER}}/{{$dotenv REPO}}/issues/{{$dotenv ISSUE_NUMBER}}/sub_issue
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+Content-Type: application/json
+{}
+
+### List sub-issues [GET]
+GET {{$dotenv BASE_URL}}/repos/{{$dotenv OWNER}}/{{$dotenv REPO}}/issues/{{$dotenv ISSUE_NUMBER}}/sub_issues
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+
+### Add sub-issue [POST]
+POST {{$dotenv BASE_URL}}/repos/{{$dotenv OWNER}}/{{$dotenv REPO}}/issues/{{$dotenv ISSUE_NUMBER}}/sub_issues
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+Content-Type: application/json
+{}
+
+### Reprioritize sub-issue [PATCH]
+PATCH {{$dotenv BASE_URL}}/repos/{{$dotenv OWNER}}/{{$dotenv REPO}}/issues/{{$dotenv ISSUE_NUMBER}}/sub_issues/priority
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+Content-Type: application/json
+{}
+
+### List timeline events for an issue [GET]
+GET {{$dotenv BASE_URL}}/repos/{{$dotenv OWNER}}/{{$dotenv REPO}}/issues/{{$dotenv ISSUE_NUMBER}}/timeline
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+
+### List labels for a repository [GET]
+GET {{$dotenv BASE_URL}}/repos/{{$dotenv OWNER}}/{{$dotenv REPO}}/labels
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+
+### Create a label [POST]
+POST {{$dotenv BASE_URL}}/repos/{{$dotenv OWNER}}/{{$dotenv REPO}}/labels
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+Content-Type: application/json
+{}
+
+### Get a label [GET]
+GET {{$dotenv BASE_URL}}/repos/{{$dotenv OWNER}}/{{$dotenv REPO}}/labels/{{$dotenv NAME}}
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+
+### Update a label [PATCH]
+PATCH {{$dotenv BASE_URL}}/repos/{{$dotenv OWNER}}/{{$dotenv REPO}}/labels/{{$dotenv NAME}}
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+Content-Type: application/json
+{}
+
+### Delete a label [DELETE]
+DELETE {{$dotenv BASE_URL}}/repos/{{$dotenv OWNER}}/{{$dotenv REPO}}/labels/{{$dotenv NAME}}
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+
+### List milestones [GET]
+GET {{$dotenv BASE_URL}}/repos/{{$dotenv OWNER}}/{{$dotenv REPO}}/milestones?state={{$dotenv STATE}}&sort={{$dotenv SORT}}&direction={{$dotenv DIRECTION}}
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+
+### Create a milestone [POST]
+POST {{$dotenv BASE_URL}}/repos/{{$dotenv OWNER}}/{{$dotenv REPO}}/milestones
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+Content-Type: application/json
+{}
+
+### Get a milestone [GET]
+GET {{$dotenv BASE_URL}}/repos/{{$dotenv OWNER}}/{{$dotenv REPO}}/milestones/{{$dotenv MILESTONE_NUMBER}}
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+
+### Update a milestone [PATCH]
+PATCH {{$dotenv BASE_URL}}/repos/{{$dotenv OWNER}}/{{$dotenv REPO}}/milestones/{{$dotenv MILESTONE_NUMBER}}
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+Content-Type: application/json
+{}
+
+### Delete a milestone [DELETE]
+DELETE {{$dotenv BASE_URL}}/repos/{{$dotenv OWNER}}/{{$dotenv REPO}}/milestones/{{$dotenv MILESTONE_NUMBER}}
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+
+### List labels for issues in a milestone [GET]
+GET {{$dotenv BASE_URL}}/repos/{{$dotenv OWNER}}/{{$dotenv REPO}}/milestones/{{$dotenv MILESTONE_NUMBER}}/labels
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+
+### List user account issues assigned to the authenticated user [GET]
+GET {{$dotenv BASE_URL}}/user/issues?filter={{$dotenv FILTER}}&state={{$dotenv STATE}}&sort={{$dotenv SORT}}
+Authorization: Bearer {{$dotenv GH_TOKEN}}

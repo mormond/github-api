@@ -1,0 +1,17 @@
+# Requests for tag: dependency-graph
+
+
+
+### Get a diff of the dependencies between commits [GET]
+GET {{$dotenv BASE_URL}}/repos/{{$dotenv OWNER}}/{{$dotenv REPO}}/dependency-graph/compare/{{$dotenv BASEHEAD}}
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+
+### Export a software bill of materials (SBOM) for a repository. [GET]
+GET {{$dotenv BASE_URL}}/repos/{{$dotenv OWNER}}/{{$dotenv REPO}}/dependency-graph/sbom
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+
+### Create a snapshot of dependencies for a repository [POST]
+POST {{$dotenv BASE_URL}}/repos/{{$dotenv OWNER}}/{{$dotenv REPO}}/dependency-graph/snapshots
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+Content-Type: application/json
+{}

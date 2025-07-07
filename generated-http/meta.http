@@ -1,0 +1,23 @@
+# Requests for tag: meta
+
+
+
+### GitHub API Root [GET]
+GET {{$dotenv BASE_URL}}/
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+
+### Get GitHub Enterprise Cloud meta information [GET]
+GET {{$dotenv BASE_URL}}/meta
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+
+### Get Octocat [GET]
+GET {{$dotenv BASE_URL}}/octocat?s={{$dotenv S}}
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+
+### Get all API versions [GET]
+GET {{$dotenv BASE_URL}}/versions
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+
+### Get the Zen of GitHub [GET]
+GET {{$dotenv BASE_URL}}/zen
+Authorization: Bearer {{$dotenv GH_TOKEN}}

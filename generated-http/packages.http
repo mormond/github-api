@@ -1,0 +1,111 @@
+# Requests for tag: packages
+
+
+
+### Get list of conflicting packages during Docker migration for organization [GET]
+GET {{$dotenv BASE_URL}}/orgs/{{$dotenv ORG_NAME}}/docker/conflicts
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+
+### List packages for an organization [GET]
+GET {{$dotenv BASE_URL}}/orgs/{{$dotenv ORG_NAME}}/packages?package_type={{$dotenv PACKAGE_TYPE}}&page={{$dotenv PAGE}}&per_page={{$dotenv PER_PAGE}}
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+
+### Get a package for an organization [GET]
+GET {{$dotenv BASE_URL}}/orgs/{{$dotenv ORG_NAME}}/packages/{{$dotenv PACKAGE_TYPE}}/{{$dotenv PACKAGE_NAME}}
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+
+### Delete a package for an organization [DELETE]
+DELETE {{$dotenv BASE_URL}}/orgs/{{$dotenv ORG_NAME}}/packages/{{$dotenv PACKAGE_TYPE}}/{{$dotenv PACKAGE_NAME}}
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+
+### Restore a package for an organization [POST]
+POST {{$dotenv BASE_URL}}/orgs/{{$dotenv ORG_NAME}}/packages/{{$dotenv PACKAGE_TYPE}}/{{$dotenv PACKAGE_NAME}}/restore?token={{$dotenv TOKEN}}
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+
+### List package versions for a package owned by an organization [GET]
+GET {{$dotenv BASE_URL}}/orgs/{{$dotenv ORG_NAME}}/packages/{{$dotenv PACKAGE_TYPE}}/{{$dotenv PACKAGE_NAME}}/versions?state={{$dotenv STATE}}
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+
+### Get a package version for an organization [GET]
+GET {{$dotenv BASE_URL}}/orgs/{{$dotenv ORG_NAME}}/packages/{{$dotenv PACKAGE_TYPE}}/{{$dotenv PACKAGE_NAME}}/versions/{{$dotenv PACKAGE_VERSION_ID}}
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+
+### Delete package version for an organization [DELETE]
+DELETE {{$dotenv BASE_URL}}/orgs/{{$dotenv ORG_NAME}}/packages/{{$dotenv PACKAGE_TYPE}}/{{$dotenv PACKAGE_NAME}}/versions/{{$dotenv PACKAGE_VERSION_ID}}
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+
+### Restore package version for an organization [POST]
+POST {{$dotenv BASE_URL}}/orgs/{{$dotenv ORG_NAME}}/packages/{{$dotenv PACKAGE_TYPE}}/{{$dotenv PACKAGE_NAME}}/versions/{{$dotenv PACKAGE_VERSION_ID}}/restore
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+
+### Get list of conflicting packages during Docker migration for authenticated-user [GET]
+GET {{$dotenv BASE_URL}}/user/docker/conflicts
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+
+### List packages for the authenticated user's namespace [GET]
+GET {{$dotenv BASE_URL}}/user/packages?package_type={{$dotenv PACKAGE_TYPE}}
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+
+### Get a package for the authenticated user [GET]
+GET {{$dotenv BASE_URL}}/user/packages/{{$dotenv PACKAGE_TYPE}}/{{$dotenv PACKAGE_NAME}}
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+
+### Delete a package for the authenticated user [DELETE]
+DELETE {{$dotenv BASE_URL}}/user/packages/{{$dotenv PACKAGE_TYPE}}/{{$dotenv PACKAGE_NAME}}
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+
+### Restore a package for the authenticated user [POST]
+POST {{$dotenv BASE_URL}}/user/packages/{{$dotenv PACKAGE_TYPE}}/{{$dotenv PACKAGE_NAME}}/restore?token={{$dotenv TOKEN}}
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+
+### List package versions for a package owned by the authenticated user [GET]
+GET {{$dotenv BASE_URL}}/user/packages/{{$dotenv PACKAGE_TYPE}}/{{$dotenv PACKAGE_NAME}}/versions?state={{$dotenv STATE}}
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+
+### Get a package version for the authenticated user [GET]
+GET {{$dotenv BASE_URL}}/user/packages/{{$dotenv PACKAGE_TYPE}}/{{$dotenv PACKAGE_NAME}}/versions/{{$dotenv PACKAGE_VERSION_ID}}
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+
+### Delete a package version for the authenticated user [DELETE]
+DELETE {{$dotenv BASE_URL}}/user/packages/{{$dotenv PACKAGE_TYPE}}/{{$dotenv PACKAGE_NAME}}/versions/{{$dotenv PACKAGE_VERSION_ID}}
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+
+### Restore a package version for the authenticated user [POST]
+POST {{$dotenv BASE_URL}}/user/packages/{{$dotenv PACKAGE_TYPE}}/{{$dotenv PACKAGE_NAME}}/versions/{{$dotenv PACKAGE_VERSION_ID}}/restore
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+
+### Get list of conflicting packages during Docker migration for user [GET]
+GET {{$dotenv BASE_URL}}/users/{{$dotenv USERNAME}}/docker/conflicts
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+
+### List packages for a user [GET]
+GET {{$dotenv BASE_URL}}/users/{{$dotenv USERNAME}}/packages?package_type={{$dotenv PACKAGE_TYPE}}
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+
+### Get a package for a user [GET]
+GET {{$dotenv BASE_URL}}/users/{{$dotenv USERNAME}}/packages/{{$dotenv PACKAGE_TYPE}}/{{$dotenv PACKAGE_NAME}}
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+
+### Delete a package for a user [DELETE]
+DELETE {{$dotenv BASE_URL}}/users/{{$dotenv USERNAME}}/packages/{{$dotenv PACKAGE_TYPE}}/{{$dotenv PACKAGE_NAME}}
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+
+### Restore a package for a user [POST]
+POST {{$dotenv BASE_URL}}/users/{{$dotenv USERNAME}}/packages/{{$dotenv PACKAGE_TYPE}}/{{$dotenv PACKAGE_NAME}}/restore?token={{$dotenv TOKEN}}
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+
+### List package versions for a package owned by a user [GET]
+GET {{$dotenv BASE_URL}}/users/{{$dotenv USERNAME}}/packages/{{$dotenv PACKAGE_TYPE}}/{{$dotenv PACKAGE_NAME}}/versions
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+
+### Get a package version for a user [GET]
+GET {{$dotenv BASE_URL}}/users/{{$dotenv USERNAME}}/packages/{{$dotenv PACKAGE_TYPE}}/{{$dotenv PACKAGE_NAME}}/versions/{{$dotenv PACKAGE_VERSION_ID}}
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+
+### Delete package version for a user [DELETE]
+DELETE {{$dotenv BASE_URL}}/users/{{$dotenv USERNAME}}/packages/{{$dotenv PACKAGE_TYPE}}/{{$dotenv PACKAGE_NAME}}/versions/{{$dotenv PACKAGE_VERSION_ID}}
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+
+### Restore package version for a user [POST]
+POST {{$dotenv BASE_URL}}/users/{{$dotenv USERNAME}}/packages/{{$dotenv PACKAGE_TYPE}}/{{$dotenv PACKAGE_NAME}}/versions/{{$dotenv PACKAGE_VERSION_ID}}/restore
+Authorization: Bearer {{$dotenv GH_TOKEN}}

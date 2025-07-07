@@ -1,0 +1,209 @@
+# Requests for tag: apps
+
+
+
+### Get the authenticated app [GET]
+GET {{$dotenv BASE_URL}}/app
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+
+### Create a GitHub App from a manifest [POST]
+POST {{$dotenv BASE_URL}}/app-manifests/{{$dotenv CODE}}/conversions
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+
+### Get a webhook configuration for an app [GET]
+GET {{$dotenv BASE_URL}}/app/hook/config
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+
+### Update a webhook configuration for an app [PATCH]
+PATCH {{$dotenv BASE_URL}}/app/hook/config
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+Content-Type: application/json
+{}
+
+### List deliveries for an app webhook [GET]
+GET {{$dotenv BASE_URL}}/app/hook/deliveries
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+
+### Get a delivery for an app webhook [GET]
+GET {{$dotenv BASE_URL}}/app/hook/deliveries/{{$dotenv DELIVERY_ID}}
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+
+### Redeliver a delivery for an app webhook [POST]
+POST {{$dotenv BASE_URL}}/app/hook/deliveries/{{$dotenv DELIVERY_ID}}/attempts
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+
+### List installation requests for the authenticated app [GET]
+GET {{$dotenv BASE_URL}}/app/installation-requests
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+
+### List installations for the authenticated app [GET]
+GET {{$dotenv BASE_URL}}/app/installations?outdated={{$dotenv OUTDATED}}
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+
+### Get an installation for the authenticated app [GET]
+GET {{$dotenv BASE_URL}}/app/installations/{{$dotenv INSTALLATION_ID}}
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+
+### Delete an installation for the authenticated app [DELETE]
+DELETE {{$dotenv BASE_URL}}/app/installations/{{$dotenv INSTALLATION_ID}}
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+
+### Create an installation access token for an app [POST]
+POST {{$dotenv BASE_URL}}/app/installations/{{$dotenv INSTALLATION_ID}}/access_tokens
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+Content-Type: application/json
+{}
+
+### Suspend an app installation [PUT]
+PUT {{$dotenv BASE_URL}}/app/installations/{{$dotenv INSTALLATION_ID}}/suspended
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+
+### Unsuspend an app installation [DELETE]
+DELETE {{$dotenv BASE_URL}}/app/installations/{{$dotenv INSTALLATION_ID}}/suspended
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+
+### Delete an app authorization [DELETE]
+DELETE {{$dotenv BASE_URL}}/applications/{{$dotenv CLIENT_ID}}/grant
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+Content-Type: application/json
+{}
+
+### Check a token [POST]
+POST {{$dotenv BASE_URL}}/applications/{{$dotenv CLIENT_ID}}/token
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+Content-Type: application/json
+{}
+
+### Reset a token [PATCH]
+PATCH {{$dotenv BASE_URL}}/applications/{{$dotenv CLIENT_ID}}/token
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+Content-Type: application/json
+{}
+
+### Delete an app token [DELETE]
+DELETE {{$dotenv BASE_URL}}/applications/{{$dotenv CLIENT_ID}}/token
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+Content-Type: application/json
+{}
+
+### Create a scoped access token [POST]
+POST {{$dotenv BASE_URL}}/applications/{{$dotenv CLIENT_ID}}/token/scoped
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+Content-Type: application/json
+{}
+
+### Get an app [GET]
+GET {{$dotenv BASE_URL}}/apps/{{$dotenv APP_SLUG}}
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+
+### Get enterprise-owned organizations that can have GitHub Apps installed [GET]
+GET {{$dotenv BASE_URL}}/enterprises/{{$dotenv ENTERPRISE_NAME}}/apps/installable_organizations
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+
+### Get repositories belonging to an enterprise-owned organization [GET]
+GET {{$dotenv BASE_URL}}/enterprises/{{$dotenv ENTERPRISE_NAME}}/apps/installable_organizations/{{$dotenv ORG_NAME}}/accessible_repositories
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+
+### List GitHub Apps installed on an enterprise-owned organization [GET]
+GET {{$dotenv BASE_URL}}/enterprises/{{$dotenv ENTERPRISE_NAME}}/apps/organizations/{{$dotenv ORG_NAME}}/installations
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+
+### Install a GitHub App on an enterprise-owned organization [POST]
+POST {{$dotenv BASE_URL}}/enterprises/{{$dotenv ENTERPRISE_NAME}}/apps/organizations/{{$dotenv ORG_NAME}}/installations
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+Content-Type: application/json
+{}
+
+### Uninstall a GitHub App from an enterprise-owned organization [DELETE]
+DELETE {{$dotenv BASE_URL}}/enterprises/{{$dotenv ENTERPRISE_NAME}}/apps/organizations/{{$dotenv ORG_NAME}}/installations/{{$dotenv INSTALLATION_ID}}
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+
+### Get the repositories accessible to a given GitHub App installation [GET]
+GET {{$dotenv BASE_URL}}/enterprises/{{$dotenv ENTERPRISE_NAME}}/apps/organizations/{{$dotenv ORG_NAME}}/installations/{{$dotenv INSTALLATION_ID}}/repositories
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+
+### Toggle installation repository access between selected and all repositories [PATCH]
+PATCH {{$dotenv BASE_URL}}/enterprises/{{$dotenv ENTERPRISE_NAME}}/apps/organizations/{{$dotenv ORG_NAME}}/installations/{{$dotenv INSTALLATION_ID}}/repositories
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+Content-Type: application/json
+{}
+
+### Grant repository access to an organization installation [PATCH]
+PATCH {{$dotenv BASE_URL}}/enterprises/{{$dotenv ENTERPRISE_NAME}}/apps/organizations/{{$dotenv ORG_NAME}}/installations/{{$dotenv INSTALLATION_ID}}/repositories/add
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+Content-Type: application/json
+{}
+
+### Remove repository access from an organization installation [PATCH]
+PATCH {{$dotenv BASE_URL}}/enterprises/{{$dotenv ENTERPRISE_NAME}}/apps/organizations/{{$dotenv ORG_NAME}}/installations/{{$dotenv INSTALLATION_ID}}/repositories/remove
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+Content-Type: application/json
+{}
+
+### List repositories accessible to the app installation [GET]
+GET {{$dotenv BASE_URL}}/installation/repositories
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+
+### Revoke an installation access token [DELETE]
+DELETE {{$dotenv BASE_URL}}/installation/token
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+
+### Get a subscription plan for an account [GET]
+GET {{$dotenv BASE_URL}}/marketplace_listing/accounts/{{$dotenv ACCOUNT_ID}}
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+
+### List plans [GET]
+GET {{$dotenv BASE_URL}}/marketplace_listing/plans
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+
+### List accounts for a plan [GET]
+GET {{$dotenv BASE_URL}}/marketplace_listing/plans/{{$dotenv PLAN_ID}}/accounts?direction={{$dotenv DIRECTION}}
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+
+### Get a subscription plan for an account (stubbed) [GET]
+GET {{$dotenv BASE_URL}}/marketplace_listing/stubbed/accounts/{{$dotenv ACCOUNT_ID}}
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+
+### List plans (stubbed) [GET]
+GET {{$dotenv BASE_URL}}/marketplace_listing/stubbed/plans
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+
+### List accounts for a plan (stubbed) [GET]
+GET {{$dotenv BASE_URL}}/marketplace_listing/stubbed/plans/{{$dotenv PLAN_ID}}/accounts?direction={{$dotenv DIRECTION}}
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+
+### Get an organization installation for the authenticated app [GET]
+GET {{$dotenv BASE_URL}}/orgs/{{$dotenv ORG_NAME}}/installation
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+
+### Get a repository installation for the authenticated app [GET]
+GET {{$dotenv BASE_URL}}/repos/{{$dotenv OWNER}}/{{$dotenv REPO}}/installation
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+
+### List app installations accessible to the user access token [GET]
+GET {{$dotenv BASE_URL}}/user/installations
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+
+### List repositories accessible to the user access token [GET]
+GET {{$dotenv BASE_URL}}/user/installations/{{$dotenv INSTALLATION_ID}}/repositories
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+
+### Add a repository to an app installation [PUT]
+PUT {{$dotenv BASE_URL}}/user/installations/{{$dotenv INSTALLATION_ID}}/repositories/{{$dotenv REPOSITORY_ID}}
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+
+### Remove a repository from an app installation [DELETE]
+DELETE {{$dotenv BASE_URL}}/user/installations/{{$dotenv INSTALLATION_ID}}/repositories/{{$dotenv REPOSITORY_ID}}
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+
+### List subscriptions for the authenticated user [GET]
+GET {{$dotenv BASE_URL}}/user/marketplace_purchases
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+
+### List subscriptions for the authenticated user (stubbed) [GET]
+GET {{$dotenv BASE_URL}}/user/marketplace_purchases/stubbed
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+
+### Get a user installation for the authenticated app [GET]
+GET {{$dotenv BASE_URL}}/users/{{$dotenv USERNAME}}/installation
+Authorization: Bearer {{$dotenv GH_TOKEN}}

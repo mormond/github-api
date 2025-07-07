@@ -1,0 +1,119 @@
+# Requests for tag: code-scanning
+
+
+
+### List code scanning alerts for an enterprise [GET]
+GET {{$dotenv BASE_URL}}/enterprises/{{$dotenv ENTERPRISE_NAME}}/code-scanning/alerts?state={{$dotenv STATE}}&sort={{$dotenv SORT}}
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+
+### List code scanning alerts for an organization [GET]
+GET {{$dotenv BASE_URL}}/orgs/{{$dotenv ORG_NAME}}/code-scanning/alerts?state={{$dotenv STATE}}&sort={{$dotenv SORT}}&severity={{$dotenv SEVERITY}}
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+
+### List dismissal requests for code scanning alerts for an organization [GET]
+GET {{$dotenv BASE_URL}}/orgs/{{$dotenv ORG_NAME}}/dismissal-requests/code-scanning
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+
+### List code scanning alerts for a repository [GET]
+GET {{$dotenv BASE_URL}}/repos/{{$dotenv OWNER}}/{{$dotenv REPO}}/code-scanning/alerts?sort={{$dotenv SORT}}&state={{$dotenv STATE}}&severity={{$dotenv SEVERITY}}
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+
+### Get a code scanning alert [GET]
+GET {{$dotenv BASE_URL}}/repos/{{$dotenv OWNER}}/{{$dotenv REPO}}/code-scanning/alerts/{{$dotenv ALERT_NUMBER}}
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+
+### Update a code scanning alert [PATCH]
+PATCH {{$dotenv BASE_URL}}/repos/{{$dotenv OWNER}}/{{$dotenv REPO}}/code-scanning/alerts/{{$dotenv ALERT_NUMBER}}
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+Content-Type: application/json
+{}
+
+### Get the status of an autofix for a code scanning alert [GET]
+GET {{$dotenv BASE_URL}}/repos/{{$dotenv OWNER}}/{{$dotenv REPO}}/code-scanning/alerts/{{$dotenv ALERT_NUMBER}}/autofix
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+
+### Create an autofix for a code scanning alert [POST]
+POST {{$dotenv BASE_URL}}/repos/{{$dotenv OWNER}}/{{$dotenv REPO}}/code-scanning/alerts/{{$dotenv ALERT_NUMBER}}/autofix
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+
+### Commit an autofix for a code scanning alert [POST]
+POST {{$dotenv BASE_URL}}/repos/{{$dotenv OWNER}}/{{$dotenv REPO}}/code-scanning/alerts/{{$dotenv ALERT_NUMBER}}/autofix/commits
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+Content-Type: application/json
+{}
+
+### List instances of a code scanning alert [GET]
+GET {{$dotenv BASE_URL}}/repos/{{$dotenv OWNER}}/{{$dotenv REPO}}/code-scanning/alerts/{{$dotenv ALERT_NUMBER}}/instances
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+
+### List code scanning analyses for a repository [GET]
+GET {{$dotenv BASE_URL}}/repos/{{$dotenv OWNER}}/{{$dotenv REPO}}/code-scanning/analyses?ref={{$dotenv REF}}&sarif_id={{$dotenv SARIF_ID}}&sort={{$dotenv SORT}}
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+
+### Get a code scanning analysis for a repository [GET]
+GET {{$dotenv BASE_URL}}/repos/{{$dotenv OWNER}}/{{$dotenv REPO}}/code-scanning/analyses/{{$dotenv ANALYSIS_ID}}
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+
+### Delete a code scanning analysis from a repository [DELETE]
+DELETE {{$dotenv BASE_URL}}/repos/{{$dotenv OWNER}}/{{$dotenv REPO}}/code-scanning/analyses/{{$dotenv ANALYSIS_ID}}?confirm_delete={{$dotenv CONFIRM_DELETE}}
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+
+### List CodeQL databases for a repository [GET]
+GET {{$dotenv BASE_URL}}/repos/{{$dotenv OWNER}}/{{$dotenv REPO}}/code-scanning/codeql/databases
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+
+### Get a CodeQL database for a repository [GET]
+GET {{$dotenv BASE_URL}}/repos/{{$dotenv OWNER}}/{{$dotenv REPO}}/code-scanning/codeql/databases/{{$dotenv LANGUAGE}}
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+
+### Delete a CodeQL database [DELETE]
+DELETE {{$dotenv BASE_URL}}/repos/{{$dotenv OWNER}}/{{$dotenv REPO}}/code-scanning/codeql/databases/{{$dotenv LANGUAGE}}
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+
+### Create a CodeQL variant analysis [POST]
+POST {{$dotenv BASE_URL}}/repos/{{$dotenv OWNER}}/{{$dotenv REPO}}/code-scanning/codeql/variant-analyses
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+Content-Type: application/json
+{}
+
+### Get the summary of a CodeQL variant analysis [GET]
+GET {{$dotenv BASE_URL}}/repos/{{$dotenv OWNER}}/{{$dotenv REPO}}/code-scanning/codeql/variant-analyses/{{$dotenv CODEQL_VARIANT_ANALYSIS_ID}}
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+
+### Get the analysis status of a repository in a CodeQL variant analysis [GET]
+GET {{$dotenv BASE_URL}}/repos/{{$dotenv OWNER}}/{{$dotenv REPO}}/code-scanning/codeql/variant-analyses/{{$dotenv CODEQL_VARIANT_ANALYSIS_ID}}/repos/{{$dotenv REPO_OWNER}}/{{$dotenv REPO_NAME}}
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+
+### Get a code scanning default setup configuration [GET]
+GET {{$dotenv BASE_URL}}/repos/{{$dotenv OWNER}}/{{$dotenv REPO}}/code-scanning/default-setup
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+
+### Update a code scanning default setup configuration [PATCH]
+PATCH {{$dotenv BASE_URL}}/repos/{{$dotenv OWNER}}/{{$dotenv REPO}}/code-scanning/default-setup
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+Content-Type: application/json
+{}
+
+### Upload an analysis as SARIF data [POST]
+POST {{$dotenv BASE_URL}}/repos/{{$dotenv OWNER}}/{{$dotenv REPO}}/code-scanning/sarifs
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+Content-Type: application/json
+{}
+
+### Get information about a SARIF upload [GET]
+GET {{$dotenv BASE_URL}}/repos/{{$dotenv OWNER}}/{{$dotenv REPO}}/code-scanning/sarifs/{{$dotenv SARIF_ID}}
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+
+### List dismissal requests for code scanning alerts for a repository [GET]
+GET {{$dotenv BASE_URL}}/repos/{{$dotenv OWNER}}/{{$dotenv REPO}}/dismissal-requests/code-scanning
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+
+### Get a dismissal request for a code scanning alert for a repository [GET]
+GET {{$dotenv BASE_URL}}/repos/{{$dotenv OWNER}}/{{$dotenv REPO}}/dismissal-requests/code-scanning/{{$dotenv ALERT_NUMBER}}
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+
+### Review a dismissal request for a code scanning alert for a repository [PATCH]
+PATCH {{$dotenv BASE_URL}}/repos/{{$dotenv OWNER}}/{{$dotenv REPO}}/dismissal-requests/code-scanning/{{$dotenv ALERT_NUMBER}}
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+Content-Type: application/json
+{}

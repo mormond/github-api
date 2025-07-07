@@ -1,0 +1,349 @@
+# Requests for tag: enterprise-admin
+
+
+
+### Get GitHub Enterprise Server statistics [GET]
+GET {{$dotenv BASE_URL}}/enterprise-installation/{{$dotenv ENTERPRISE_OR_ORG}}/server-statistics?date_start={{$dotenv DATE_START}}&date_end={{$dotenv DATE_END}}
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+
+### Get GitHub Actions permissions for an enterprise [GET]
+GET {{$dotenv BASE_URL}}/enterprises/{{$dotenv ENTERPRISE_NAME}}/actions/permissions
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+
+### Set GitHub Actions permissions for an enterprise [PUT]
+PUT {{$dotenv BASE_URL}}/enterprises/{{$dotenv ENTERPRISE_NAME}}/actions/permissions
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+Content-Type: application/json
+{}
+
+### List selected organizations enabled for GitHub Actions in an enterprise [GET]
+GET {{$dotenv BASE_URL}}/enterprises/{{$dotenv ENTERPRISE_NAME}}/actions/permissions/organizations
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+
+### Set selected organizations enabled for GitHub Actions in an enterprise [PUT]
+PUT {{$dotenv BASE_URL}}/enterprises/{{$dotenv ENTERPRISE_NAME}}/actions/permissions/organizations
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+Content-Type: application/json
+{}
+
+### Enable a selected organization for GitHub Actions in an enterprise [PUT]
+PUT {{$dotenv BASE_URL}}/enterprises/{{$dotenv ENTERPRISE_NAME}}/actions/permissions/organizations/{{$dotenv ORG_ID}}
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+
+### Disable a selected organization for GitHub Actions in an enterprise [DELETE]
+DELETE {{$dotenv BASE_URL}}/enterprises/{{$dotenv ENTERPRISE_NAME}}/actions/permissions/organizations/{{$dotenv ORG_ID}}
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+
+### Get allowed actions and reusable workflows for an enterprise [GET]
+GET {{$dotenv BASE_URL}}/enterprises/{{$dotenv ENTERPRISE_NAME}}/actions/permissions/selected-actions
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+
+### Set allowed actions and reusable workflows for an enterprise [PUT]
+PUT {{$dotenv BASE_URL}}/enterprises/{{$dotenv ENTERPRISE_NAME}}/actions/permissions/selected-actions
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+Content-Type: application/json
+{}
+
+### List self-hosted runner groups for an enterprise [GET]
+GET {{$dotenv BASE_URL}}/enterprises/{{$dotenv ENTERPRISE_NAME}}/actions/runner-groups
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+
+### Create a self-hosted runner group for an enterprise [POST]
+POST {{$dotenv BASE_URL}}/enterprises/{{$dotenv ENTERPRISE_NAME}}/actions/runner-groups
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+Content-Type: application/json
+{}
+
+### Get a self-hosted runner group for an enterprise [GET]
+GET {{$dotenv BASE_URL}}/enterprises/{{$dotenv ENTERPRISE_NAME}}/actions/runner-groups/{{$dotenv RUNNER_GROUP_ID}}
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+
+### Update a self-hosted runner group for an enterprise [PATCH]
+PATCH {{$dotenv BASE_URL}}/enterprises/{{$dotenv ENTERPRISE_NAME}}/actions/runner-groups/{{$dotenv RUNNER_GROUP_ID}}
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+Content-Type: application/json
+{}
+
+### Delete a self-hosted runner group from an enterprise [DELETE]
+DELETE {{$dotenv BASE_URL}}/enterprises/{{$dotenv ENTERPRISE_NAME}}/actions/runner-groups/{{$dotenv RUNNER_GROUP_ID}}
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+
+### List organization access to a self-hosted runner group in an enterprise [GET]
+GET {{$dotenv BASE_URL}}/enterprises/{{$dotenv ENTERPRISE_NAME}}/actions/runner-groups/{{$dotenv RUNNER_GROUP_ID}}/organizations
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+
+### Set organization access for a self-hosted runner group in an enterprise [PUT]
+PUT {{$dotenv BASE_URL}}/enterprises/{{$dotenv ENTERPRISE_NAME}}/actions/runner-groups/{{$dotenv RUNNER_GROUP_ID}}/organizations
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+Content-Type: application/json
+{}
+
+### Add organization access to a self-hosted runner group in an enterprise [PUT]
+PUT {{$dotenv BASE_URL}}/enterprises/{{$dotenv ENTERPRISE_NAME}}/actions/runner-groups/{{$dotenv RUNNER_GROUP_ID}}/organizations/{{$dotenv ORG_ID}}
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+
+### Remove organization access to a self-hosted runner group in an enterprise [DELETE]
+DELETE {{$dotenv BASE_URL}}/enterprises/{{$dotenv ENTERPRISE_NAME}}/actions/runner-groups/{{$dotenv RUNNER_GROUP_ID}}/organizations/{{$dotenv ORG_ID}}
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+
+### List self-hosted runners in a group for an enterprise [GET]
+GET {{$dotenv BASE_URL}}/enterprises/{{$dotenv ENTERPRISE_NAME}}/actions/runner-groups/{{$dotenv RUNNER_GROUP_ID}}/runners
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+
+### Set self-hosted runners in a group for an enterprise [PUT]
+PUT {{$dotenv BASE_URL}}/enterprises/{{$dotenv ENTERPRISE_NAME}}/actions/runner-groups/{{$dotenv RUNNER_GROUP_ID}}/runners
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+Content-Type: application/json
+{}
+
+### Add a self-hosted runner to a group for an enterprise [PUT]
+PUT {{$dotenv BASE_URL}}/enterprises/{{$dotenv ENTERPRISE_NAME}}/actions/runner-groups/{{$dotenv RUNNER_GROUP_ID}}/runners/{{$dotenv RUNNER_ID}}
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+
+### Remove a self-hosted runner from a group for an enterprise [DELETE]
+DELETE {{$dotenv BASE_URL}}/enterprises/{{$dotenv ENTERPRISE_NAME}}/actions/runner-groups/{{$dotenv RUNNER_GROUP_ID}}/runners/{{$dotenv RUNNER_ID}}
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+
+### List self-hosted runners for an enterprise [GET]
+GET {{$dotenv BASE_URL}}/enterprises/{{$dotenv ENTERPRISE_NAME}}/actions/runners?name={{$dotenv NAME}}
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+
+### List runner applications for an enterprise [GET]
+GET {{$dotenv BASE_URL}}/enterprises/{{$dotenv ENTERPRISE_NAME}}/actions/runners/downloads
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+
+### Create a registration token for an enterprise [POST]
+POST {{$dotenv BASE_URL}}/enterprises/{{$dotenv ENTERPRISE_NAME}}/actions/runners/registration-token
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+
+### Create a remove token for an enterprise [POST]
+POST {{$dotenv BASE_URL}}/enterprises/{{$dotenv ENTERPRISE_NAME}}/actions/runners/remove-token
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+
+### Get a self-hosted runner for an enterprise [GET]
+GET {{$dotenv BASE_URL}}/enterprises/{{$dotenv ENTERPRISE_NAME}}/actions/runners/{{$dotenv RUNNER_ID}}
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+
+### Delete a self-hosted runner from an enterprise [DELETE]
+DELETE {{$dotenv BASE_URL}}/enterprises/{{$dotenv ENTERPRISE_NAME}}/actions/runners/{{$dotenv RUNNER_ID}}
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+
+### List labels for a self-hosted runner for an enterprise [GET]
+GET {{$dotenv BASE_URL}}/enterprises/{{$dotenv ENTERPRISE_NAME}}/actions/runners/{{$dotenv RUNNER_ID}}/labels
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+
+### Add custom labels to a self-hosted runner for an enterprise [POST]
+POST {{$dotenv BASE_URL}}/enterprises/{{$dotenv ENTERPRISE_NAME}}/actions/runners/{{$dotenv RUNNER_ID}}/labels
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+Content-Type: application/json
+{}
+
+### Set custom labels for a self-hosted runner for an enterprise [PUT]
+PUT {{$dotenv BASE_URL}}/enterprises/{{$dotenv ENTERPRISE_NAME}}/actions/runners/{{$dotenv RUNNER_ID}}/labels
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+Content-Type: application/json
+{}
+
+### Remove all custom labels from a self-hosted runner for an enterprise [DELETE]
+DELETE {{$dotenv BASE_URL}}/enterprises/{{$dotenv ENTERPRISE_NAME}}/actions/runners/{{$dotenv RUNNER_ID}}/labels
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+
+### Remove a custom label from a self-hosted runner for an enterprise [DELETE]
+DELETE {{$dotenv BASE_URL}}/enterprises/{{$dotenv ENTERPRISE_NAME}}/actions/runners/{{$dotenv RUNNER_ID}}/labels/{{$dotenv NAME}}
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+
+### Get announcement banner for enterprise [GET]
+GET {{$dotenv BASE_URL}}/enterprises/{{$dotenv ENTERPRISE_NAME}}/announcement
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+
+### Set announcement banner for enterprise [PATCH]
+PATCH {{$dotenv BASE_URL}}/enterprises/{{$dotenv ENTERPRISE_NAME}}/announcement
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+Content-Type: application/json
+{}
+
+### Remove announcement banner from enterprise [DELETE]
+DELETE {{$dotenv BASE_URL}}/enterprises/{{$dotenv ENTERPRISE_NAME}}/announcement
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+
+### Get the audit log for an enterprise [GET]
+GET {{$dotenv BASE_URL}}/enterprises/{{$dotenv ENTERPRISE_NAME}}/audit-log
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+
+### Get the audit log stream key for encrypting secrets [GET]
+GET {{$dotenv BASE_URL}}/enterprises/{{$dotenv ENTERPRISE_NAME}}/audit-log/stream-key
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+
+### List audit log stream configurations for an enterprise [GET]
+GET {{$dotenv BASE_URL}}/enterprises/{{$dotenv ENTERPRISE_NAME}}/audit-log/streams
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+
+### Create an audit log streaming configuration for an enterprise [POST]
+POST {{$dotenv BASE_URL}}/enterprises/{{$dotenv ENTERPRISE_NAME}}/audit-log/streams
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+Content-Type: application/json
+{}
+
+### List one audit log streaming configuration via a stream ID [GET]
+GET {{$dotenv BASE_URL}}/enterprises/{{$dotenv ENTERPRISE_NAME}}/audit-log/streams/{{$dotenv STREAM_ID}}
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+
+### Update an existing audit log stream configuration [PUT]
+PUT {{$dotenv BASE_URL}}/enterprises/{{$dotenv ENTERPRISE_NAME}}/audit-log/streams/{{$dotenv STREAM_ID}}
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+Content-Type: application/json
+{}
+
+### Delete an audit log streaming configuration for an enterprise [DELETE]
+DELETE {{$dotenv BASE_URL}}/enterprises/{{$dotenv ENTERPRISE_NAME}}/audit-log/streams/{{$dotenv STREAM_ID}}
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+
+### List push rule bypass requests within an enterprise [GET]
+GET {{$dotenv BASE_URL}}/enterprises/{{$dotenv ENTERPRISE_NAME}}/bypass-requests/push-rules
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+
+### Get code security and analysis features for an enterprise [GET]
+GET {{$dotenv BASE_URL}}/enterprises/{{$dotenv ENTERPRISE_NAME}}/code_security_and_analysis
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+
+### Update code security and analysis features for an enterprise [PATCH]
+PATCH {{$dotenv BASE_URL}}/enterprises/{{$dotenv ENTERPRISE_NAME}}/code_security_and_analysis
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+Content-Type: application/json
+{}
+
+### List enterprise consumed licenses [GET]
+GET {{$dotenv BASE_URL}}/enterprises/{{$dotenv ENTERPRISE_NAME}}/consumed-licenses
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+
+### Get a license sync status [GET]
+GET {{$dotenv BASE_URL}}/enterprises/{{$dotenv ENTERPRISE_NAME}}/license-sync-status
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+
+### List hosted compute network configurations for an enterprise [GET]
+GET {{$dotenv BASE_URL}}/enterprises/{{$dotenv ENTERPRISE_NAME}}/network-configurations
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+
+### Create a hosted compute network configuration for an enterprise [POST]
+POST {{$dotenv BASE_URL}}/enterprises/{{$dotenv ENTERPRISE_NAME}}/network-configurations
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+Content-Type: application/json
+{}
+
+### Get a hosted compute network configuration for an enterprise [GET]
+GET {{$dotenv BASE_URL}}/enterprises/{{$dotenv ENTERPRISE_NAME}}/network-configurations/{{$dotenv NETWORK_CONFIGURATION_ID}}
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+
+### Update a hosted compute network configuration for an enterprise [PATCH]
+PATCH {{$dotenv BASE_URL}}/enterprises/{{$dotenv ENTERPRISE_NAME}}/network-configurations/{{$dotenv NETWORK_CONFIGURATION_ID}}
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+Content-Type: application/json
+{}
+
+### Delete a hosted compute network configuration from an enterprise [DELETE]
+DELETE {{$dotenv BASE_URL}}/enterprises/{{$dotenv ENTERPRISE_NAME}}/network-configurations/{{$dotenv NETWORK_CONFIGURATION_ID}}
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+
+### Get a hosted compute network settings resource for an enterprise [GET]
+GET {{$dotenv BASE_URL}}/enterprises/{{$dotenv ENTERPRISE_NAME}}/network-settings/{{$dotenv NETWORK_SETTINGS_ID}}
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+
+### Get custom properties for an enterprise [GET]
+GET {{$dotenv BASE_URL}}/enterprises/{{$dotenv ENTERPRISE_NAME}}/properties/schema
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+
+### Create or update custom properties for an enterprise [PATCH]
+PATCH {{$dotenv BASE_URL}}/enterprises/{{$dotenv ENTERPRISE_NAME}}/properties/schema
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+Content-Type: application/json
+{}
+
+### Promote a custom property to an enterprise [PUT]
+PUT {{$dotenv BASE_URL}}/enterprises/{{$dotenv ENTERPRISE_NAME}}/properties/schema/organizations/{{$dotenv ORG_NAME}}/{{$dotenv CUSTOM_PROPERTY_NAME}}/promote
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+
+### Get a custom property for an enterprise [GET]
+GET {{$dotenv BASE_URL}}/enterprises/{{$dotenv ENTERPRISE_NAME}}/properties/schema/{{$dotenv CUSTOM_PROPERTY_NAME}}
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+
+### Create or update a custom property for an enterprise [PUT]
+PUT {{$dotenv BASE_URL}}/enterprises/{{$dotenv ENTERPRISE_NAME}}/properties/schema/{{$dotenv CUSTOM_PROPERTY_NAME}}
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+Content-Type: application/json
+{}
+
+### Remove a custom property for an enterprise [DELETE]
+DELETE {{$dotenv BASE_URL}}/enterprises/{{$dotenv ENTERPRISE_NAME}}/properties/schema/{{$dotenv CUSTOM_PROPERTY_NAME}}
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+
+### Get enterprise ruleset history [GET]
+GET {{$dotenv BASE_URL}}/enterprises/{{$dotenv ENTERPRISE_NAME}}/rulesets/{{$dotenv RULESET_ID}}/history
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+
+### Get enterprise ruleset version [GET]
+GET {{$dotenv BASE_URL}}/enterprises/{{$dotenv ENTERPRISE_NAME}}/rulesets/{{$dotenv RULESET_ID}}/history/{{$dotenv VERSION_ID}}
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+
+### Enable or disable a security feature [POST]
+POST {{$dotenv BASE_URL}}/enterprises/{{$dotenv ENTERPRISE_NAME}}/{{$dotenv SECURITY_PRODUCT}}/{{$dotenv ENABLEMENT}}
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+
+### List provisioned SCIM groups for an enterprise [GET]
+GET {{$dotenv BASE_URL}}/scim/v2/enterprises/{{$dotenv ENTERPRISE_NAME}}/Groups?filter={{$dotenv FILTER}}
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+
+### Provision a SCIM enterprise group [POST]
+POST {{$dotenv BASE_URL}}/scim/v2/enterprises/{{$dotenv ENTERPRISE_NAME}}/Groups
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+Content-Type: application/json
+{}
+
+### Get SCIM provisioning information for an enterprise group [GET]
+GET {{$dotenv BASE_URL}}/scim/v2/enterprises/{{$dotenv ENTERPRISE_NAME}}/Groups/{{$dotenv SCIM_GROUP_ID}}
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+
+### Set SCIM information for a provisioned enterprise group [PUT]
+PUT {{$dotenv BASE_URL}}/scim/v2/enterprises/{{$dotenv ENTERPRISE_NAME}}/Groups/{{$dotenv SCIM_GROUP_ID}}
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+Content-Type: application/json
+{}
+
+### Update an attribute for a SCIM enterprise group [PATCH]
+PATCH {{$dotenv BASE_URL}}/scim/v2/enterprises/{{$dotenv ENTERPRISE_NAME}}/Groups/{{$dotenv SCIM_GROUP_ID}}
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+Content-Type: application/json
+{}
+
+### Delete a SCIM group from an enterprise [DELETE]
+DELETE {{$dotenv BASE_URL}}/scim/v2/enterprises/{{$dotenv ENTERPRISE_NAME}}/Groups/{{$dotenv SCIM_GROUP_ID}}
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+
+### List SCIM provisioned identities for an enterprise [GET]
+GET {{$dotenv BASE_URL}}/scim/v2/enterprises/{{$dotenv ENTERPRISE_NAME}}/Users?filter={{$dotenv FILTER}}
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+
+### Provision a SCIM enterprise user [POST]
+POST {{$dotenv BASE_URL}}/scim/v2/enterprises/{{$dotenv ENTERPRISE_NAME}}/Users
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+Content-Type: application/json
+{}
+
+### Get SCIM provisioning information for an enterprise user [GET]
+GET {{$dotenv BASE_URL}}/scim/v2/enterprises/{{$dotenv ENTERPRISE_NAME}}/Users/{{$dotenv SCIM_USER_ID}}
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+
+### Set SCIM information for a provisioned enterprise user [PUT]
+PUT {{$dotenv BASE_URL}}/scim/v2/enterprises/{{$dotenv ENTERPRISE_NAME}}/Users/{{$dotenv SCIM_USER_ID}}
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+Content-Type: application/json
+{}
+
+### Update an attribute for a SCIM enterprise user [PATCH]
+PATCH {{$dotenv BASE_URL}}/scim/v2/enterprises/{{$dotenv ENTERPRISE_NAME}}/Users/{{$dotenv SCIM_USER_ID}}
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+Content-Type: application/json
+{}
+
+### Delete a SCIM user from an enterprise [DELETE]
+DELETE {{$dotenv BASE_URL}}/scim/v2/enterprises/{{$dotenv ENTERPRISE_NAME}}/Users/{{$dotenv SCIM_USER_ID}}
+Authorization: Bearer {{$dotenv GH_TOKEN}}

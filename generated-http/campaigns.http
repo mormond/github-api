@@ -1,0 +1,27 @@
+# Requests for tag: campaigns
+
+
+
+### List campaigns for an organization [GET]
+GET {{$dotenv BASE_URL}}/orgs/{{$dotenv ORG_NAME}}/campaigns?state={{$dotenv STATE}}&sort={{$dotenv SORT}}
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+
+### Create a campaign for an organization [POST]
+POST {{$dotenv BASE_URL}}/orgs/{{$dotenv ORG_NAME}}/campaigns
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+Content-Type: application/json
+{}
+
+### Get a campaign for an organization [GET]
+GET {{$dotenv BASE_URL}}/orgs/{{$dotenv ORG_NAME}}/campaigns/{{$dotenv CAMPAIGN_NUMBER}}
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+
+### Update a campaign [PATCH]
+PATCH {{$dotenv BASE_URL}}/orgs/{{$dotenv ORG_NAME}}/campaigns/{{$dotenv CAMPAIGN_NUMBER}}
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+Content-Type: application/json
+{}
+
+### Delete a campaign for an organization [DELETE]
+DELETE {{$dotenv BASE_URL}}/orgs/{{$dotenv ORG_NAME}}/campaigns/{{$dotenv CAMPAIGN_NUMBER}}
+Authorization: Bearer {{$dotenv GH_TOKEN}}

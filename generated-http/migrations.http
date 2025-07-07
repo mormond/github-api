@@ -1,0 +1,103 @@
+# Requests for tag: migrations
+
+
+
+### List organization migrations [GET]
+GET {{$dotenv BASE_URL}}/orgs/{{$dotenv ORG_NAME}}/migrations?exclude={{$dotenv EXCLUDE}}
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+
+### Start an organization migration [POST]
+POST {{$dotenv BASE_URL}}/orgs/{{$dotenv ORG_NAME}}/migrations
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+Content-Type: application/json
+{}
+
+### Get an organization migration status [GET]
+GET {{$dotenv BASE_URL}}/orgs/{{$dotenv ORG_NAME}}/migrations/{{$dotenv MIGRATION_ID}}?exclude={{$dotenv EXCLUDE}}
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+
+### Download an organization migration archive [GET]
+GET {{$dotenv BASE_URL}}/orgs/{{$dotenv ORG_NAME}}/migrations/{{$dotenv MIGRATION_ID}}/archive
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+
+### Delete an organization migration archive [DELETE]
+DELETE {{$dotenv BASE_URL}}/orgs/{{$dotenv ORG_NAME}}/migrations/{{$dotenv MIGRATION_ID}}/archive
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+
+### Unlock an organization repository [DELETE]
+DELETE {{$dotenv BASE_URL}}/orgs/{{$dotenv ORG_NAME}}/migrations/{{$dotenv MIGRATION_ID}}/repos/{{$dotenv REPO_NAME}}/lock
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+
+### List repositories in an organization migration [GET]
+GET {{$dotenv BASE_URL}}/orgs/{{$dotenv ORG_NAME}}/migrations/{{$dotenv MIGRATION_ID}}/repositories
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+
+### Get an import status [GET]
+GET {{$dotenv BASE_URL}}/repos/{{$dotenv OWNER}}/{{$dotenv REPO}}/import
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+
+### Start an import [PUT]
+PUT {{$dotenv BASE_URL}}/repos/{{$dotenv OWNER}}/{{$dotenv REPO}}/import
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+Content-Type: application/json
+{}
+
+### Update an import [PATCH]
+PATCH {{$dotenv BASE_URL}}/repos/{{$dotenv OWNER}}/{{$dotenv REPO}}/import
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+Content-Type: application/json
+{}
+
+### Cancel an import [DELETE]
+DELETE {{$dotenv BASE_URL}}/repos/{{$dotenv OWNER}}/{{$dotenv REPO}}/import
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+
+### Get commit authors [GET]
+GET {{$dotenv BASE_URL}}/repos/{{$dotenv OWNER}}/{{$dotenv REPO}}/import/authors
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+
+### Map a commit author [PATCH]
+PATCH {{$dotenv BASE_URL}}/repos/{{$dotenv OWNER}}/{{$dotenv REPO}}/import/authors/{{$dotenv AUTHOR_ID}}
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+Content-Type: application/json
+{}
+
+### Get large files [GET]
+GET {{$dotenv BASE_URL}}/repos/{{$dotenv OWNER}}/{{$dotenv REPO}}/import/large_files
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+
+### Update Git LFS preference [PATCH]
+PATCH {{$dotenv BASE_URL}}/repos/{{$dotenv OWNER}}/{{$dotenv REPO}}/import/lfs
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+Content-Type: application/json
+{}
+
+### List user migrations [GET]
+GET {{$dotenv BASE_URL}}/user/migrations
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+
+### Start a user migration [POST]
+POST {{$dotenv BASE_URL}}/user/migrations
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+Content-Type: application/json
+{}
+
+### Get a user migration status [GET]
+GET {{$dotenv BASE_URL}}/user/migrations/{{$dotenv MIGRATION_ID}}?exclude={{$dotenv EXCLUDE}}
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+
+### Download a user migration archive [GET]
+GET {{$dotenv BASE_URL}}/user/migrations/{{$dotenv MIGRATION_ID}}/archive
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+
+### Delete a user migration archive [DELETE]
+DELETE {{$dotenv BASE_URL}}/user/migrations/{{$dotenv MIGRATION_ID}}/archive
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+
+### Unlock a user repository [DELETE]
+DELETE {{$dotenv BASE_URL}}/user/migrations/{{$dotenv MIGRATION_ID}}/repos/{{$dotenv REPO_NAME}}/lock
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+
+### List repositories for a user migration [GET]
+GET {{$dotenv BASE_URL}}/user/migrations/{{$dotenv MIGRATION_ID}}/repositories
+Authorization: Bearer {{$dotenv GH_TOKEN}}

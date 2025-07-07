@@ -1,0 +1,15 @@
+# Requests for tag: markdown
+
+
+
+### Render a Markdown document [POST]
+POST {{$dotenv BASE_URL}}/markdown
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+Content-Type: application/json
+{}
+
+### Render a Markdown document in raw mode [POST]
+POST {{$dotenv BASE_URL}}/markdown/raw
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+Content-Type: application/json
+{}

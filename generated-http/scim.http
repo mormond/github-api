@@ -1,0 +1,37 @@
+# Requests for tag: scim
+
+
+
+### List provisioned SCIM groups for an enterprise [GET]
+GET {{$dotenv BASE_URL}}/scim/v2/enterprises/{{$dotenv ENTERPRISE_NAME}}/Groups?filter={{$dotenv FILTER}}
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+
+### List SCIM provisioned identities [GET]
+GET {{$dotenv BASE_URL}}/scim/v2/organizations/{{$dotenv ORG_NAME}}/Users?startIndex={{$dotenv STARTINDEX}}&count={{$dotenv COUNT}}&filter={{$dotenv FILTER}}
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+
+### Provision and invite a SCIM user [POST]
+POST {{$dotenv BASE_URL}}/scim/v2/organizations/{{$dotenv ORG_NAME}}/Users
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+Content-Type: application/json
+{}
+
+### Get SCIM provisioning information for a user [GET]
+GET {{$dotenv BASE_URL}}/scim/v2/organizations/{{$dotenv ORG_NAME}}/Users/{{$dotenv SCIM_USER_ID}}
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+
+### Update a provisioned organization membership [PUT]
+PUT {{$dotenv BASE_URL}}/scim/v2/organizations/{{$dotenv ORG_NAME}}/Users/{{$dotenv SCIM_USER_ID}}
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+Content-Type: application/json
+{}
+
+### Update an attribute for a SCIM user [PATCH]
+PATCH {{$dotenv BASE_URL}}/scim/v2/organizations/{{$dotenv ORG_NAME}}/Users/{{$dotenv SCIM_USER_ID}}
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+Content-Type: application/json
+{}
+
+### Delete a SCIM user from an organization [DELETE]
+DELETE {{$dotenv BASE_URL}}/scim/v2/organizations/{{$dotenv ORG_NAME}}/Users/{{$dotenv SCIM_USER_ID}}
+Authorization: Bearer {{$dotenv GH_TOKEN}}

@@ -1,0 +1,221 @@
+# Requests for tag: codespaces
+
+
+
+### List codespaces for the organization [GET]
+GET {{$dotenv BASE_URL}}/orgs/{{$dotenv ORG_NAME}}/codespaces
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+
+### Manage access control for organization codespaces [PUT]
+PUT {{$dotenv BASE_URL}}/orgs/{{$dotenv ORG_NAME}}/codespaces/access
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+Content-Type: application/json
+{}
+
+### Add users to Codespaces access for an organization [POST]
+POST {{$dotenv BASE_URL}}/orgs/{{$dotenv ORG_NAME}}/codespaces/access/selected_users
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+Content-Type: application/json
+{}
+
+### Remove users from Codespaces access for an organization [DELETE]
+DELETE {{$dotenv BASE_URL}}/orgs/{{$dotenv ORG_NAME}}/codespaces/access/selected_users
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+Content-Type: application/json
+{}
+
+### List organization secrets [GET]
+GET {{$dotenv BASE_URL}}/orgs/{{$dotenv ORG_NAME}}/codespaces/secrets
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+
+### Get an organization public key [GET]
+GET {{$dotenv BASE_URL}}/orgs/{{$dotenv ORG_NAME}}/codespaces/secrets/public-key
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+
+### Get an organization secret [GET]
+GET {{$dotenv BASE_URL}}/orgs/{{$dotenv ORG_NAME}}/codespaces/secrets/{{$dotenv SECRET_NAME}}
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+
+### Create or update an organization secret [PUT]
+PUT {{$dotenv BASE_URL}}/orgs/{{$dotenv ORG_NAME}}/codespaces/secrets/{{$dotenv SECRET_NAME}}
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+Content-Type: application/json
+{}
+
+### Delete an organization secret [DELETE]
+DELETE {{$dotenv BASE_URL}}/orgs/{{$dotenv ORG_NAME}}/codespaces/secrets/{{$dotenv SECRET_NAME}}
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+
+### List selected repositories for an organization secret [GET]
+GET {{$dotenv BASE_URL}}/orgs/{{$dotenv ORG_NAME}}/codespaces/secrets/{{$dotenv SECRET_NAME}}/repositories
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+
+### Set selected repositories for an organization secret [PUT]
+PUT {{$dotenv BASE_URL}}/orgs/{{$dotenv ORG_NAME}}/codespaces/secrets/{{$dotenv SECRET_NAME}}/repositories
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+Content-Type: application/json
+{}
+
+### Add selected repository to an organization secret [PUT]
+PUT {{$dotenv BASE_URL}}/orgs/{{$dotenv ORG_NAME}}/codespaces/secrets/{{$dotenv SECRET_NAME}}/repositories/{{$dotenv REPOSITORY_ID}}
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+
+### Remove selected repository from an organization secret [DELETE]
+DELETE {{$dotenv BASE_URL}}/orgs/{{$dotenv ORG_NAME}}/codespaces/secrets/{{$dotenv SECRET_NAME}}/repositories/{{$dotenv REPOSITORY_ID}}
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+
+### List codespaces for a user in organization [GET]
+GET {{$dotenv BASE_URL}}/orgs/{{$dotenv ORG_NAME}}/members/{{$dotenv USERNAME}}/codespaces
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+
+### Delete a codespace from the organization [DELETE]
+DELETE {{$dotenv BASE_URL}}/orgs/{{$dotenv ORG_NAME}}/members/{{$dotenv USERNAME}}/codespaces/{{$dotenv CODESPACE_NAME}}
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+
+### Stop a codespace for an organization user [POST]
+POST {{$dotenv BASE_URL}}/orgs/{{$dotenv ORG_NAME}}/members/{{$dotenv USERNAME}}/codespaces/{{$dotenv CODESPACE_NAME}}/stop
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+
+### List codespaces in a repository for the authenticated user [GET]
+GET {{$dotenv BASE_URL}}/repos/{{$dotenv OWNER}}/{{$dotenv REPO}}/codespaces
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+
+### Create a codespace in a repository [POST]
+POST {{$dotenv BASE_URL}}/repos/{{$dotenv OWNER}}/{{$dotenv REPO}}/codespaces
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+Content-Type: application/json
+{}
+
+### List devcontainer configurations in a repository for the authenticated user [GET]
+GET {{$dotenv BASE_URL}}/repos/{{$dotenv OWNER}}/{{$dotenv REPO}}/codespaces/devcontainers
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+
+### List available machine types for a repository [GET]
+GET {{$dotenv BASE_URL}}/repos/{{$dotenv OWNER}}/{{$dotenv REPO}}/codespaces/machines?location={{$dotenv LOCATION}}&client_ip={{$dotenv CLIENT_IP}}&ref={{$dotenv REF}}
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+
+### Get default attributes for a codespace [GET]
+GET {{$dotenv BASE_URL}}/repos/{{$dotenv OWNER}}/{{$dotenv REPO}}/codespaces/new?ref={{$dotenv REF}}&client_ip={{$dotenv CLIENT_IP}}
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+
+### Check if permissions defined by a devcontainer have been accepted by the authenticated user [GET]
+GET {{$dotenv BASE_URL}}/repos/{{$dotenv OWNER}}/{{$dotenv REPO}}/codespaces/permissions_check?ref={{$dotenv REF}}&devcontainer_path={{$dotenv DEVCONTAINER_PATH}}
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+
+### List repository secrets [GET]
+GET {{$dotenv BASE_URL}}/repos/{{$dotenv OWNER}}/{{$dotenv REPO}}/codespaces/secrets
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+
+### Get a repository public key [GET]
+GET {{$dotenv BASE_URL}}/repos/{{$dotenv OWNER}}/{{$dotenv REPO}}/codespaces/secrets/public-key
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+
+### Get a repository secret [GET]
+GET {{$dotenv BASE_URL}}/repos/{{$dotenv OWNER}}/{{$dotenv REPO}}/codespaces/secrets/{{$dotenv SECRET_NAME}}
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+
+### Create or update a repository secret [PUT]
+PUT {{$dotenv BASE_URL}}/repos/{{$dotenv OWNER}}/{{$dotenv REPO}}/codespaces/secrets/{{$dotenv SECRET_NAME}}
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+Content-Type: application/json
+{}
+
+### Delete a repository secret [DELETE]
+DELETE {{$dotenv BASE_URL}}/repos/{{$dotenv OWNER}}/{{$dotenv REPO}}/codespaces/secrets/{{$dotenv SECRET_NAME}}
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+
+### Create a codespace from a pull request [POST]
+POST {{$dotenv BASE_URL}}/repos/{{$dotenv OWNER}}/{{$dotenv REPO}}/pulls/{{$dotenv PULL_NUMBER}}/codespaces
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+Content-Type: application/json
+{}
+
+### List codespaces for the authenticated user [GET]
+GET {{$dotenv BASE_URL}}/user/codespaces
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+
+### Create a codespace for the authenticated user [POST]
+POST {{$dotenv BASE_URL}}/user/codespaces
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+Content-Type: application/json
+{}
+
+### List secrets for the authenticated user [GET]
+GET {{$dotenv BASE_URL}}/user/codespaces/secrets
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+
+### Get public key for the authenticated user [GET]
+GET {{$dotenv BASE_URL}}/user/codespaces/secrets/public-key
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+
+### Get a secret for the authenticated user [GET]
+GET {{$dotenv BASE_URL}}/user/codespaces/secrets/{{$dotenv SECRET_NAME}}
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+
+### Create or update a secret for the authenticated user [PUT]
+PUT {{$dotenv BASE_URL}}/user/codespaces/secrets/{{$dotenv SECRET_NAME}}
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+Content-Type: application/json
+{}
+
+### Delete a secret for the authenticated user [DELETE]
+DELETE {{$dotenv BASE_URL}}/user/codespaces/secrets/{{$dotenv SECRET_NAME}}
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+
+### List selected repositories for a user secret [GET]
+GET {{$dotenv BASE_URL}}/user/codespaces/secrets/{{$dotenv SECRET_NAME}}/repositories
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+
+### Set selected repositories for a user secret [PUT]
+PUT {{$dotenv BASE_URL}}/user/codespaces/secrets/{{$dotenv SECRET_NAME}}/repositories
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+Content-Type: application/json
+{}
+
+### Add a selected repository to a user secret [PUT]
+PUT {{$dotenv BASE_URL}}/user/codespaces/secrets/{{$dotenv SECRET_NAME}}/repositories/{{$dotenv REPOSITORY_ID}}
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+
+### Remove a selected repository from a user secret [DELETE]
+DELETE {{$dotenv BASE_URL}}/user/codespaces/secrets/{{$dotenv SECRET_NAME}}/repositories/{{$dotenv REPOSITORY_ID}}
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+
+### Get a codespace for the authenticated user [GET]
+GET {{$dotenv BASE_URL}}/user/codespaces/{{$dotenv CODESPACE_NAME}}
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+
+### Update a codespace for the authenticated user [PATCH]
+PATCH {{$dotenv BASE_URL}}/user/codespaces/{{$dotenv CODESPACE_NAME}}
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+Content-Type: application/json
+{}
+
+### Delete a codespace for the authenticated user [DELETE]
+DELETE {{$dotenv BASE_URL}}/user/codespaces/{{$dotenv CODESPACE_NAME}}
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+
+### Export a codespace for the authenticated user [POST]
+POST {{$dotenv BASE_URL}}/user/codespaces/{{$dotenv CODESPACE_NAME}}/exports
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+
+### Get details about a codespace export [GET]
+GET {{$dotenv BASE_URL}}/user/codespaces/{{$dotenv CODESPACE_NAME}}/exports/{{$dotenv EXPORT_ID}}
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+
+### List machine types for a codespace [GET]
+GET {{$dotenv BASE_URL}}/user/codespaces/{{$dotenv CODESPACE_NAME}}/machines
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+
+### Create a repository from an unpublished codespace [POST]
+POST {{$dotenv BASE_URL}}/user/codespaces/{{$dotenv CODESPACE_NAME}}/publish
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+Content-Type: application/json
+{}
+
+### Start a codespace for the authenticated user [POST]
+POST {{$dotenv BASE_URL}}/user/codespaces/{{$dotenv CODESPACE_NAME}}/start
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+
+### Stop a codespace for the authenticated user [POST]
+POST {{$dotenv BASE_URL}}/user/codespaces/{{$dotenv CODESPACE_NAME}}/stop
+Authorization: Bearer {{$dotenv GH_TOKEN}}

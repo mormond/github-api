@@ -1,0 +1,102 @@
+# Requests for tag: billing
+
+
+
+### Get GitHub Actions billing for an enterprise [GET]
+GET {{$dotenv BASE_URL}}/enterprises/{{$dotenv ENTERPRISE_NAME}}/settings/billing/actions
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+
+### Get GitHub Advanced Security active committers for an enterprise [GET]
+GET {{$dotenv BASE_URL}}/enterprises/{{$dotenv ENTERPRISE_NAME}}/settings/billing/advanced-security
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+
+### Get all cost centers for an enterprise [GET]
+GET {{$dotenv BASE_URL}}/enterprises/{{$dotenv ENTERPRISE_NAME}}/settings/billing/cost-centers
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+
+### Create a new cost center [POST]
+POST {{$dotenv BASE_URL}}/enterprises/{{$dotenv ENTERPRISE_NAME}}/settings/billing/cost-centers
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+Content-Type: application/json
+{}
+
+### Get a cost center by ID [GET]
+GET {{$dotenv BASE_URL}}/enterprises/{{$dotenv ENTERPRISE_NAME}}/settings/billing/cost-centers/{{$dotenv COST_CENTER_ID}}
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+
+### Update a cost center name [PATCH]
+PATCH {{$dotenv BASE_URL}}/enterprises/{{$dotenv ENTERPRISE_NAME}}/settings/billing/cost-centers/{{$dotenv COST_CENTER_ID}}
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+Content-Type: application/json
+{}
+
+### Delete a cost center [DELETE]
+DELETE {{$dotenv BASE_URL}}/enterprises/{{$dotenv ENTERPRISE_NAME}}/settings/billing/cost-centers/{{$dotenv COST_CENTER_ID}}
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+
+### Add resources to a cost center [POST]
+POST {{$dotenv BASE_URL}}/enterprises/{{$dotenv ENTERPRISE_NAME}}/settings/billing/cost-centers/{{$dotenv COST_CENTER_ID}}/resource
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+Content-Type: application/vnd.github+json
+X-GitHub-Api-Version: 2022-11-28
+
+{
+    "users": ["{{$dotenv USERNAME}}"]
+}
+
+### Remove resources from a cost center [DELETE]
+DELETE {{$dotenv BASE_URL}}/enterprises/{{$dotenv ENTERPRISE_NAME}}/settings/billing/cost-centers/{{$dotenv COST_CENTER_ID}}/resource
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+Content-Type: application/json
+
+{
+    "users": ["{{$dotenv USERNAME}}"]
+}
+
+### Get GitHub Packages billing for an enterprise [GET]
+GET {{$dotenv BASE_URL}}/enterprises/{{$dotenv ENTERPRISE_NAME}}/settings/billing/packages
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+
+### Get shared storage billing for an enterprise [GET]
+GET {{$dotenv BASE_URL}}/enterprises/{{$dotenv ENTERPRISE_NAME}}/settings/billing/shared-storage
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+
+### Get billing usage report for an enterprise [GET]
+GET {{$dotenv BASE_URL}}/enterprises/{{$dotenv ENTERPRISE_NAME}}/settings/billing/usage?cost_center_id={{$dotenv COST_CENTER_ID}}
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+
+### Get billing usage report for an organization [GET]
+GET {{$dotenv BASE_URL}}/organizations/{{$dotenv ORG_NAME}}/settings/billing/usage
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+
+### Get GitHub Actions billing for an organization [GET]
+GET {{$dotenv BASE_URL}}/orgs/{{$dotenv ORG_NAME}}/settings/billing/actions
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+
+### Get GitHub Advanced Security active committers for an organization [GET]
+GET {{$dotenv BASE_URL}}/orgs/{{$dotenv ORG_NAME}}/settings/billing/advanced-security
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+
+### Get GitHub Packages billing for an organization [GET]
+GET {{$dotenv BASE_URL}}/orgs/{{$dotenv ORG_NAME}}/settings/billing/packages
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+
+### Get shared storage billing for an organization [GET]
+GET {{$dotenv BASE_URL}}/orgs/{{$dotenv ORG_NAME}}/settings/billing/shared-storage
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+
+### Get GitHub Actions billing for a user [GET]
+GET {{$dotenv BASE_URL}}/users/{{$dotenv USERNAME}}/settings/billing/actions
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+
+### Get GitHub Packages billing for a user [GET]
+GET {{$dotenv BASE_URL}}/users/{{$dotenv USERNAME}}/settings/billing/packages
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+
+### Get shared storage billing for a user [GET]
+GET {{$dotenv BASE_URL}}/users/{{$dotenv USERNAME}}/settings/billing/shared-storage
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+
+### Get billing usage report for a user [GET]
+GET {{$dotenv BASE_URL}}/users/{{$dotenv USERNAME}}/settings/billing/usage
+Authorization: Bearer {{$dotenv GH_TOKEN}}

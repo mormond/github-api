@@ -1,0 +1,741 @@
+# Requests for tag: actions
+
+
+
+### Get GitHub Actions cache usage for an enterprise [GET]
+GET {{$dotenv BASE_URL}}/enterprises/{{$dotenv ENTERPRISE_NAME}}/actions/cache/usage
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+
+### List GitHub-hosted runners for an enterprise [GET]
+GET {{$dotenv BASE_URL}}/enterprises/{{$dotenv ENTERPRISE_NAME}}/actions/hosted-runners
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+
+### Create a GitHub-hosted runner for an enterprise [POST]
+POST {{$dotenv BASE_URL}}/enterprises/{{$dotenv ENTERPRISE_NAME}}/actions/hosted-runners
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+Content-Type: application/json
+{}
+
+### Get GitHub-owned images for GitHub-hosted runners in an enterprise [GET]
+GET {{$dotenv BASE_URL}}/enterprises/{{$dotenv ENTERPRISE_NAME}}/actions/hosted-runners/images/github-owned
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+
+### Get partner images for GitHub-hosted runners in an enterprise [GET]
+GET {{$dotenv BASE_URL}}/enterprises/{{$dotenv ENTERPRISE_NAME}}/actions/hosted-runners/images/partner
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+
+### Get limits on GitHub-hosted runners for an enterprise [GET]
+GET {{$dotenv BASE_URL}}/enterprises/{{$dotenv ENTERPRISE_NAME}}/actions/hosted-runners/limits
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+
+### Get GitHub-hosted runners machine specs for an enterprise [GET]
+GET {{$dotenv BASE_URL}}/enterprises/{{$dotenv ENTERPRISE_NAME}}/actions/hosted-runners/machine-sizes
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+
+### Get platforms for GitHub-hosted runners in an enterprise [GET]
+GET {{$dotenv BASE_URL}}/enterprises/{{$dotenv ENTERPRISE_NAME}}/actions/hosted-runners/platforms
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+
+### Get a GitHub-hosted runner for an enterprise [GET]
+GET {{$dotenv BASE_URL}}/enterprises/{{$dotenv ENTERPRISE_NAME}}/actions/hosted-runners/{{$dotenv HOSTED_RUNNER_ID}}
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+
+### Update a GitHub-hosted runner for an enterprise [PATCH]
+PATCH {{$dotenv BASE_URL}}/enterprises/{{$dotenv ENTERPRISE_NAME}}/actions/hosted-runners/{{$dotenv HOSTED_RUNNER_ID}}
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+Content-Type: application/json
+{}
+
+### Delete a GitHub-hosted runner for an enterprise [DELETE]
+DELETE {{$dotenv BASE_URL}}/enterprises/{{$dotenv ENTERPRISE_NAME}}/actions/hosted-runners/{{$dotenv HOSTED_RUNNER_ID}}
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+
+### Set the GitHub Actions OIDC custom issuer policy for an enterprise [PUT]
+PUT {{$dotenv BASE_URL}}/enterprises/{{$dotenv ENTERPRISE_NAME}}/actions/oidc/customization/issuer
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+Content-Type: application/json
+{}
+
+### Get default workflow permissions for an enterprise [GET]
+GET {{$dotenv BASE_URL}}/enterprises/{{$dotenv ENTERPRISE_NAME}}/actions/permissions/workflow
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+
+### Set default workflow permissions for an enterprise [PUT]
+PUT {{$dotenv BASE_URL}}/enterprises/{{$dotenv ENTERPRISE_NAME}}/actions/permissions/workflow
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+Content-Type: application/json
+{}
+
+### Create configuration for a just-in-time runner for an Enterprise [POST]
+POST {{$dotenv BASE_URL}}/enterprises/{{$dotenv ENTERPRISE_NAME}}/actions/runners/generate-jitconfig
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+Content-Type: application/json
+{}
+
+### Get GitHub Actions cache usage for an organization [GET]
+GET {{$dotenv BASE_URL}}/orgs/{{$dotenv ORG_NAME}}/actions/cache/usage
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+
+### List repositories with GitHub Actions cache usage for an organization [GET]
+GET {{$dotenv BASE_URL}}/orgs/{{$dotenv ORG_NAME}}/actions/cache/usage-by-repository
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+
+### List GitHub-hosted runners for an organization [GET]
+GET {{$dotenv BASE_URL}}/orgs/{{$dotenv ORG_NAME}}/actions/hosted-runners
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+
+### Create a GitHub-hosted runner for an organization [POST]
+POST {{$dotenv BASE_URL}}/orgs/{{$dotenv ORG_NAME}}/actions/hosted-runners
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+Content-Type: application/json
+{}
+
+### Get GitHub-owned images for GitHub-hosted runners in an organization [GET]
+GET {{$dotenv BASE_URL}}/orgs/{{$dotenv ORG_NAME}}/actions/hosted-runners/images/github-owned
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+
+### Get partner images for GitHub-hosted runners in an organization [GET]
+GET {{$dotenv BASE_URL}}/orgs/{{$dotenv ORG_NAME}}/actions/hosted-runners/images/partner
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+
+### Get limits on GitHub-hosted runners for an organization [GET]
+GET {{$dotenv BASE_URL}}/orgs/{{$dotenv ORG_NAME}}/actions/hosted-runners/limits
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+
+### Get GitHub-hosted runners machine specs for an organization [GET]
+GET {{$dotenv BASE_URL}}/orgs/{{$dotenv ORG_NAME}}/actions/hosted-runners/machine-sizes
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+
+### Get platforms for GitHub-hosted runners in an organization [GET]
+GET {{$dotenv BASE_URL}}/orgs/{{$dotenv ORG_NAME}}/actions/hosted-runners/platforms
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+
+### Get a GitHub-hosted runner for an organization [GET]
+GET {{$dotenv BASE_URL}}/orgs/{{$dotenv ORG_NAME}}/actions/hosted-runners/{{$dotenv HOSTED_RUNNER_ID}}
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+
+### Update a GitHub-hosted runner for an organization [PATCH]
+PATCH {{$dotenv BASE_URL}}/orgs/{{$dotenv ORG_NAME}}/actions/hosted-runners/{{$dotenv HOSTED_RUNNER_ID}}
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+Content-Type: application/json
+{}
+
+### Delete a GitHub-hosted runner for an organization [DELETE]
+DELETE {{$dotenv BASE_URL}}/orgs/{{$dotenv ORG_NAME}}/actions/hosted-runners/{{$dotenv HOSTED_RUNNER_ID}}
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+
+### Get GitHub Actions permissions for an organization [GET]
+GET {{$dotenv BASE_URL}}/orgs/{{$dotenv ORG_NAME}}/actions/permissions
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+
+### Set GitHub Actions permissions for an organization [PUT]
+PUT {{$dotenv BASE_URL}}/orgs/{{$dotenv ORG_NAME}}/actions/permissions
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+Content-Type: application/json
+{}
+
+### List selected repositories enabled for GitHub Actions in an organization [GET]
+GET {{$dotenv BASE_URL}}/orgs/{{$dotenv ORG_NAME}}/actions/permissions/repositories
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+
+### Set selected repositories enabled for GitHub Actions in an organization [PUT]
+PUT {{$dotenv BASE_URL}}/orgs/{{$dotenv ORG_NAME}}/actions/permissions/repositories
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+Content-Type: application/json
+{}
+
+### Enable a selected repository for GitHub Actions in an organization [PUT]
+PUT {{$dotenv BASE_URL}}/orgs/{{$dotenv ORG_NAME}}/actions/permissions/repositories/{{$dotenv REPOSITORY_ID}}
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+
+### Disable a selected repository for GitHub Actions in an organization [DELETE]
+DELETE {{$dotenv BASE_URL}}/orgs/{{$dotenv ORG_NAME}}/actions/permissions/repositories/{{$dotenv REPOSITORY_ID}}
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+
+### Get allowed actions and reusable workflows for an organization [GET]
+GET {{$dotenv BASE_URL}}/orgs/{{$dotenv ORG_NAME}}/actions/permissions/selected-actions
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+
+### Set allowed actions for an organization [PUT]
+PUT {{$dotenv BASE_URL}}/orgs/{{$dotenv ORG_NAME}}/actions/permissions/selected-actions
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+Content-Type: application/json
+{}
+
+### Get default workflow permissions for an organization [GET]
+GET {{$dotenv BASE_URL}}/orgs/{{$dotenv ORG_NAME}}/actions/permissions/workflow
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+
+### Set default workflow permissions for an organization [PUT]
+PUT {{$dotenv BASE_URL}}/orgs/{{$dotenv ORG_NAME}}/actions/permissions/workflow
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+Content-Type: application/json
+{}
+
+### List self-hosted runner groups for an organization [GET]
+GET {{$dotenv BASE_URL}}/orgs/{{$dotenv ORG_NAME}}/actions/runner-groups
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+
+### Create a self-hosted runner group for an organization [POST]
+POST {{$dotenv BASE_URL}}/orgs/{{$dotenv ORG_NAME}}/actions/runner-groups
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+Content-Type: application/json
+{}
+
+### Get a self-hosted runner group for an organization [GET]
+GET {{$dotenv BASE_URL}}/orgs/{{$dotenv ORG_NAME}}/actions/runner-groups/{{$dotenv RUNNER_GROUP_ID}}
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+
+### Update a self-hosted runner group for an organization [PATCH]
+PATCH {{$dotenv BASE_URL}}/orgs/{{$dotenv ORG_NAME}}/actions/runner-groups/{{$dotenv RUNNER_GROUP_ID}}
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+Content-Type: application/json
+{}
+
+### Delete a self-hosted runner group from an organization [DELETE]
+DELETE {{$dotenv BASE_URL}}/orgs/{{$dotenv ORG_NAME}}/actions/runner-groups/{{$dotenv RUNNER_GROUP_ID}}
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+
+### List GitHub-hosted runners in a group for an organization [GET]
+GET {{$dotenv BASE_URL}}/orgs/{{$dotenv ORG_NAME}}/actions/runner-groups/{{$dotenv RUNNER_GROUP_ID}}/hosted-runners
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+
+### List repository access to a self-hosted runner group in an organization [GET]
+GET {{$dotenv BASE_URL}}/orgs/{{$dotenv ORG_NAME}}/actions/runner-groups/{{$dotenv RUNNER_GROUP_ID}}/repositories
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+
+### Set repository access for a self-hosted runner group in an organization [PUT]
+PUT {{$dotenv BASE_URL}}/orgs/{{$dotenv ORG_NAME}}/actions/runner-groups/{{$dotenv RUNNER_GROUP_ID}}/repositories
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+Content-Type: application/json
+{}
+
+### Add repository access to a self-hosted runner group in an organization [PUT]
+PUT {{$dotenv BASE_URL}}/orgs/{{$dotenv ORG_NAME}}/actions/runner-groups/{{$dotenv RUNNER_GROUP_ID}}/repositories/{{$dotenv REPOSITORY_ID}}
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+
+### Remove repository access to a self-hosted runner group in an organization [DELETE]
+DELETE {{$dotenv BASE_URL}}/orgs/{{$dotenv ORG_NAME}}/actions/runner-groups/{{$dotenv RUNNER_GROUP_ID}}/repositories/{{$dotenv REPOSITORY_ID}}
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+
+### List self-hosted runners in a group for an organization [GET]
+GET {{$dotenv BASE_URL}}/orgs/{{$dotenv ORG_NAME}}/actions/runner-groups/{{$dotenv RUNNER_GROUP_ID}}/runners
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+
+### Set self-hosted runners in a group for an organization [PUT]
+PUT {{$dotenv BASE_URL}}/orgs/{{$dotenv ORG_NAME}}/actions/runner-groups/{{$dotenv RUNNER_GROUP_ID}}/runners
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+Content-Type: application/json
+{}
+
+### Add a self-hosted runner to a group for an organization [PUT]
+PUT {{$dotenv BASE_URL}}/orgs/{{$dotenv ORG_NAME}}/actions/runner-groups/{{$dotenv RUNNER_GROUP_ID}}/runners/{{$dotenv RUNNER_ID}}
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+
+### Remove a self-hosted runner from a group for an organization [DELETE]
+DELETE {{$dotenv BASE_URL}}/orgs/{{$dotenv ORG_NAME}}/actions/runner-groups/{{$dotenv RUNNER_GROUP_ID}}/runners/{{$dotenv RUNNER_ID}}
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+
+### List self-hosted runners for an organization [GET]
+GET {{$dotenv BASE_URL}}/orgs/{{$dotenv ORG_NAME}}/actions/runners?name={{$dotenv NAME}}
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+
+### List runner applications for an organization [GET]
+GET {{$dotenv BASE_URL}}/orgs/{{$dotenv ORG_NAME}}/actions/runners/downloads
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+
+### Create configuration for a just-in-time runner for an organization [POST]
+POST {{$dotenv BASE_URL}}/orgs/{{$dotenv ORG_NAME}}/actions/runners/generate-jitconfig
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+Content-Type: application/json
+{}
+
+### Create a registration token for an organization [POST]
+POST {{$dotenv BASE_URL}}/orgs/{{$dotenv ORG_NAME}}/actions/runners/registration-token
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+
+### Create a remove token for an organization [POST]
+POST {{$dotenv BASE_URL}}/orgs/{{$dotenv ORG_NAME}}/actions/runners/remove-token
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+
+### Get a self-hosted runner for an organization [GET]
+GET {{$dotenv BASE_URL}}/orgs/{{$dotenv ORG_NAME}}/actions/runners/{{$dotenv RUNNER_ID}}
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+
+### Delete a self-hosted runner from an organization [DELETE]
+DELETE {{$dotenv BASE_URL}}/orgs/{{$dotenv ORG_NAME}}/actions/runners/{{$dotenv RUNNER_ID}}
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+
+### List labels for a self-hosted runner for an organization [GET]
+GET {{$dotenv BASE_URL}}/orgs/{{$dotenv ORG_NAME}}/actions/runners/{{$dotenv RUNNER_ID}}/labels
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+
+### Add custom labels to a self-hosted runner for an organization [POST]
+POST {{$dotenv BASE_URL}}/orgs/{{$dotenv ORG_NAME}}/actions/runners/{{$dotenv RUNNER_ID}}/labels
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+Content-Type: application/json
+{}
+
+### Set custom labels for a self-hosted runner for an organization [PUT]
+PUT {{$dotenv BASE_URL}}/orgs/{{$dotenv ORG_NAME}}/actions/runners/{{$dotenv RUNNER_ID}}/labels
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+Content-Type: application/json
+{}
+
+### Remove all custom labels from a self-hosted runner for an organization [DELETE]
+DELETE {{$dotenv BASE_URL}}/orgs/{{$dotenv ORG_NAME}}/actions/runners/{{$dotenv RUNNER_ID}}/labels
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+
+### Remove a custom label from a self-hosted runner for an organization [DELETE]
+DELETE {{$dotenv BASE_URL}}/orgs/{{$dotenv ORG_NAME}}/actions/runners/{{$dotenv RUNNER_ID}}/labels/{{$dotenv NAME}}
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+
+### List organization secrets [GET]
+GET {{$dotenv BASE_URL}}/orgs/{{$dotenv ORG_NAME}}/actions/secrets
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+
+### Get an organization public key [GET]
+GET {{$dotenv BASE_URL}}/orgs/{{$dotenv ORG_NAME}}/actions/secrets/public-key
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+
+### Get an organization secret [GET]
+GET {{$dotenv BASE_URL}}/orgs/{{$dotenv ORG_NAME}}/actions/secrets/{{$dotenv SECRET_NAME}}
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+
+### Create or update an organization secret [PUT]
+PUT {{$dotenv BASE_URL}}/orgs/{{$dotenv ORG_NAME}}/actions/secrets/{{$dotenv SECRET_NAME}}
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+Content-Type: application/json
+{}
+
+### Delete an organization secret [DELETE]
+DELETE {{$dotenv BASE_URL}}/orgs/{{$dotenv ORG_NAME}}/actions/secrets/{{$dotenv SECRET_NAME}}
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+
+### List selected repositories for an organization secret [GET]
+GET {{$dotenv BASE_URL}}/orgs/{{$dotenv ORG_NAME}}/actions/secrets/{{$dotenv SECRET_NAME}}/repositories
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+
+### Set selected repositories for an organization secret [PUT]
+PUT {{$dotenv BASE_URL}}/orgs/{{$dotenv ORG_NAME}}/actions/secrets/{{$dotenv SECRET_NAME}}/repositories
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+Content-Type: application/json
+{}
+
+### Add selected repository to an organization secret [PUT]
+PUT {{$dotenv BASE_URL}}/orgs/{{$dotenv ORG_NAME}}/actions/secrets/{{$dotenv SECRET_NAME}}/repositories/{{$dotenv REPOSITORY_ID}}
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+
+### Remove selected repository from an organization secret [DELETE]
+DELETE {{$dotenv BASE_URL}}/orgs/{{$dotenv ORG_NAME}}/actions/secrets/{{$dotenv SECRET_NAME}}/repositories/{{$dotenv REPOSITORY_ID}}
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+
+### List organization variables [GET]
+GET {{$dotenv BASE_URL}}/orgs/{{$dotenv ORG_NAME}}/actions/variables
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+
+### Create an organization variable [POST]
+POST {{$dotenv BASE_URL}}/orgs/{{$dotenv ORG_NAME}}/actions/variables
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+Content-Type: application/json
+{}
+
+### Get an organization variable [GET]
+GET {{$dotenv BASE_URL}}/orgs/{{$dotenv ORG_NAME}}/actions/variables/{{$dotenv NAME}}
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+
+### Update an organization variable [PATCH]
+PATCH {{$dotenv BASE_URL}}/orgs/{{$dotenv ORG_NAME}}/actions/variables/{{$dotenv NAME}}
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+Content-Type: application/json
+{}
+
+### Delete an organization variable [DELETE]
+DELETE {{$dotenv BASE_URL}}/orgs/{{$dotenv ORG_NAME}}/actions/variables/{{$dotenv NAME}}
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+
+### List selected repositories for an organization variable [GET]
+GET {{$dotenv BASE_URL}}/orgs/{{$dotenv ORG_NAME}}/actions/variables/{{$dotenv NAME}}/repositories
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+
+### Set selected repositories for an organization variable [PUT]
+PUT {{$dotenv BASE_URL}}/orgs/{{$dotenv ORG_NAME}}/actions/variables/{{$dotenv NAME}}/repositories
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+Content-Type: application/json
+{}
+
+### Add selected repository to an organization variable [PUT]
+PUT {{$dotenv BASE_URL}}/orgs/{{$dotenv ORG_NAME}}/actions/variables/{{$dotenv NAME}}/repositories/{{$dotenv REPOSITORY_ID}}
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+
+### Remove selected repository from an organization variable [DELETE]
+DELETE {{$dotenv BASE_URL}}/orgs/{{$dotenv ORG_NAME}}/actions/variables/{{$dotenv NAME}}/repositories/{{$dotenv REPOSITORY_ID}}
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+
+### List artifacts for a repository [GET]
+GET {{$dotenv BASE_URL}}/repos/{{$dotenv OWNER}}/{{$dotenv REPO}}/actions/artifacts
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+
+### Get an artifact [GET]
+GET {{$dotenv BASE_URL}}/repos/{{$dotenv OWNER}}/{{$dotenv REPO}}/actions/artifacts/{{$dotenv ARTIFACT_ID}}
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+
+### Delete an artifact [DELETE]
+DELETE {{$dotenv BASE_URL}}/repos/{{$dotenv OWNER}}/{{$dotenv REPO}}/actions/artifacts/{{$dotenv ARTIFACT_ID}}
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+
+### Download an artifact [GET]
+GET {{$dotenv BASE_URL}}/repos/{{$dotenv OWNER}}/{{$dotenv REPO}}/actions/artifacts/{{$dotenv ARTIFACT_ID}}/{{$dotenv ARCHIVE_FORMAT}}
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+
+### Get GitHub Actions cache usage for a repository [GET]
+GET {{$dotenv BASE_URL}}/repos/{{$dotenv OWNER}}/{{$dotenv REPO}}/actions/cache/usage
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+
+### List GitHub Actions caches for a repository [GET]
+GET {{$dotenv BASE_URL}}/repos/{{$dotenv OWNER}}/{{$dotenv REPO}}/actions/caches
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+
+### Delete GitHub Actions caches for a repository (using a cache key) [DELETE]
+DELETE {{$dotenv BASE_URL}}/repos/{{$dotenv OWNER}}/{{$dotenv REPO}}/actions/caches
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+
+### Delete a GitHub Actions cache for a repository (using a cache ID) [DELETE]
+DELETE {{$dotenv BASE_URL}}/repos/{{$dotenv OWNER}}/{{$dotenv REPO}}/actions/caches/{{$dotenv CACHE_ID}}
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+
+### Get a job for a workflow run [GET]
+GET {{$dotenv BASE_URL}}/repos/{{$dotenv OWNER}}/{{$dotenv REPO}}/actions/jobs/{{$dotenv JOB_ID}}
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+
+### Download job logs for a workflow run [GET]
+GET {{$dotenv BASE_URL}}/repos/{{$dotenv OWNER}}/{{$dotenv REPO}}/actions/jobs/{{$dotenv JOB_ID}}/logs
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+
+### Re-run a job from a workflow run [POST]
+POST {{$dotenv BASE_URL}}/repos/{{$dotenv OWNER}}/{{$dotenv REPO}}/actions/jobs/{{$dotenv JOB_ID}}/rerun
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+Content-Type: application/json
+{}
+
+### Get the customization template for an OIDC subject claim for a repository [GET]
+GET {{$dotenv BASE_URL}}/repos/{{$dotenv OWNER}}/{{$dotenv REPO}}/actions/oidc/customization/sub
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+
+### Set the customization template for an OIDC subject claim for a repository [PUT]
+PUT {{$dotenv BASE_URL}}/repos/{{$dotenv OWNER}}/{{$dotenv REPO}}/actions/oidc/customization/sub
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+Content-Type: application/json
+{}
+
+### List repository organization secrets [GET]
+GET {{$dotenv BASE_URL}}/repos/{{$dotenv OWNER}}/{{$dotenv REPO}}/actions/organization-secrets
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+
+### List repository organization variables [GET]
+GET {{$dotenv BASE_URL}}/repos/{{$dotenv OWNER}}/{{$dotenv REPO}}/actions/organization-variables
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+
+### Get GitHub Actions permissions for a repository [GET]
+GET {{$dotenv BASE_URL}}/repos/{{$dotenv OWNER}}/{{$dotenv REPO}}/actions/permissions
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+
+### Set GitHub Actions permissions for a repository [PUT]
+PUT {{$dotenv BASE_URL}}/repos/{{$dotenv OWNER}}/{{$dotenv REPO}}/actions/permissions
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+Content-Type: application/json
+{}
+
+### Get the level of access for workflows outside of the repository [GET]
+GET {{$dotenv BASE_URL}}/repos/{{$dotenv OWNER}}/{{$dotenv REPO}}/actions/permissions/access
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+
+### Set the level of access for workflows outside of the repository [PUT]
+PUT {{$dotenv BASE_URL}}/repos/{{$dotenv OWNER}}/{{$dotenv REPO}}/actions/permissions/access
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+Content-Type: application/json
+{}
+
+### Get allowed actions and reusable workflows for a repository [GET]
+GET {{$dotenv BASE_URL}}/repos/{{$dotenv OWNER}}/{{$dotenv REPO}}/actions/permissions/selected-actions
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+
+### Set allowed actions for a repository [PUT]
+PUT {{$dotenv BASE_URL}}/repos/{{$dotenv OWNER}}/{{$dotenv REPO}}/actions/permissions/selected-actions
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+Content-Type: application/json
+{}
+
+### Get default workflow permissions for a repository [GET]
+GET {{$dotenv BASE_URL}}/repos/{{$dotenv OWNER}}/{{$dotenv REPO}}/actions/permissions/workflow
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+
+### Set default workflow permissions for a repository [PUT]
+PUT {{$dotenv BASE_URL}}/repos/{{$dotenv OWNER}}/{{$dotenv REPO}}/actions/permissions/workflow
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+Content-Type: application/json
+{}
+
+### List self-hosted runners for a repository [GET]
+GET {{$dotenv BASE_URL}}/repos/{{$dotenv OWNER}}/{{$dotenv REPO}}/actions/runners?name={{$dotenv NAME}}
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+
+### List runner applications for a repository [GET]
+GET {{$dotenv BASE_URL}}/repos/{{$dotenv OWNER}}/{{$dotenv REPO}}/actions/runners/downloads
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+
+### Create configuration for a just-in-time runner for a repository [POST]
+POST {{$dotenv BASE_URL}}/repos/{{$dotenv OWNER}}/{{$dotenv REPO}}/actions/runners/generate-jitconfig
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+Content-Type: application/json
+{}
+
+### Create a registration token for a repository [POST]
+POST {{$dotenv BASE_URL}}/repos/{{$dotenv OWNER}}/{{$dotenv REPO}}/actions/runners/registration-token
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+
+### Create a remove token for a repository [POST]
+POST {{$dotenv BASE_URL}}/repos/{{$dotenv OWNER}}/{{$dotenv REPO}}/actions/runners/remove-token
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+
+### Get a self-hosted runner for a repository [GET]
+GET {{$dotenv BASE_URL}}/repos/{{$dotenv OWNER}}/{{$dotenv REPO}}/actions/runners/{{$dotenv RUNNER_ID}}
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+
+### Delete a self-hosted runner from a repository [DELETE]
+DELETE {{$dotenv BASE_URL}}/repos/{{$dotenv OWNER}}/{{$dotenv REPO}}/actions/runners/{{$dotenv RUNNER_ID}}
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+
+### List labels for a self-hosted runner for a repository [GET]
+GET {{$dotenv BASE_URL}}/repos/{{$dotenv OWNER}}/{{$dotenv REPO}}/actions/runners/{{$dotenv RUNNER_ID}}/labels
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+
+### Add custom labels to a self-hosted runner for a repository [POST]
+POST {{$dotenv BASE_URL}}/repos/{{$dotenv OWNER}}/{{$dotenv REPO}}/actions/runners/{{$dotenv RUNNER_ID}}/labels
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+Content-Type: application/json
+{}
+
+### Set custom labels for a self-hosted runner for a repository [PUT]
+PUT {{$dotenv BASE_URL}}/repos/{{$dotenv OWNER}}/{{$dotenv REPO}}/actions/runners/{{$dotenv RUNNER_ID}}/labels
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+Content-Type: application/json
+{}
+
+### Remove all custom labels from a self-hosted runner for a repository [DELETE]
+DELETE {{$dotenv BASE_URL}}/repos/{{$dotenv OWNER}}/{{$dotenv REPO}}/actions/runners/{{$dotenv RUNNER_ID}}/labels
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+
+### Remove a custom label from a self-hosted runner for a repository [DELETE]
+DELETE {{$dotenv BASE_URL}}/repos/{{$dotenv OWNER}}/{{$dotenv REPO}}/actions/runners/{{$dotenv RUNNER_ID}}/labels/{{$dotenv NAME}}
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+
+### List workflow runs for a repository [GET]
+GET {{$dotenv BASE_URL}}/repos/{{$dotenv OWNER}}/{{$dotenv REPO}}/actions/runs
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+
+### Get a workflow run [GET]
+GET {{$dotenv BASE_URL}}/repos/{{$dotenv OWNER}}/{{$dotenv REPO}}/actions/runs/{{$dotenv RUN_ID}}
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+
+### Delete a workflow run [DELETE]
+DELETE {{$dotenv BASE_URL}}/repos/{{$dotenv OWNER}}/{{$dotenv REPO}}/actions/runs/{{$dotenv RUN_ID}}
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+
+### Get the review history for a workflow run [GET]
+GET {{$dotenv BASE_URL}}/repos/{{$dotenv OWNER}}/{{$dotenv REPO}}/actions/runs/{{$dotenv RUN_ID}}/approvals
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+
+### Approve a workflow run for a fork pull request [POST]
+POST {{$dotenv BASE_URL}}/repos/{{$dotenv OWNER}}/{{$dotenv REPO}}/actions/runs/{{$dotenv RUN_ID}}/approve
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+
+### List workflow run artifacts [GET]
+GET {{$dotenv BASE_URL}}/repos/{{$dotenv OWNER}}/{{$dotenv REPO}}/actions/runs/{{$dotenv RUN_ID}}/artifacts
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+
+### Get a workflow run attempt [GET]
+GET {{$dotenv BASE_URL}}/repos/{{$dotenv OWNER}}/{{$dotenv REPO}}/actions/runs/{{$dotenv RUN_ID}}/attempts/{{$dotenv ATTEMPT_NUMBER}}
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+
+### List jobs for a workflow run attempt [GET]
+GET {{$dotenv BASE_URL}}/repos/{{$dotenv OWNER}}/{{$dotenv REPO}}/actions/runs/{{$dotenv RUN_ID}}/attempts/{{$dotenv ATTEMPT_NUMBER}}/jobs
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+
+### Download workflow run attempt logs [GET]
+GET {{$dotenv BASE_URL}}/repos/{{$dotenv OWNER}}/{{$dotenv REPO}}/actions/runs/{{$dotenv RUN_ID}}/attempts/{{$dotenv ATTEMPT_NUMBER}}/logs
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+
+### Cancel a workflow run [POST]
+POST {{$dotenv BASE_URL}}/repos/{{$dotenv OWNER}}/{{$dotenv REPO}}/actions/runs/{{$dotenv RUN_ID}}/cancel
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+
+### Review custom deployment protection rules for a workflow run [POST]
+POST {{$dotenv BASE_URL}}/repos/{{$dotenv OWNER}}/{{$dotenv REPO}}/actions/runs/{{$dotenv RUN_ID}}/deployment_protection_rule
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+Content-Type: application/json
+{}
+
+### Force cancel a workflow run [POST]
+POST {{$dotenv BASE_URL}}/repos/{{$dotenv OWNER}}/{{$dotenv REPO}}/actions/runs/{{$dotenv RUN_ID}}/force-cancel
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+
+### List jobs for a workflow run [GET]
+GET {{$dotenv BASE_URL}}/repos/{{$dotenv OWNER}}/{{$dotenv REPO}}/actions/runs/{{$dotenv RUN_ID}}/jobs?filter={{$dotenv FILTER}}
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+
+### Download workflow run logs [GET]
+GET {{$dotenv BASE_URL}}/repos/{{$dotenv OWNER}}/{{$dotenv REPO}}/actions/runs/{{$dotenv RUN_ID}}/logs
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+
+### Delete workflow run logs [DELETE]
+DELETE {{$dotenv BASE_URL}}/repos/{{$dotenv OWNER}}/{{$dotenv REPO}}/actions/runs/{{$dotenv RUN_ID}}/logs
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+
+### Get pending deployments for a workflow run [GET]
+GET {{$dotenv BASE_URL}}/repos/{{$dotenv OWNER}}/{{$dotenv REPO}}/actions/runs/{{$dotenv RUN_ID}}/pending_deployments
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+
+### Review pending deployments for a workflow run [POST]
+POST {{$dotenv BASE_URL}}/repos/{{$dotenv OWNER}}/{{$dotenv REPO}}/actions/runs/{{$dotenv RUN_ID}}/pending_deployments
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+Content-Type: application/json
+{}
+
+### Re-run a workflow [POST]
+POST {{$dotenv BASE_URL}}/repos/{{$dotenv OWNER}}/{{$dotenv REPO}}/actions/runs/{{$dotenv RUN_ID}}/rerun
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+Content-Type: application/json
+{}
+
+### Re-run failed jobs from a workflow run [POST]
+POST {{$dotenv BASE_URL}}/repos/{{$dotenv OWNER}}/{{$dotenv REPO}}/actions/runs/{{$dotenv RUN_ID}}/rerun-failed-jobs
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+Content-Type: application/json
+{}
+
+### Get workflow run usage [GET]
+GET {{$dotenv BASE_URL}}/repos/{{$dotenv OWNER}}/{{$dotenv REPO}}/actions/runs/{{$dotenv RUN_ID}}/timing
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+
+### List repository secrets [GET]
+GET {{$dotenv BASE_URL}}/repos/{{$dotenv OWNER}}/{{$dotenv REPO}}/actions/secrets
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+
+### Get a repository public key [GET]
+GET {{$dotenv BASE_URL}}/repos/{{$dotenv OWNER}}/{{$dotenv REPO}}/actions/secrets/public-key
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+
+### Get a repository secret [GET]
+GET {{$dotenv BASE_URL}}/repos/{{$dotenv OWNER}}/{{$dotenv REPO}}/actions/secrets/{{$dotenv SECRET_NAME}}
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+
+### Create or update a repository secret [PUT]
+PUT {{$dotenv BASE_URL}}/repos/{{$dotenv OWNER}}/{{$dotenv REPO}}/actions/secrets/{{$dotenv SECRET_NAME}}
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+Content-Type: application/json
+{}
+
+### Delete a repository secret [DELETE]
+DELETE {{$dotenv BASE_URL}}/repos/{{$dotenv OWNER}}/{{$dotenv REPO}}/actions/secrets/{{$dotenv SECRET_NAME}}
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+
+### List repository variables [GET]
+GET {{$dotenv BASE_URL}}/repos/{{$dotenv OWNER}}/{{$dotenv REPO}}/actions/variables
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+
+### Create a repository variable [POST]
+POST {{$dotenv BASE_URL}}/repos/{{$dotenv OWNER}}/{{$dotenv REPO}}/actions/variables
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+Content-Type: application/json
+{}
+
+### Get a repository variable [GET]
+GET {{$dotenv BASE_URL}}/repos/{{$dotenv OWNER}}/{{$dotenv REPO}}/actions/variables/{{$dotenv NAME}}
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+
+### Update a repository variable [PATCH]
+PATCH {{$dotenv BASE_URL}}/repos/{{$dotenv OWNER}}/{{$dotenv REPO}}/actions/variables/{{$dotenv NAME}}
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+Content-Type: application/json
+{}
+
+### Delete a repository variable [DELETE]
+DELETE {{$dotenv BASE_URL}}/repos/{{$dotenv OWNER}}/{{$dotenv REPO}}/actions/variables/{{$dotenv NAME}}
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+
+### List repository workflows [GET]
+GET {{$dotenv BASE_URL}}/repos/{{$dotenv OWNER}}/{{$dotenv REPO}}/actions/workflows
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+
+### Get a workflow [GET]
+GET {{$dotenv BASE_URL}}/repos/{{$dotenv OWNER}}/{{$dotenv REPO}}/actions/workflows/{{$dotenv WORKFLOW_ID}}
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+
+### Disable a workflow [PUT]
+PUT {{$dotenv BASE_URL}}/repos/{{$dotenv OWNER}}/{{$dotenv REPO}}/actions/workflows/{{$dotenv WORKFLOW_ID}}/disable
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+
+### Create a workflow dispatch event [POST]
+POST {{$dotenv BASE_URL}}/repos/{{$dotenv OWNER}}/{{$dotenv REPO}}/actions/workflows/{{$dotenv WORKFLOW_ID}}/dispatches
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+Content-Type: application/json
+{}
+
+### Enable a workflow [PUT]
+PUT {{$dotenv BASE_URL}}/repos/{{$dotenv OWNER}}/{{$dotenv REPO}}/actions/workflows/{{$dotenv WORKFLOW_ID}}/enable
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+
+### List workflow runs for a workflow [GET]
+GET {{$dotenv BASE_URL}}/repos/{{$dotenv OWNER}}/{{$dotenv REPO}}/actions/workflows/{{$dotenv WORKFLOW_ID}}/runs
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+
+### Get workflow usage [GET]
+GET {{$dotenv BASE_URL}}/repos/{{$dotenv OWNER}}/{{$dotenv REPO}}/actions/workflows/{{$dotenv WORKFLOW_ID}}/timing
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+
+### List environment secrets [GET]
+GET {{$dotenv BASE_URL}}/repos/{{$dotenv OWNER}}/{{$dotenv REPO}}/environments/{{$dotenv ENVIRONMENT_NAME}}/secrets
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+
+### Get an environment public key [GET]
+GET {{$dotenv BASE_URL}}/repos/{{$dotenv OWNER}}/{{$dotenv REPO}}/environments/{{$dotenv ENVIRONMENT_NAME}}/secrets/public-key
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+
+### Get an environment secret [GET]
+GET {{$dotenv BASE_URL}}/repos/{{$dotenv OWNER}}/{{$dotenv REPO}}/environments/{{$dotenv ENVIRONMENT_NAME}}/secrets/{{$dotenv SECRET_NAME}}
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+
+### Create or update an environment secret [PUT]
+PUT {{$dotenv BASE_URL}}/repos/{{$dotenv OWNER}}/{{$dotenv REPO}}/environments/{{$dotenv ENVIRONMENT_NAME}}/secrets/{{$dotenv SECRET_NAME}}
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+Content-Type: application/json
+{}
+
+### Delete an environment secret [DELETE]
+DELETE {{$dotenv BASE_URL}}/repos/{{$dotenv OWNER}}/{{$dotenv REPO}}/environments/{{$dotenv ENVIRONMENT_NAME}}/secrets/{{$dotenv SECRET_NAME}}
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+
+### List environment variables [GET]
+GET {{$dotenv BASE_URL}}/repos/{{$dotenv OWNER}}/{{$dotenv REPO}}/environments/{{$dotenv ENVIRONMENT_NAME}}/variables
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+
+### Create an environment variable [POST]
+POST {{$dotenv BASE_URL}}/repos/{{$dotenv OWNER}}/{{$dotenv REPO}}/environments/{{$dotenv ENVIRONMENT_NAME}}/variables
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+Content-Type: application/json
+{}
+
+### Get an environment variable [GET]
+GET {{$dotenv BASE_URL}}/repos/{{$dotenv OWNER}}/{{$dotenv REPO}}/environments/{{$dotenv ENVIRONMENT_NAME}}/variables/{{$dotenv NAME}}
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+
+### Update an environment variable [PATCH]
+PATCH {{$dotenv BASE_URL}}/repos/{{$dotenv OWNER}}/{{$dotenv REPO}}/environments/{{$dotenv ENVIRONMENT_NAME}}/variables/{{$dotenv NAME}}
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+Content-Type: application/json
+{}
+
+### Delete an environment variable [DELETE]
+DELETE {{$dotenv BASE_URL}}/repos/{{$dotenv OWNER}}/{{$dotenv REPO}}/environments/{{$dotenv ENVIRONMENT_NAME}}/variables/{{$dotenv NAME}}
+Authorization: Bearer {{$dotenv GH_TOKEN}}

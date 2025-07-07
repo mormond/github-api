@@ -1,0 +1,7 @@
+# Requests for tag: rate-limit
+
+
+
+### Get rate limit status for the authenticated user [GET]
+GET {{$dotenv BASE_URL}}/rate_limit
+Authorization: Bearer {{$dotenv GH_TOKEN}}

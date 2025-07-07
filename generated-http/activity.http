@@ -1,0 +1,139 @@
+# Requests for tag: activity
+
+
+
+### List public events [GET]
+GET {{$dotenv BASE_URL}}/events
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+
+### Get feeds [GET]
+GET {{$dotenv BASE_URL}}/feeds
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+
+### List public events for a network of repositories [GET]
+GET {{$dotenv BASE_URL}}/networks/{{$dotenv OWNER}}/{{$dotenv REPO}}/events
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+
+### List notifications for the authenticated user [GET]
+GET {{$dotenv BASE_URL}}/notifications?per_page={{$dotenv PER_PAGE}}
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+
+### Mark notifications as read [PUT]
+PUT {{$dotenv BASE_URL}}/notifications
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+Content-Type: application/json
+{}
+
+### Get a thread [GET]
+GET {{$dotenv BASE_URL}}/notifications/threads/{{$dotenv THREAD_ID}}
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+
+### Mark a thread as read [PATCH]
+PATCH {{$dotenv BASE_URL}}/notifications/threads/{{$dotenv THREAD_ID}}
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+
+### Mark a thread as done [DELETE]
+DELETE {{$dotenv BASE_URL}}/notifications/threads/{{$dotenv THREAD_ID}}
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+
+### Get a thread subscription for the authenticated user [GET]
+GET {{$dotenv BASE_URL}}/notifications/threads/{{$dotenv THREAD_ID}}/subscription
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+
+### Set a thread subscription [PUT]
+PUT {{$dotenv BASE_URL}}/notifications/threads/{{$dotenv THREAD_ID}}/subscription
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+Content-Type: application/json
+{}
+
+### Delete a thread subscription [DELETE]
+DELETE {{$dotenv BASE_URL}}/notifications/threads/{{$dotenv THREAD_ID}}/subscription
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+
+### List public organization events [GET]
+GET {{$dotenv BASE_URL}}/orgs/{{$dotenv ORG_NAME}}/events
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+
+### List repository events [GET]
+GET {{$dotenv BASE_URL}}/repos/{{$dotenv OWNER}}/{{$dotenv REPO}}/events
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+
+### List repository notifications for the authenticated user [GET]
+GET {{$dotenv BASE_URL}}/repos/{{$dotenv OWNER}}/{{$dotenv REPO}}/notifications
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+
+### Mark repository notifications as read [PUT]
+PUT {{$dotenv BASE_URL}}/repos/{{$dotenv OWNER}}/{{$dotenv REPO}}/notifications
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+Content-Type: application/json
+{}
+
+### List stargazers [GET]
+GET {{$dotenv BASE_URL}}/repos/{{$dotenv OWNER}}/{{$dotenv REPO}}/stargazers
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+
+### List watchers [GET]
+GET {{$dotenv BASE_URL}}/repos/{{$dotenv OWNER}}/{{$dotenv REPO}}/subscribers
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+
+### Get a repository subscription [GET]
+GET {{$dotenv BASE_URL}}/repos/{{$dotenv OWNER}}/{{$dotenv REPO}}/subscription
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+
+### Set a repository subscription [PUT]
+PUT {{$dotenv BASE_URL}}/repos/{{$dotenv OWNER}}/{{$dotenv REPO}}/subscription
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+Content-Type: application/json
+{}
+
+### Delete a repository subscription [DELETE]
+DELETE {{$dotenv BASE_URL}}/repos/{{$dotenv OWNER}}/{{$dotenv REPO}}/subscription
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+
+### List repositories starred by the authenticated user [GET]
+GET {{$dotenv BASE_URL}}/user/starred
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+
+### Check if a repository is starred by the authenticated user [GET]
+GET {{$dotenv BASE_URL}}/user/starred/{{$dotenv OWNER}}/{{$dotenv REPO}}
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+
+### Star a repository for the authenticated user [PUT]
+PUT {{$dotenv BASE_URL}}/user/starred/{{$dotenv OWNER}}/{{$dotenv REPO}}
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+
+### Unstar a repository for the authenticated user [DELETE]
+DELETE {{$dotenv BASE_URL}}/user/starred/{{$dotenv OWNER}}/{{$dotenv REPO}}
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+
+### List repositories watched by the authenticated user [GET]
+GET {{$dotenv BASE_URL}}/user/subscriptions
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+
+### List events for the authenticated user [GET]
+GET {{$dotenv BASE_URL}}/users/{{$dotenv USERNAME}}/events
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+
+### List organization events for the authenticated user [GET]
+GET {{$dotenv BASE_URL}}/users/{{$dotenv USERNAME}}/events/orgs/{{$dotenv ORG_NAME}}
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+
+### List public events for a user [GET]
+GET {{$dotenv BASE_URL}}/users/{{$dotenv USERNAME}}/events/public
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+
+### List events received by the authenticated user [GET]
+GET {{$dotenv BASE_URL}}/users/{{$dotenv USERNAME}}/received_events
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+
+### List public events received by a user [GET]
+GET {{$dotenv BASE_URL}}/users/{{$dotenv USERNAME}}/received_events/public
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+
+### List repositories starred by a user [GET]
+GET {{$dotenv BASE_URL}}/users/{{$dotenv USERNAME}}/starred
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+
+### List repositories watched by a user [GET]
+GET {{$dotenv BASE_URL}}/users/{{$dotenv USERNAME}}/subscriptions
+Authorization: Bearer {{$dotenv GH_TOKEN}}

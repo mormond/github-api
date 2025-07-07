@@ -1,0 +1,11 @@
+# Requests for tag: gitignore
+
+
+
+### Get all gitignore templates [GET]
+GET {{$dotenv BASE_URL}}/gitignore/templates
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+
+### Get a gitignore template [GET]
+GET {{$dotenv BASE_URL}}/gitignore/templates/{{$dotenv NAME}}
+Authorization: Bearer {{$dotenv GH_TOKEN}}

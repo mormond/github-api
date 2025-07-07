@@ -1,0 +1,31 @@
+# Requests for tag: private-registries
+
+
+
+### List private registries for an organization [GET]
+GET {{$dotenv BASE_URL}}/orgs/{{$dotenv ORG_NAME}}/private-registries
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+
+### Create a private registry for an organization [POST]
+POST {{$dotenv BASE_URL}}/orgs/{{$dotenv ORG_NAME}}/private-registries
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+Content-Type: application/json
+{}
+
+### Get private registries public key for an organization [GET]
+GET {{$dotenv BASE_URL}}/orgs/{{$dotenv ORG_NAME}}/private-registries/public-key
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+
+### Get a private registry for an organization [GET]
+GET {{$dotenv BASE_URL}}/orgs/{{$dotenv ORG_NAME}}/private-registries/{{$dotenv SECRET_NAME}}
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+
+### Update a private registry for an organization [PATCH]
+PATCH {{$dotenv BASE_URL}}/orgs/{{$dotenv ORG_NAME}}/private-registries/{{$dotenv SECRET_NAME}}
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+Content-Type: application/json
+{}
+
+### Delete a private registry for an organization [DELETE]
+DELETE {{$dotenv BASE_URL}}/orgs/{{$dotenv ORG_NAME}}/private-registries/{{$dotenv SECRET_NAME}}
+Authorization: Bearer {{$dotenv GH_TOKEN}}

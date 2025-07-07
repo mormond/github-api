@@ -1,0 +1,7 @@
+# Requests for tag: emojis
+
+
+
+### Get emojis [GET]
+GET {{$dotenv BASE_URL}}/emojis
+Authorization: Bearer {{$dotenv GH_TOKEN}}

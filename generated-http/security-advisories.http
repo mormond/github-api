@@ -1,0 +1,49 @@
+# Requests for tag: security-advisories
+
+
+
+### List global security advisories [GET]
+GET {{$dotenv BASE_URL}}/advisories?ghsa_id={{$dotenv GHSA_ID}}&type={{$dotenv TYPE}}&cve_id={{$dotenv CVE_ID}}&ecosystem={{$dotenv ECOSYSTEM}}&severity={{$dotenv SEVERITY}}&cwes={{$dotenv CWES}}&is_withdrawn={{$dotenv IS_WITHDRAWN}}&affects={{$dotenv AFFECTS}}&published={{$dotenv PUBLISHED}}&updated={{$dotenv UPDATED}}&modified={{$dotenv MODIFIED}}&epss_percentage={{$dotenv EPSS_PERCENTAGE}}&epss_percentile={{$dotenv EPSS_PERCENTILE}}&per_page={{$dotenv PER_PAGE}}&sort={{$dotenv SORT}}
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+
+### Get a global security advisory [GET]
+GET {{$dotenv BASE_URL}}/advisories/{{$dotenv GHSA_ID}}
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+
+### List repository security advisories for an organization [GET]
+GET {{$dotenv BASE_URL}}/orgs/{{$dotenv ORG_NAME}}/security-advisories?sort={{$dotenv SORT}}&per_page={{$dotenv PER_PAGE}}&state={{$dotenv STATE}}
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+
+### List repository security advisories [GET]
+GET {{$dotenv BASE_URL}}/repos/{{$dotenv OWNER}}/{{$dotenv REPO}}/security-advisories?sort={{$dotenv SORT}}&per_page={{$dotenv PER_PAGE}}&state={{$dotenv STATE}}
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+
+### Create a repository security advisory [POST]
+POST {{$dotenv BASE_URL}}/repos/{{$dotenv OWNER}}/{{$dotenv REPO}}/security-advisories
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+Content-Type: application/json
+{}
+
+### Privately report a security vulnerability [POST]
+POST {{$dotenv BASE_URL}}/repos/{{$dotenv OWNER}}/{{$dotenv REPO}}/security-advisories/reports
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+Content-Type: application/json
+{}
+
+### Get a repository security advisory [GET]
+GET {{$dotenv BASE_URL}}/repos/{{$dotenv OWNER}}/{{$dotenv REPO}}/security-advisories/{{$dotenv GHSA_ID}}
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+
+### Update a repository security advisory [PATCH]
+PATCH {{$dotenv BASE_URL}}/repos/{{$dotenv OWNER}}/{{$dotenv REPO}}/security-advisories/{{$dotenv GHSA_ID}}
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+Content-Type: application/json
+{}
+
+### Request a CVE for a repository security advisory [POST]
+POST {{$dotenv BASE_URL}}/repos/{{$dotenv OWNER}}/{{$dotenv REPO}}/security-advisories/{{$dotenv GHSA_ID}}/cve
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+
+### Create a temporary private fork [POST]
+POST {{$dotenv BASE_URL}}/repos/{{$dotenv OWNER}}/{{$dotenv REPO}}/security-advisories/{{$dotenv GHSA_ID}}/forks
+Authorization: Bearer {{$dotenv GH_TOKEN}}

@@ -1,0 +1,45 @@
+# Requests for tag: interactions
+
+
+
+### Get interaction restrictions for an organization [GET]
+GET {{$dotenv BASE_URL}}/orgs/{{$dotenv ORG_NAME}}/interaction-limits
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+
+### Set interaction restrictions for an organization [PUT]
+PUT {{$dotenv BASE_URL}}/orgs/{{$dotenv ORG_NAME}}/interaction-limits
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+Content-Type: application/json
+{}
+
+### Remove interaction restrictions for an organization [DELETE]
+DELETE {{$dotenv BASE_URL}}/orgs/{{$dotenv ORG_NAME}}/interaction-limits
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+
+### Get interaction restrictions for a repository [GET]
+GET {{$dotenv BASE_URL}}/repos/{{$dotenv OWNER}}/{{$dotenv REPO}}/interaction-limits
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+
+### Set interaction restrictions for a repository [PUT]
+PUT {{$dotenv BASE_URL}}/repos/{{$dotenv OWNER}}/{{$dotenv REPO}}/interaction-limits
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+Content-Type: application/json
+{}
+
+### Remove interaction restrictions for a repository [DELETE]
+DELETE {{$dotenv BASE_URL}}/repos/{{$dotenv OWNER}}/{{$dotenv REPO}}/interaction-limits
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+
+### Get interaction restrictions for your public repositories [GET]
+GET {{$dotenv BASE_URL}}/user/interaction-limits
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+
+### Set interaction restrictions for your public repositories [PUT]
+PUT {{$dotenv BASE_URL}}/user/interaction-limits
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+Content-Type: application/json
+{}
+
+### Remove interaction restrictions from your public repositories [DELETE]
+DELETE {{$dotenv BASE_URL}}/user/interaction-limits
+Authorization: Bearer {{$dotenv GH_TOKEN}}

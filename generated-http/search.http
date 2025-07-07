@@ -1,0 +1,31 @@
+# Requests for tag: search
+
+
+
+### Search code [GET]
+GET {{$dotenv BASE_URL}}/search/code?q={{$dotenv Q}}&sort={{$dotenv SORT}}&order={{$dotenv ORDER}}
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+
+### Search commits [GET]
+GET {{$dotenv BASE_URL}}/search/commits?q={{$dotenv Q}}&sort={{$dotenv SORT}}
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+
+### Search issues and pull requests [GET]
+GET {{$dotenv BASE_URL}}/search/issues?q={{$dotenv Q}}&sort={{$dotenv SORT}}
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+
+### Search labels [GET]
+GET {{$dotenv BASE_URL}}/search/labels?repository_id={{$dotenv REPOSITORY_ID}}&q={{$dotenv Q}}&sort={{$dotenv SORT}}
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+
+### Search repositories [GET]
+GET {{$dotenv BASE_URL}}/search/repositories?q={{$dotenv Q}}&sort={{$dotenv SORT}}
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+
+### Search topics [GET]
+GET {{$dotenv BASE_URL}}/search/topics?q={{$dotenv Q}}
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+
+### Search users [GET]
+GET {{$dotenv BASE_URL}}/search/users?q={{$dotenv Q}}&sort={{$dotenv SORT}}
+Authorization: Bearer {{$dotenv GH_TOKEN}}

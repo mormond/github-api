@@ -1,0 +1,91 @@
+# Requests for tag: gists
+
+
+
+### List gists for the authenticated user [GET]
+GET {{$dotenv BASE_URL}}/gists
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+
+### Create a gist [POST]
+POST {{$dotenv BASE_URL}}/gists
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+Content-Type: application/json
+{}
+
+### List public gists [GET]
+GET {{$dotenv BASE_URL}}/gists/public
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+
+### List starred gists [GET]
+GET {{$dotenv BASE_URL}}/gists/starred
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+
+### Get a gist [GET]
+GET {{$dotenv BASE_URL}}/gists/{{$dotenv GIST_ID}}
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+
+### Update a gist [PATCH]
+PATCH {{$dotenv BASE_URL}}/gists/{{$dotenv GIST_ID}}
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+Content-Type: application/json
+{}
+
+### Delete a gist [DELETE]
+DELETE {{$dotenv BASE_URL}}/gists/{{$dotenv GIST_ID}}
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+
+### List gist comments [GET]
+GET {{$dotenv BASE_URL}}/gists/{{$dotenv GIST_ID}}/comments
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+
+### Create a gist comment [POST]
+POST {{$dotenv BASE_URL}}/gists/{{$dotenv GIST_ID}}/comments
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+Content-Type: application/json
+{}
+
+### Get a gist comment [GET]
+GET {{$dotenv BASE_URL}}/gists/{{$dotenv GIST_ID}}/comments/{{$dotenv COMMENT_ID}}
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+
+### Update a gist comment [PATCH]
+PATCH {{$dotenv BASE_URL}}/gists/{{$dotenv GIST_ID}}/comments/{{$dotenv COMMENT_ID}}
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+Content-Type: application/json
+{}
+
+### Delete a gist comment [DELETE]
+DELETE {{$dotenv BASE_URL}}/gists/{{$dotenv GIST_ID}}/comments/{{$dotenv COMMENT_ID}}
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+
+### List gist commits [GET]
+GET {{$dotenv BASE_URL}}/gists/{{$dotenv GIST_ID}}/commits
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+
+### List gist forks [GET]
+GET {{$dotenv BASE_URL}}/gists/{{$dotenv GIST_ID}}/forks
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+
+### Fork a gist [POST]
+POST {{$dotenv BASE_URL}}/gists/{{$dotenv GIST_ID}}/forks
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+
+### Check if a gist is starred [GET]
+GET {{$dotenv BASE_URL}}/gists/{{$dotenv GIST_ID}}/star
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+
+### Star a gist [PUT]
+PUT {{$dotenv BASE_URL}}/gists/{{$dotenv GIST_ID}}/star
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+
+### Unstar a gist [DELETE]
+DELETE {{$dotenv BASE_URL}}/gists/{{$dotenv GIST_ID}}/star
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+
+### Get a gist revision [GET]
+GET {{$dotenv BASE_URL}}/gists/{{$dotenv GIST_ID}}/{{$dotenv SHA}}
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+
+### List gists for a user [GET]
+GET {{$dotenv BASE_URL}}/users/{{$dotenv USERNAME}}/gists
+Authorization: Bearer {{$dotenv GH_TOKEN}}

@@ -1,0 +1,323 @@
+# Requests for tag: teams
+
+
+
+### Get an external group [GET]
+GET {{$dotenv BASE_URL}}/orgs/{{$dotenv ORG_NAME}}/external-group/{{$dotenv GROUP_ID}}
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+
+### List external groups in an organization [GET]
+GET {{$dotenv BASE_URL}}/orgs/{{$dotenv ORG_NAME}}/external-groups?page={{$dotenv PAGE}}&display_name={{$dotenv DISPLAY_NAME}}
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+
+### List IdP groups for an organization [GET]
+GET {{$dotenv BASE_URL}}/orgs/{{$dotenv ORG_NAME}}/team-sync/groups?page={{$dotenv PAGE}}&q={{$dotenv Q}}
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+
+### List teams [GET]
+GET {{$dotenv BASE_URL}}/orgs/{{$dotenv ORG_NAME}}/teams
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+
+### Create a team [POST]
+POST {{$dotenv BASE_URL}}/orgs/{{$dotenv ORG_NAME}}/teams
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+Content-Type: application/json
+{}
+
+### Get a team by name [GET]
+GET {{$dotenv BASE_URL}}/orgs/{{$dotenv ORG_NAME}}/teams/{{$dotenv TEAM_SLUG}}
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+
+### Update a team [PATCH]
+PATCH {{$dotenv BASE_URL}}/orgs/{{$dotenv ORG_NAME}}/teams/{{$dotenv TEAM_SLUG}}
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+Content-Type: application/json
+{}
+
+### Delete a team [DELETE]
+DELETE {{$dotenv BASE_URL}}/orgs/{{$dotenv ORG_NAME}}/teams/{{$dotenv TEAM_SLUG}}
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+
+### List discussions [GET]
+GET {{$dotenv BASE_URL}}/orgs/{{$dotenv ORG_NAME}}/teams/{{$dotenv TEAM_SLUG}}/discussions?pinned={{$dotenv PINNED}}
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+
+### Create a discussion [POST]
+POST {{$dotenv BASE_URL}}/orgs/{{$dotenv ORG_NAME}}/teams/{{$dotenv TEAM_SLUG}}/discussions
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+Content-Type: application/json
+{}
+
+### Get a discussion [GET]
+GET {{$dotenv BASE_URL}}/orgs/{{$dotenv ORG_NAME}}/teams/{{$dotenv TEAM_SLUG}}/discussions/{{$dotenv DISCUSSION_NUMBER}}
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+
+### Update a discussion [PATCH]
+PATCH {{$dotenv BASE_URL}}/orgs/{{$dotenv ORG_NAME}}/teams/{{$dotenv TEAM_SLUG}}/discussions/{{$dotenv DISCUSSION_NUMBER}}
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+Content-Type: application/json
+{}
+
+### Delete a discussion [DELETE]
+DELETE {{$dotenv BASE_URL}}/orgs/{{$dotenv ORG_NAME}}/teams/{{$dotenv TEAM_SLUG}}/discussions/{{$dotenv DISCUSSION_NUMBER}}
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+
+### List discussion comments [GET]
+GET {{$dotenv BASE_URL}}/orgs/{{$dotenv ORG_NAME}}/teams/{{$dotenv TEAM_SLUG}}/discussions/{{$dotenv DISCUSSION_NUMBER}}/comments
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+
+### Create a discussion comment [POST]
+POST {{$dotenv BASE_URL}}/orgs/{{$dotenv ORG_NAME}}/teams/{{$dotenv TEAM_SLUG}}/discussions/{{$dotenv DISCUSSION_NUMBER}}/comments
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+Content-Type: application/json
+{}
+
+### Get a discussion comment [GET]
+GET {{$dotenv BASE_URL}}/orgs/{{$dotenv ORG_NAME}}/teams/{{$dotenv TEAM_SLUG}}/discussions/{{$dotenv DISCUSSION_NUMBER}}/comments/{{$dotenv COMMENT_NUMBER}}
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+
+### Update a discussion comment [PATCH]
+PATCH {{$dotenv BASE_URL}}/orgs/{{$dotenv ORG_NAME}}/teams/{{$dotenv TEAM_SLUG}}/discussions/{{$dotenv DISCUSSION_NUMBER}}/comments/{{$dotenv COMMENT_NUMBER}}
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+Content-Type: application/json
+{}
+
+### Delete a discussion comment [DELETE]
+DELETE {{$dotenv BASE_URL}}/orgs/{{$dotenv ORG_NAME}}/teams/{{$dotenv TEAM_SLUG}}/discussions/{{$dotenv DISCUSSION_NUMBER}}/comments/{{$dotenv COMMENT_NUMBER}}
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+
+### List a connection between an external group and a team [GET]
+GET {{$dotenv BASE_URL}}/orgs/{{$dotenv ORG_NAME}}/teams/{{$dotenv TEAM_SLUG}}/external-groups
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+
+### Update the connection between an external group and a team [PATCH]
+PATCH {{$dotenv BASE_URL}}/orgs/{{$dotenv ORG_NAME}}/teams/{{$dotenv TEAM_SLUG}}/external-groups
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+Content-Type: application/json
+{}
+
+### Remove the connection between an external group and a team [DELETE]
+DELETE {{$dotenv BASE_URL}}/orgs/{{$dotenv ORG_NAME}}/teams/{{$dotenv TEAM_SLUG}}/external-groups
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+
+### List pending team invitations [GET]
+GET {{$dotenv BASE_URL}}/orgs/{{$dotenv ORG_NAME}}/teams/{{$dotenv TEAM_SLUG}}/invitations
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+
+### List team members [GET]
+GET {{$dotenv BASE_URL}}/orgs/{{$dotenv ORG_NAME}}/teams/{{$dotenv TEAM_SLUG}}/members?role={{$dotenv ROLE}}
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+
+### Get team membership for a user [GET]
+GET {{$dotenv BASE_URL}}/orgs/{{$dotenv ORG_NAME}}/teams/{{$dotenv TEAM_SLUG}}/memberships/{{$dotenv USERNAME}}
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+
+### Add or update team membership for a user [PUT]
+PUT {{$dotenv BASE_URL}}/orgs/{{$dotenv ORG_NAME}}/teams/{{$dotenv TEAM_SLUG}}/memberships/{{$dotenv USERNAME}}
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+Content-Type: application/json
+{}
+
+### Remove team membership for a user [DELETE]
+DELETE {{$dotenv BASE_URL}}/orgs/{{$dotenv ORG_NAME}}/teams/{{$dotenv TEAM_SLUG}}/memberships/{{$dotenv USERNAME}}
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+
+### List team projects [GET]
+GET {{$dotenv BASE_URL}}/orgs/{{$dotenv ORG_NAME}}/teams/{{$dotenv TEAM_SLUG}}/projects
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+
+### Check team permissions for a project [GET]
+GET {{$dotenv BASE_URL}}/orgs/{{$dotenv ORG_NAME}}/teams/{{$dotenv TEAM_SLUG}}/projects/{{$dotenv PROJECT_ID}}
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+
+### Add or update team project permissions [PUT]
+PUT {{$dotenv BASE_URL}}/orgs/{{$dotenv ORG_NAME}}/teams/{{$dotenv TEAM_SLUG}}/projects/{{$dotenv PROJECT_ID}}
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+Content-Type: application/json
+{}
+
+### Remove a project from a team [DELETE]
+DELETE {{$dotenv BASE_URL}}/orgs/{{$dotenv ORG_NAME}}/teams/{{$dotenv TEAM_SLUG}}/projects/{{$dotenv PROJECT_ID}}
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+
+### List team repositories [GET]
+GET {{$dotenv BASE_URL}}/orgs/{{$dotenv ORG_NAME}}/teams/{{$dotenv TEAM_SLUG}}/repos
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+
+### Check team permissions for a repository [GET]
+GET {{$dotenv BASE_URL}}/orgs/{{$dotenv ORG_NAME}}/teams/{{$dotenv TEAM_SLUG}}/repos/{{$dotenv OWNER}}/{{$dotenv REPO}}
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+
+### Add or update team repository permissions [PUT]
+PUT {{$dotenv BASE_URL}}/orgs/{{$dotenv ORG_NAME}}/teams/{{$dotenv TEAM_SLUG}}/repos/{{$dotenv OWNER}}/{{$dotenv REPO}}
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+Content-Type: application/json
+{}
+
+### Remove a repository from a team [DELETE]
+DELETE {{$dotenv BASE_URL}}/orgs/{{$dotenv ORG_NAME}}/teams/{{$dotenv TEAM_SLUG}}/repos/{{$dotenv OWNER}}/{{$dotenv REPO}}
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+
+### List IdP groups for a team [GET]
+GET {{$dotenv BASE_URL}}/orgs/{{$dotenv ORG_NAME}}/teams/{{$dotenv TEAM_SLUG}}/team-sync/group-mappings
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+
+### Create or update IdP group connections [PATCH]
+PATCH {{$dotenv BASE_URL}}/orgs/{{$dotenv ORG_NAME}}/teams/{{$dotenv TEAM_SLUG}}/team-sync/group-mappings
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+Content-Type: application/json
+{}
+
+### List child teams [GET]
+GET {{$dotenv BASE_URL}}/orgs/{{$dotenv ORG_NAME}}/teams/{{$dotenv TEAM_SLUG}}/teams
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+
+### Get a team (Legacy) [GET]
+GET {{$dotenv BASE_URL}}/teams/{{$dotenv TEAM_ID}}
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+
+### Update a team (Legacy) [PATCH]
+PATCH {{$dotenv BASE_URL}}/teams/{{$dotenv TEAM_ID}}
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+Content-Type: application/json
+{}
+
+### Delete a team (Legacy) [DELETE]
+DELETE {{$dotenv BASE_URL}}/teams/{{$dotenv TEAM_ID}}
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+
+### List discussions (Legacy) [GET]
+GET {{$dotenv BASE_URL}}/teams/{{$dotenv TEAM_ID}}/discussions
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+
+### Create a discussion (Legacy) [POST]
+POST {{$dotenv BASE_URL}}/teams/{{$dotenv TEAM_ID}}/discussions
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+Content-Type: application/json
+{}
+
+### Get a discussion (Legacy) [GET]
+GET {{$dotenv BASE_URL}}/teams/{{$dotenv TEAM_ID}}/discussions/{{$dotenv DISCUSSION_NUMBER}}
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+
+### Update a discussion (Legacy) [PATCH]
+PATCH {{$dotenv BASE_URL}}/teams/{{$dotenv TEAM_ID}}/discussions/{{$dotenv DISCUSSION_NUMBER}}
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+Content-Type: application/json
+{}
+
+### Delete a discussion (Legacy) [DELETE]
+DELETE {{$dotenv BASE_URL}}/teams/{{$dotenv TEAM_ID}}/discussions/{{$dotenv DISCUSSION_NUMBER}}
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+
+### List discussion comments (Legacy) [GET]
+GET {{$dotenv BASE_URL}}/teams/{{$dotenv TEAM_ID}}/discussions/{{$dotenv DISCUSSION_NUMBER}}/comments
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+
+### Create a discussion comment (Legacy) [POST]
+POST {{$dotenv BASE_URL}}/teams/{{$dotenv TEAM_ID}}/discussions/{{$dotenv DISCUSSION_NUMBER}}/comments
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+Content-Type: application/json
+{}
+
+### Get a discussion comment (Legacy) [GET]
+GET {{$dotenv BASE_URL}}/teams/{{$dotenv TEAM_ID}}/discussions/{{$dotenv DISCUSSION_NUMBER}}/comments/{{$dotenv COMMENT_NUMBER}}
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+
+### Update a discussion comment (Legacy) [PATCH]
+PATCH {{$dotenv BASE_URL}}/teams/{{$dotenv TEAM_ID}}/discussions/{{$dotenv DISCUSSION_NUMBER}}/comments/{{$dotenv COMMENT_NUMBER}}
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+Content-Type: application/json
+{}
+
+### Delete a discussion comment (Legacy) [DELETE]
+DELETE {{$dotenv BASE_URL}}/teams/{{$dotenv TEAM_ID}}/discussions/{{$dotenv DISCUSSION_NUMBER}}/comments/{{$dotenv COMMENT_NUMBER}}
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+
+### List pending team invitations (Legacy) [GET]
+GET {{$dotenv BASE_URL}}/teams/{{$dotenv TEAM_ID}}/invitations
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+
+### List team members (Legacy) [GET]
+GET {{$dotenv BASE_URL}}/teams/{{$dotenv TEAM_ID}}/members?role={{$dotenv ROLE}}
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+
+### Get team member (Legacy) [GET]
+GET {{$dotenv BASE_URL}}/teams/{{$dotenv TEAM_ID}}/members/{{$dotenv USERNAME}}
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+
+### Add team member (Legacy) [PUT]
+PUT {{$dotenv BASE_URL}}/teams/{{$dotenv TEAM_ID}}/members/{{$dotenv USERNAME}}
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+
+### Remove team member (Legacy) [DELETE]
+DELETE {{$dotenv BASE_URL}}/teams/{{$dotenv TEAM_ID}}/members/{{$dotenv USERNAME}}
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+
+### Get team membership for a user (Legacy) [GET]
+GET {{$dotenv BASE_URL}}/teams/{{$dotenv TEAM_ID}}/memberships/{{$dotenv USERNAME}}
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+
+### Add or update team membership for a user (Legacy) [PUT]
+PUT {{$dotenv BASE_URL}}/teams/{{$dotenv TEAM_ID}}/memberships/{{$dotenv USERNAME}}
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+Content-Type: application/json
+{}
+
+### Remove team membership for a user (Legacy) [DELETE]
+DELETE {{$dotenv BASE_URL}}/teams/{{$dotenv TEAM_ID}}/memberships/{{$dotenv USERNAME}}
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+
+### List team projects (Legacy) [GET]
+GET {{$dotenv BASE_URL}}/teams/{{$dotenv TEAM_ID}}/projects
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+
+### Check team permissions for a project (Legacy) [GET]
+GET {{$dotenv BASE_URL}}/teams/{{$dotenv TEAM_ID}}/projects/{{$dotenv PROJECT_ID}}
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+
+### Add or update team project permissions (Legacy) [PUT]
+PUT {{$dotenv BASE_URL}}/teams/{{$dotenv TEAM_ID}}/projects/{{$dotenv PROJECT_ID}}
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+Content-Type: application/json
+{}
+
+### Remove a project from a team (Legacy) [DELETE]
+DELETE {{$dotenv BASE_URL}}/teams/{{$dotenv TEAM_ID}}/projects/{{$dotenv PROJECT_ID}}
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+
+### List team repositories (Legacy) [GET]
+GET {{$dotenv BASE_URL}}/teams/{{$dotenv TEAM_ID}}/repos
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+
+### Check team permissions for a repository (Legacy) [GET]
+GET {{$dotenv BASE_URL}}/teams/{{$dotenv TEAM_ID}}/repos/{{$dotenv OWNER}}/{{$dotenv REPO}}
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+
+### Add or update team repository permissions (Legacy) [PUT]
+PUT {{$dotenv BASE_URL}}/teams/{{$dotenv TEAM_ID}}/repos/{{$dotenv OWNER}}/{{$dotenv REPO}}
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+Content-Type: application/json
+{}
+
+### Remove a repository from a team (Legacy) [DELETE]
+DELETE {{$dotenv BASE_URL}}/teams/{{$dotenv TEAM_ID}}/repos/{{$dotenv OWNER}}/{{$dotenv REPO}}
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+
+### List IdP groups for a team (Legacy) [GET]
+GET {{$dotenv BASE_URL}}/teams/{{$dotenv TEAM_ID}}/team-sync/group-mappings
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+
+### Create or update IdP group connections (Legacy) [PATCH]
+PATCH {{$dotenv BASE_URL}}/teams/{{$dotenv TEAM_ID}}/team-sync/group-mappings
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+Content-Type: application/json
+{}
+
+### List child teams (Legacy) [GET]
+GET {{$dotenv BASE_URL}}/teams/{{$dotenv TEAM_ID}}/teams
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+
+### List teams for the authenticated user [GET]
+GET {{$dotenv BASE_URL}}/user/teams
+Authorization: Bearer {{$dotenv GH_TOKEN}}

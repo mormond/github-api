@@ -1,0 +1,63 @@
+# Requests for tag: copilot
+
+
+
+### List all Copilot seat assignments for an enterprise [GET]
+GET {{$dotenv BASE_URL}}/enterprises/{{$dotenv ENTERPRISE_NAME}}/copilot/billing/seats?per_page={{$dotenv PER_PAGE}}
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+
+### Get Copilot metrics for an enterprise [GET]
+GET {{$dotenv BASE_URL}}/enterprises/{{$dotenv ENTERPRISE_NAME}}/copilot/metrics?since={{$dotenv SINCE}}&until={{$dotenv UNTIL}}&per_page={{$dotenv PER_PAGE}}
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+
+### Get Copilot seat assignment details for an enterprise user [GET]
+GET {{$dotenv BASE_URL}}/enterprises/{{$dotenv ENTERPRISE_NAME}}/members/{{$dotenv USERNAME}}/copilot
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+
+### Get Copilot metrics for an enterprise team [GET]
+GET {{$dotenv BASE_URL}}/enterprises/{{$dotenv ENTERPRISE_NAME}}/team/{{$dotenv TEAM_SLUG}}/copilot/metrics?since={{$dotenv SINCE}}&until={{$dotenv UNTIL}}&per_page={{$dotenv PER_PAGE}}
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+
+### Get Copilot seat information and settings for an organization [GET]
+GET {{$dotenv BASE_URL}}/orgs/{{$dotenv ORG_NAME}}/copilot/billing
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+
+### List all Copilot seat assignments for an organization [GET]
+GET {{$dotenv BASE_URL}}/orgs/{{$dotenv ORG_NAME}}/copilot/billing/seats?per_page={{$dotenv PER_PAGE}}
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+
+### Add teams to the Copilot subscription for an organization [POST]
+POST {{$dotenv BASE_URL}}/orgs/{{$dotenv ORG_NAME}}/copilot/billing/selected_teams
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+Content-Type: application/json
+{}
+
+### Remove teams from the Copilot subscription for an organization [DELETE]
+DELETE {{$dotenv BASE_URL}}/orgs/{{$dotenv ORG_NAME}}/copilot/billing/selected_teams
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+Content-Type: application/json
+{}
+
+### Add users to the Copilot subscription for an organization [POST]
+POST {{$dotenv BASE_URL}}/orgs/{{$dotenv ORG_NAME}}/copilot/billing/selected_users
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+Content-Type: application/json
+{}
+
+### Remove users from the Copilot subscription for an organization [DELETE]
+DELETE {{$dotenv BASE_URL}}/orgs/{{$dotenv ORG_NAME}}/copilot/billing/selected_users
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+Content-Type: application/json
+{}
+
+### Get Copilot metrics for an organization [GET]
+GET {{$dotenv BASE_URL}}/orgs/{{$dotenv ORG_NAME}}/copilot/metrics?since={{$dotenv SINCE}}&until={{$dotenv UNTIL}}&per_page={{$dotenv PER_PAGE}}
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+
+### Get Copilot seat assignment details for a user [GET]
+GET {{$dotenv BASE_URL}}/orgs/{{$dotenv ORG_NAME}}/members/{{$dotenv USERNAME}}/copilot
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+
+### Get Copilot metrics for a team [GET]
+GET {{$dotenv BASE_URL}}/orgs/{{$dotenv ORG_NAME}}/team/{{$dotenv TEAM_SLUG}}/copilot/metrics?since={{$dotenv SINCE}}&until={{$dotenv UNTIL}}&per_page={{$dotenv PER_PAGE}}
+Authorization: Bearer {{$dotenv GH_TOKEN}}

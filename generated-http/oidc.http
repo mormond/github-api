@@ -1,0 +1,13 @@
+# Requests for tag: oidc
+
+
+
+### Get the customization template for an OIDC subject claim for an organization [GET]
+GET {{$dotenv BASE_URL}}/orgs/{{$dotenv ORG_NAME}}/actions/oidc/customization/sub
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+
+### Set the customization template for an OIDC subject claim for an organization [PUT]
+PUT {{$dotenv BASE_URL}}/orgs/{{$dotenv ORG_NAME}}/actions/oidc/customization/sub
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+Content-Type: application/json
+{}

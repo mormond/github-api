@@ -1,0 +1,67 @@
+# Requests for tag: git
+
+
+
+### Create a blob [POST]
+POST {{$dotenv BASE_URL}}/repos/{{$dotenv OWNER}}/{{$dotenv REPO}}/git/blobs
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+Content-Type: application/json
+{}
+
+### Get a blob [GET]
+GET {{$dotenv BASE_URL}}/repos/{{$dotenv OWNER}}/{{$dotenv REPO}}/git/blobs/{{$dotenv FILE_SHA}}
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+
+### Create a commit [POST]
+POST {{$dotenv BASE_URL}}/repos/{{$dotenv OWNER}}/{{$dotenv REPO}}/git/commits
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+Content-Type: application/json
+{}
+
+### Get a commit object [GET]
+GET {{$dotenv BASE_URL}}/repos/{{$dotenv OWNER}}/{{$dotenv REPO}}/git/commits/{{$dotenv COMMIT_SHA}}
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+
+### List matching references [GET]
+GET {{$dotenv BASE_URL}}/repos/{{$dotenv OWNER}}/{{$dotenv REPO}}/git/matching-refs/{{$dotenv REF}}
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+
+### Get a reference [GET]
+GET {{$dotenv BASE_URL}}/repos/{{$dotenv OWNER}}/{{$dotenv REPO}}/git/ref/{{$dotenv REF}}
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+
+### Create a reference [POST]
+POST {{$dotenv BASE_URL}}/repos/{{$dotenv OWNER}}/{{$dotenv REPO}}/git/refs
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+Content-Type: application/json
+{}
+
+### Update a reference [PATCH]
+PATCH {{$dotenv BASE_URL}}/repos/{{$dotenv OWNER}}/{{$dotenv REPO}}/git/refs/{{$dotenv REF}}
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+Content-Type: application/json
+{}
+
+### Delete a reference [DELETE]
+DELETE {{$dotenv BASE_URL}}/repos/{{$dotenv OWNER}}/{{$dotenv REPO}}/git/refs/{{$dotenv REF}}
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+
+### Create a tag object [POST]
+POST {{$dotenv BASE_URL}}/repos/{{$dotenv OWNER}}/{{$dotenv REPO}}/git/tags
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+Content-Type: application/json
+{}
+
+### Get a tag [GET]
+GET {{$dotenv BASE_URL}}/repos/{{$dotenv OWNER}}/{{$dotenv REPO}}/git/tags/{{$dotenv TAG_SHA}}
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+
+### Create a tree [POST]
+POST {{$dotenv BASE_URL}}/repos/{{$dotenv OWNER}}/{{$dotenv REPO}}/git/trees
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+Content-Type: application/json
+{}
+
+### Get a tree [GET]
+GET {{$dotenv BASE_URL}}/repos/{{$dotenv OWNER}}/{{$dotenv REPO}}/git/trees/{{$dotenv TREE_SHA}}?recursive={{$dotenv RECURSIVE}}
+Authorization: Bearer {{$dotenv GH_TOKEN}}

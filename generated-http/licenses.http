@@ -1,0 +1,15 @@
+# Requests for tag: licenses
+
+
+
+### Get all commonly used licenses [GET]
+GET {{$dotenv BASE_URL}}/licenses?featured={{$dotenv FEATURED}}
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+
+### Get a license [GET]
+GET {{$dotenv BASE_URL}}/licenses/{{$dotenv LICENSE}}
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+
+### Get the license for a repository [GET]
+GET {{$dotenv BASE_URL}}/repos/{{$dotenv OWNER}}/{{$dotenv REPO}}/license
+Authorization: Bearer {{$dotenv GH_TOKEN}}

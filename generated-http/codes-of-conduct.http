@@ -1,0 +1,11 @@
+# Requests for tag: codes-of-conduct
+
+
+
+### Get all codes of conduct [GET]
+GET {{$dotenv BASE_URL}}/codes_of_conduct
+Authorization: Bearer {{$dotenv GH_TOKEN}}
+
+### Get a code of conduct [GET]
+GET {{$dotenv BASE_URL}}/codes_of_conduct/{{$dotenv KEY}}
+Authorization: Bearer {{$dotenv GH_TOKEN}}
